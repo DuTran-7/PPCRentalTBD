@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    @*<title>Login/Logout animation concept</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>*@
+
+    @*<link rel="stylesheet" href="css/style.css">*@
+    @*<link href="~/Content/style.css" rel="stylesheet" />*@
+    <link href="~/Content/style1.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    
+        <form action="/Home/Login" method="post">
+            <header>Login</header>
+            <p>
+                @if (ViewBag.mgs != null)
+                {
+                    @ViewBag.mgs
+                }
+            </p>
+
+            <label>Username <span>*</span></label>
+            <input type="text" name="Email" required />
+            <div class="help">At least 6 character</div>
+            <label>Password <span>*</span></label>
+            <input type="password" name="Password" required />
+            <div class="help">Use upper and lowercase lettes as well</div>
+            <button type="Submit">Login</button>
+        </form>
+        
+
+    
+    
+
+    @*<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>*@
+
+    @*<script src="js/index.js"></script>*@
+
+</body>
+</html>

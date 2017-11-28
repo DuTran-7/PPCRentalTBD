@@ -1,0 +1,170 @@
+﻿@model IEnumerable<WebPPC.Models.PROPERTY>
+
+@{
+    ViewBag.Title = "Admin Page";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="text-align:center">Project List</h2>
+<style>
+    #scroll {
+        display: block;
+        padding: 5px;
+        margin-top: 5px;
+        overflow: scroll;
+    }
+</style>
+    <a href="/Admin/Create/CreateProject"><h6>Create</h6></a>
+<table class="table" id="scroll">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Avatar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BedRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BathRoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PackingPlace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROJECT_STATUS.Status_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Create_post)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Updated_at)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DISTRICT.DistrictName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WARD.WardName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.STREET.StreetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROPERTY_TYPE.CodeType)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.USER.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROJECT_STATUS.Status_Name)
+        </th>
+        
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+
+            <td>
+                <img src="/img/@item.Avatar" width="100" />
+            </td>
+
+            <td>
+                @*@Html.DisplayFor(modelItem => item.Avatar)*@
+                <img src="/img/@item.Images" width="100" />
+            </td>
+            <td>
+                @item.Content;
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BedRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BathRoom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PackingPlace)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WARD.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Create_post)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Updated_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DISTRICT.DistrictName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WARD.WardName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STREET.StreetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROPERTY_TYPE.CodeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.USER.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
+            </td>         
+            
+            
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>

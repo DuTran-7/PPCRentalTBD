@@ -1,0 +1,227 @@
+﻿@model WebPPC.Models.PROPERTY
+@using WebPPC.Models;
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var db = new DemoPPCRentalEntities1();
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!-- Custom fonts for this template -->
+<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.bundle.min.js"></script>
+<!-- Plugin JavaScript -->
+
+<script src="~/Scripts/jquery.easing.min.js"></script>
+<!-- Contact form JavaScript -->
+
+<script src="~/Scripts/jqBootstrapValidation.js"></script>
+<script src="~/Scripts/contact_me.js"></script>
+<!-- Custom scripts for this template -->
+<!-- Custom styles for this template -->
+
+<link href="~/Content/agency.min.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Post", "Post", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Post Project</h2>
+
+                </div>
+            </div>
+            
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="contactForm" name="sentMessage" novalidate>
+                            <div class="row">
+                                <div class="form-horizontal">
+                                    <h4>Post Project</h4>
+                                    <hr />
+                                    @Html.ValidationSummary(true)
+                                    <div class="col-md-12">
+                                        <div class="form-group">   
+                                            @Html.EditorFor(model => model.PropertyName, new { @class = "form-control" })                                           
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.DropDownList("PropertyType_ID",
+                                            new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
+                                            "--Property Type--", new { @class = "form-control" })
+                                            @Html.LabelFor(model => model.PropertyType_ID, "PropertyType_ID", new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @*@Html.DropDownList("PropertyType_ID", String.Empty)*@
+                                            @Html.ValidationMessageFor(model => model.PropertyType_ID)
+                                        </div>
+                                            @Html.LabelFor(model => model.PROPERTY_TYPE, new { @class = "control-label col-md-2" })
+                                            
+                                            @*<p class="help-block text-danger"></p>*@
+                                   </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <input class="form-control" name="Avatar" id="email" type="file" placeholder="Avatar *" required data-validation-required-message="Please enter your email address.">
+                                            <div class="col-md-10">                
+                                                @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger" })
+                                            </div>
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            <input class="form-control" name="Images" id="email" type="file" placeholder="Images *" required data-validation-required-message="Please enter your email address.">
+                                            <div class="col-md-10">
+                                                @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger" })
+                                            </div>
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            @Html.DropDownList("Quan_ID",
+                                            new SelectList(db.DISTRICTs, "ID", "DistrictName"),
+                                            "--Chọn Quận--", new { @class = "form-control" })
+                                            @*@Html.LabelFor(model => model.DISTRICT, new { @class = "control-label col-md-2" })*@
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.DropDownListFor(m => m.Street_ID,
+                                             new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
+                                             "--Chọn Đường--", new { @class = "form-control" })
+                                            @*@Html.LabelFor(model => model.STREET, new { @class = "control-label col-md-2" })*@
+                                        </div>
+                                            @*<div class="form-group">
+                                                @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.Price)
+                                                    @Html.ValidationMessageFor(model => model.Price)
+                                                </div>
+                                            </div>*@
+
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" type="number" placeholder="Price *" required data-validation-required-message="Please enter your phone number.">
+                                            @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" type="text" placeholder="UnitPrice *" required data-validation-required-message="Please enter your phone number.">
+                                            @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
+                                            <p class="help-block text-danger"></p>
+                                        </div>        
+                                 </div>
+
+
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" type="number" placeholder="Area *" required data-validation-required-message="Please enter your phone number.">
+                                            @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
+                                            <p class="help-block text-danger"></p>
+                                        </div>
+                                        @*<div class="form-group">
+                                            @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Area)
+                                                @Html.ValidationMessageFor(model => model.Area)
+                                            </div>
+                                        </div>*@
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.BedRoom, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.BedRoom)
+                                                @Html.ValidationMessageFor(model => model.BedRoom)
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.BathRoom, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.BathRoom)
+                                                @Html.ValidationMessageFor(model => model.BathRoom)
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.PackingPlace, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.PackingPlace)
+                                                @Html.ValidationMessageFor(model => model.PackingPlace)
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Created_at, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Created_at)
+                                                @Html.ValidationMessageFor(model => model.Created_at)
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Create_post, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Create_post)
+                                                @Html.ValidationMessageFor(model => model.Create_post)
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Content)
+                                                @Html.ValidationMessageFor(model => model.Content)
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Updated_at, new { @class = "control-label col-md-2" })
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Updated_at)
+                                                @Html.ValidationMessageFor(model => model.Updated_at)
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                            
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <a href="@Url.Action("PostProject", "Post")"><input type="submit" value="Post PROJECT" class="btn btn-warning btn-xl" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+section Scripts {
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+@Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    $('#PropertyType_ID').select2();
+    $('#Quan_ID').select2();
+    $('#Street_ID').select2();
+    $('#Quan_ID').on('change', function () {
+        $('#Street_ID').empty();
+        $.getJSON('GetStreet?District_id=' + $('#Quan_ID').val(),
+        function (json) {
+            $('#Street_ID').select2({ data: json });
+        });
+    });
+</script>
+}

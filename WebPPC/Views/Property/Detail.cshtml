@@ -1,0 +1,140 @@
+﻿@model WebPPC.Models.PROPERTY
+
+@{
+    ViewBag.Title = "Detail";
+
+}
+<style>
+    #leftcontent {
+        width: 600px;
+        float: left;
+        padding-left: 5%;
+    }
+
+    #rightcontent {
+        width: 300px;
+        float: right;
+    }
+
+    #cuoi {
+        width: 910px;
+        border: 1px solid #000000;
+        padding-left: 5%;
+    }
+
+    #left {
+        width: 600px;
+        float: left;
+    }
+
+    #right {
+        width: 300px;
+        float: right;
+    }
+</style>
+<h2 class="section-heading text-uppercase" style="padding-left:40%;padding-top:50px;padding-bottom:20px;">Detail Project</h2>
+
+<img style="padding-left:5%" src="~/img/@Model.Avatar" alt="@Html.DisplayNameFor(model => Model.PropertyName)" width="95%" />
+<br /><hr /><br />
+
+
+<div>
+
+    <div id="leftcontent">
+        <h4 style="font-size:300%;text-align: left;text-transform: uppercase; margin-bottom: auto  "><b>@Html.DisplayFor(model => model.PropertyName)</b></h4>
+        <br />
+        <img src="~/img/location.PNG" width="10" style="" /> Đường @Html.DisplayFor(model => Model.STREET.StreetName) ,Phường @Html.DisplayFor(model => Model.WARD.WardName), Quận @Html.DisplayFor(model => Model.DISTRICT.DistrictName)
+        <br /><br /><br /><br />
+        <h4 style="text-transform: uppercase">Giới thiệu dự án</h4>
+        <p style="text-indent: 50px ; word-wrap:break-word;text-align:justify">@Html.DisplayFor(model => model.Content)</p>
+        <br />
+        <br />
+
+        <div class="row" style="text-align:center">
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconmoney.PNG" width="30"></p>
+                @Html.DisplayFor(model => Model.Price)
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconarea.PNG" width="30"></p>
+                @Html.DisplayFor(model => Model.Area)
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconunit.PNG" width="30"></p>
+                @Html.DisplayFor(model => Model.UnitPrice)
+            </div>
+        </div>
+        <br>
+        <div class="row" style="text-align:center">
+
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconbed.PNG" alt="Bed-Rooom: " width="30"></p>
+                @Html.DisplayFor(model => Model.BedRoom)
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconbath.PNG" alt="Bath-Room: " width="30"></p>
+                @Html.DisplayFor(model => Model.BathRoom)
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <p style="text-align:center;"><img src="~/img/iconparking.PNG" alt="Parking-Place: " width="30"></p>
+                @Html.DisplayFor(model => Model.PackingPlace)
+            </div>
+
+
+        </div>
+
+        <br /><br />
+
+
+        <dl class="dl-horizontal">
+
+            <dt>
+                <a>Project Type</a>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PROPERTY_TYPE.CodeType)
+            </dd>
+            <br/>
+            <dt>
+                <a>Created At</a>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Created_at)
+            </dd>
+            <br />
+            @*<dt>
+                <a>Phone Contact</a>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.USER.Phone)
+            </dd>
+            <br />
+            <dt>
+                <a>Email Contact</a>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.USER.Email)
+            </dd>
+            <br />
+            <dt>
+                <a>Adress Contact</a>
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.USER.Address)
+            </dd>*@
+        </dl>
+    </div>
+</div>
+
+<div id="cuoi">
+    <div id="left" style="float:left; margin-left:20px; width:60%; margin-bottom:30px">
+        <h3>Apartment Structure:</h3>
+        <img src="~/img/apartment_structure.jpg" width="70%" />
+    </div>
+
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br>
+<hr>

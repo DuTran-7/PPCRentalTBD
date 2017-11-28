@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Team12Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DISTRICT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DistrictName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="FEATURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeatureName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="IMAGES">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="300" />
+    <Property Name="filepath" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="PROJECT_STATUS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Status_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="PROPERTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropertyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="200" />
+    <Property Name="Images" Type="varchar" MaxLength="200" />
+    <Property Name="PropertyType_ID" Type="int" />
+    <Property Name="Content" Type="nvarchar" MaxLength="500" />
+    <Property Name="Street_ID" Type="int" />
+    <Property Name="Ward_ID" Type="int" />
+    <Property Name="District_ID" Type="int" />
+    <Property Name="Price" Type="int" />
+    <Property Name="UnitPrice" Type="nvarchar" MaxLength="30" />
+    <Property Name="Area" Type="nvarchar" MaxLength="30" />
+    <Property Name="BedRoom" Type="int" />
+    <Property Name="BathRoom" Type="int" />
+    <Property Name="PackingPlace" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="Created_at" Type="date" />
+    <Property Name="Create_post" Type="date" />
+    <Property Name="Status_ID" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="Updated_at" Type="date" />
+    <Property Name="Sale_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="PROPERTY_FEATURE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Property_ID" Type="int" />
+    <Property Name="Feature_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="PROPERTY_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeType" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="STREET">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StreetName" Type="nvarchar" MaxLength="50" />
+    <Property Name="District_ID" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Role" Type="nvarchar" MaxLength="30" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="WARD">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WardName" Type="nvarchar" MaxLength="50" />
+    <Property Name="District_ID" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <Association Name="FK_PROPERTY_DISTRICT">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="District_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_FEATURE_FEATURE">
+    <End Role="FEATURE" Type="Self.FEATURE" Multiplicity="0..1" />
+    <End Role="PROPERTY_FEATURE" Type="Self.PROPERTY_FEATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FEATURE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY_FEATURE">
+        <PropertyRef Name="Feature_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_FEATURE_PROPERTY">
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="0..1" />
+    <End Role="PROPERTY_FEATURE" Type="Self.PROPERTY_FEATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPERTY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY_FEATURE">
+        <PropertyRef Name="Property_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_PROJECT_STATUS">
+    <End Role="PROJECT_STATUS" Type="Self.PROJECT_STATUS" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROJECT_STATUS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="Status_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_PROPERTY_TYPE">
+    <End Role="PROPERTY_TYPE" Type="Self.PROPERTY_TYPE" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPERTY_TYPE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="PropertyType_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_STREET1">
+    <End Role="STREET" Type="Self.STREET" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STREET">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="Street_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_USER">
+    <End Role="USER" Type="Self.USER" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_USER1">
+    <End Role="USER" Type="Self.USER" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="Sale_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROPERTY_WARD">
+    <End Role="WARD" Type="Self.WARD" Multiplicity="0..1" />
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WARD">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROPERTY">
+        <PropertyRef Name="Ward_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STREET_DISTRICT">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="STREET" Type="Self.STREET" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="STREET">
+        <PropertyRef Name="District_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WARD_DISTRICT">
+    <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
+    <End Role="WARD" Type="Self.WARD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DISTRICT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="WARD">
+        <PropertyRef Name="District_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Team12ModelStoreContainer">
+    <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FEATURE" EntityType="Self.FEATURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IMAGES" EntityType="Self.IMAGES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROJECT_STATUS" EntityType="Self.PROJECT_STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROPERTY" EntityType="Self.PROPERTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROPERTY_FEATURE" EntityType="Self.PROPERTY_FEATURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROPERTY_TYPE" EntityType="Self.PROPERTY_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STREET" EntityType="Self.STREET" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WARD" EntityType="Self.WARD" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PROPERTY_DISTRICT" Association="Self.FK_PROPERTY_DISTRICT">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_FEATURE_FEATURE" Association="Self.FK_PROPERTY_FEATURE_FEATURE">
+      <End Role="FEATURE" EntitySet="FEATURE" />
+      <End Role="PROPERTY_FEATURE" EntitySet="PROPERTY_FEATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_FEATURE_PROPERTY" Association="Self.FK_PROPERTY_FEATURE_PROPERTY">
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="PROPERTY_FEATURE" EntitySet="PROPERTY_FEATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_PROJECT_STATUS" Association="Self.FK_PROPERTY_PROJECT_STATUS">
+      <End Role="PROJECT_STATUS" EntitySet="PROJECT_STATUS" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_PROPERTY_TYPE" Association="Self.FK_PROPERTY_PROPERTY_TYPE">
+      <End Role="PROPERTY_TYPE" EntitySet="PROPERTY_TYPE" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_STREET1" Association="Self.FK_PROPERTY_STREET1">
+      <End Role="STREET" EntitySet="STREET" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_USER" Association="Self.FK_PROPERTY_USER">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_USER1" Association="Self.FK_PROPERTY_USER1">
+      <End Role="USER" EntitySet="USER" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROPERTY_WARD" Association="Self.FK_PROPERTY_WARD">
+      <End Role="WARD" EntitySet="WARD" />
+      <End Role="PROPERTY" EntitySet="PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STREET_DISTRICT" Association="Self.FK_STREET_DISTRICT">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="STREET" EntitySet="STREET" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WARD_DISTRICT" Association="Self.FK_WARD_DISTRICT">
+      <End Role="DISTRICT" EntitySet="DISTRICT" />
+      <End Role="WARD" EntitySet="WARD" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
