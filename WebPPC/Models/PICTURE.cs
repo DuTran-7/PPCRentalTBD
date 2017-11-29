@@ -12,19 +12,11 @@ namespace WebPPC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class WARD
+    public partial class PICTURE
     {
-        public WARD()
-        {
-            this.PROPERTies = new HashSet<PROPERTY>();
-        }
+        public int id { get; set; }
+        public int Property_id { get; set; }
     
-        public int ID { get; set; }
-        public string WardName { get; set; }
-        public Nullable<int> District_ID { get; set; }
-        public Nullable<bool> Status { get; set; }
-    
-        public virtual DISTRICT DISTRICT { get; set; }
-        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
+        public virtual PROPERTY PROPERTY { get; set; }
     }
 }

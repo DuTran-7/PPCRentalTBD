@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
     public class ProjectController : Controller
     {
 
-        Team12Entities1 model = new Team12Entities1();
+        DemoPPCRentalEntities1 model = new DemoPPCRentalEntities1();
         public ActionResult ProjectI()
         {
             var pj = model.PROPERTies.ToList();

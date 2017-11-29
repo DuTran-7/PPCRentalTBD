@@ -7,7 +7,7 @@
 }
 
 <h2>PostProject</h2>
-
+<link href="~/Content/agency.min.css" rel="stylesheet" />
 
     @using (Html.BeginForm("PostProject", "Post", FormMethod.Post, new { enctype = "multipart/form-data" } ))
     {
@@ -23,16 +23,18 @@
                     @Html.EditorFor(model => model.PropertyName, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.PropertyName)
                 </div>
+
             </div>
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
                 <div class="col-md-10">
-                    <input type="file" name="Avatar" class="form-control" />
+                    <input type="file" name="Avatar" class="form-control" required data-validation-required-message="" />
                     @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger " })
                 </div>
+                <p class="help-block text-danger"></p>
             </div>
-
+            
             <div class="form-group">
                 @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
                 <div class="col-md-10">

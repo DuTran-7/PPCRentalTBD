@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
 {
     public class HomeController : Controller
     {
-        Team12Entities1 db = new Team12Entities1();
+        DemoPPCRentalEntities1 db = new DemoPPCRentalEntities1();
         public ActionResult Index()
         {
             List<PROPERTY> product = new List<PROPERTY>();
@@ -63,5 +63,59 @@ namespace WebPPC.Controllers
             }
             return View();
         }
+        //[HttpGet]
+        //public ActionResult Signup()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult Signup(USER user, SignUpModel model)
+        //{
+        //    if(ModelState.IsValid)
+        //    {
+
+        //    }
+        //    return View(model);
+        //    var sig = new USER();
+        //    sig.Address = user.Address;
+        //    sig.Email = user.Email;
+        //    sig.FullName = user.FullName;
+        //    sig.Password = user.Password;
+        //    sig.Phone = user.Phone;
+        //    db.USERs.Add(sig);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index", "Home");
+        //}
+        [HttpGet]
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult SignUp(SignUpModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                var sig = new USER();
+                sig.Address = model.Address;
+                sig.Email = model.Email;
+                sig.FullName = model.FullName;
+                sig.Password = model.Password;
+                sig.Phone = model.Phone;
+                sig.Status = true;
+                
+                db.USERs.Add(sig);
+                db.SaveChanges();
+                ViewBag.Success = "Đăng ký thành công";
+                model = new SignUpModel();
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Đăng ký không thành công");
+            }
+            return View(model);
+        }
+        
     }
 }

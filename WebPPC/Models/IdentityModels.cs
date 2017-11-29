@@ -13,5 +13,7 @@ namespace WebPPC.Models
             : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<WebPPC.Models.SignUpModel> SignUpModels { get; set; }
     }
 }

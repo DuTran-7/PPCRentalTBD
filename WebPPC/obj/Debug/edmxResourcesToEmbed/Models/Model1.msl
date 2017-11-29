@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Team12ModelStoreContainer" CdmEntityContainer="Team12Entities1">
+  <EntityContainerMapping StorageEntityContainer="DemoPPCRentalModelStoreContainer" CdmEntityContainer="DemoPPCRentalEntities1">
     <EntitySetMapping Name="DISTRICTs">
-      <EntityTypeMapping TypeName="Team12Model.DISTRICT">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.DISTRICT">
         <MappingFragment StoreEntitySet="DISTRICT">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FEATUREs">
-      <EntityTypeMapping TypeName="Team12Model.FEATURE">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.FEATURE">
         <MappingFragment StoreEntitySet="FEATURE">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="FeatureName" ColumnName="FeatureName" />
@@ -19,17 +19,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="IMAGES">
-      <EntityTypeMapping TypeName="Team12Model.IMAGE">
-        <MappingFragment StoreEntitySet="IMAGES">
+    <EntitySetMapping Name="PICTUREs">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.PICTURE">
+        <MappingFragment StoreEntitySet="PICTURE">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="filepath" ColumnName="filepath" />
+          <ScalarProperty Name="Property_id" ColumnName="Property_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PROJECT_STATUS">
-      <EntityTypeMapping TypeName="Team12Model.PROJECT_STATUS">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.PROJECT_STATUS">
         <MappingFragment StoreEntitySet="PROJECT_STATUS">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Status_Name" ColumnName="Status_Name" />
@@ -38,7 +37,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PROPERTies">
-      <EntityTypeMapping TypeName="Team12Model.PROPERTY">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.PROPERTY">
         <MappingFragment StoreEntitySet="PROPERTY">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
@@ -66,7 +65,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PROPERTY_FEATURE">
-      <EntityTypeMapping TypeName="Team12Model.PROPERTY_FEATURE">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.PROPERTY_FEATURE">
         <MappingFragment StoreEntitySet="PROPERTY_FEATURE">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Property_ID" ColumnName="Property_ID" />
@@ -75,7 +74,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PROPERTY_TYPE">
-      <EntityTypeMapping TypeName="Team12Model.PROPERTY_TYPE">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.PROPERTY_TYPE">
         <MappingFragment StoreEntitySet="PROPERTY_TYPE">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="CodeType" ColumnName="CodeType" />
@@ -85,7 +84,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="STREETs">
-      <EntityTypeMapping TypeName="Team12Model.STREET">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.STREET">
         <MappingFragment StoreEntitySet="STREET">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="StreetName" ColumnName="StreetName" />
@@ -94,19 +93,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="Team12Model.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="USERs">
-      <EntityTypeMapping TypeName="Team12Model.USER">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.USER">
         <MappingFragment StoreEntitySet="USER">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -120,7 +108,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="WARDs">
-      <EntityTypeMapping TypeName="Team12Model.WARD">
+      <EntityTypeMapping TypeName="DemoPPCRentalModel.WARD">
         <MappingFragment StoreEntitySet="WARD">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="WardName" ColumnName="WardName" />

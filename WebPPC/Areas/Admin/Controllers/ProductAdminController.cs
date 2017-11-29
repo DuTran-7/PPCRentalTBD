@@ -8,7 +8,7 @@ namespace WebPPC.Areas.Admin.Controllers
 {
     public class ProductAdminController : Controller
     {
-        Team12Entities1 model = new Team12Entities1();
+        DemoPPCRentalEntities1 model = new DemoPPCRentalEntities1();
         //
         // GET: /Admin/ProductAdmin/
         public ActionResult Index()
