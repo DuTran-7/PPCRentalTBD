@@ -60,53 +60,60 @@ namespace WebPPC.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult PostProject(PROPERTY property, HttpPostedFileBase Avatar, USER us,HttpPostedFileBase Image)
+        public ActionResult PostProject( HttpPostedFileBase Avatar, USER us,HttpPostedFileBase Image,PostModel model)
         {
-
-            string avatar = "";
-            if (Avatar.ContentLength > 0)
+            if (ModelState.IsValid)
             {
-                var filename = Path.GetFileName(Avatar.FileName);
-                var path = Path.Combine(Server.MapPath("~/img"), filename);
-                Avatar.SaveAs(path);
-                avatar = filename;
+                string avatar = "";
+                if (Avatar.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(Avatar.FileName);
+                    var path = Path.Combine(Server.MapPath("~/img"), filename);
+                    Avatar.SaveAs(path);
+                    avatar = filename;
+                }
+                string image = "";
+                if (Image.ContentLength > 0)
+                {
+                    var filename = Path.GetFileName(Image.FileName);
+                    var path = Path.Combine(Server.MapPath("~/img"), filename);
+                    Image.SaveAs(path);
+                    image = filename;
+                }
+                var pro = new PROPERTY();
+                pro.PropertyName = model.PropertyName;
+                pro.PropertyType_ID = model.PropertyType_ID;
+                pro.Avatar = avatar;
+                pro.Images = image;
+                //pro.DISTRICT = model.DISTRICT;
+                pro.District_ID = model.District_ID;
+                pro.Street_ID = model.Street_ID;
+                pro.Ward_ID = model.Ward_ID;
+                //pro.STREET = model.STREET;
+                pro.Price = model.Price;
+                pro.Area = model.Area;
+                pro.BathRoom = model.BathRoom;
+                pro.BedRoom = model.BedRoom;
+                pro.PackingPlace = model.PackingPlace;
+                pro.Content = model.Content;
+                //pro.UserID = model.UserID;
+                pro.UnitPrice = model.UnitPrice;
+                //pr.Email = us.Email;
+                //pr.Phone = us.Phone;
+                //pro.Create_post = DateTime.Now.;
+                pro.Updated_at = DateTime.Now;
+                pro.Created_at = DateTime.Now;
+                db.PROPERTies.Add(pro);
+                db.SaveChanges();
+                ViewBag.Success = "Đăng ký thành công";
+                model = new PostModel();
+                return RedirectToAction("Index", "Home");
             }
-            string image = "";
-            if (Image.ContentLength > 0)
+            else
             {
-                var filename = Path.GetFileName(Image.FileName);
-                var path = Path.Combine(Server.MapPath("~/img"), filename);
-                Image.SaveAs(path);
-                image = filename;
+                ModelState.AddModelError("", "Đăng bài không thành công, vui lòng kiểm tra lại các trường thông tin của bạn");
             }
-            var pro = new PROPERTY();
-            var pr = new USER();
-            pro.PropertyName = property.PropertyName;
-            pro.PropertyType_ID = property.PropertyType_ID;
-            pro.Avatar = avatar;
-            pro.Images = image;
-            pro.DISTRICT = property.DISTRICT;
-            pro.District_ID = property.District_ID;
-            pro.Street_ID = property.Street_ID;
-            pro.Ward_ID = property.Ward_ID;
-            pro.STREET = property.STREET;
-            pro.Price = property.Price;
-            pro.Area = property.Area;
-            pro.BathRoom = property.BathRoom;
-            pro.BedRoom = property.BedRoom;
-            pro.PackingPlace = property.PackingPlace;
-            pro.Content = property.Content;
-            pro.UserID = property.UserID;
-            pro.UnitPrice = property.UnitPrice;
-            pr.Email = us.Email;
-            pr.Phone = us.Phone;
-            //pro.Create_post = DateTime.Now.;
-            pro.Updated_at = DateTime.Now;
-            pro.Created_at = DateTime.Now;
-            db.PROPERTies.Add(pro);
-            db.USERs.Add(pr);
-            db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return View(model);
         }
         public JsonResult GetStreet(int District_id)
         {

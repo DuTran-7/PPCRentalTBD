@@ -15,5 +15,7 @@ namespace WebPPC.Models
         }
 
         public System.Data.Entity.DbSet<WebPPC.Models.SignUpModel> SignUpModels { get; set; }
+
+        public System.Data.Entity.DbSet<WebPPC.Models.PostModel> PostModels { get; set; }
     }
 }
