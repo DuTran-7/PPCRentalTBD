@@ -13,10 +13,10 @@ namespace WebPPC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DemoPPCRentalEntities1 : DbContext
+    public partial class Team12Entities1 : DbContext
     {
-        public DemoPPCRentalEntities1()
-            : base("name=DemoPPCRentalEntities1")
+        public Team12Entities1()
+            : base("name=Team12Entities1")
         {
         }
     
@@ -27,12 +27,13 @@ namespace WebPPC.Models
     
         public virtual DbSet<DISTRICT> DISTRICTs { get; set; }
         public virtual DbSet<FEATURE> FEATUREs { get; set; }
-        public virtual DbSet<PICTURE> PICTUREs { get; set; }
+        public virtual DbSet<IMAGE> IMAGES { get; set; }
         public virtual DbSet<PROJECT_STATUS> PROJECT_STATUS { get; set; }
         public virtual DbSet<PROPERTY> PROPERTies { get; set; }
         public virtual DbSet<PROPERTY_FEATURE> PROPERTY_FEATURE { get; set; }
         public virtual DbSet<PROPERTY_TYPE> PROPERTY_TYPE { get; set; }
         public virtual DbSet<STREET> STREETs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WARD> WARDs { get; set; }
     }

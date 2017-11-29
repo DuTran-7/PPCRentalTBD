@@ -14,6 +14,7 @@ namespace WebPPC.Models
     
     public partial class STREET
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public STREET()
         {
             this.PROPERTies = new HashSet<PROPERTY>();
@@ -25,6 +26,7 @@ namespace WebPPC.Models
         public Nullable<bool> Status { get; set; }
     
         public virtual DISTRICT DISTRICT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY> PROPERTies { get; set; }
     }
 }

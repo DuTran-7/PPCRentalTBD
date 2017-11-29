@@ -1,7 +1,7 @@
 ﻿@model WebPPC.Models.SignUpModel
 
 @{
-    ViewBag.Title = "Sign";
+    ViewBag.Title = "Sign Up";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,15 +12,15 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>SignUpModel</h4>
+        <h4></h4>
         <hr />
         @Html.ValidationSummary(true)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.Email)
-                @Html.ValidationMessageFor(model => model.Email)
+                @Html.TextBoxFor(model => model.Email, new { @class = "emaill"})
+                @Html.ValidationMessageFor(model => model.Email,"", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -28,7 +28,7 @@
             @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.PasswordFor(model => model.Password)
-                @Html.ValidationMessageFor(model => model.Password)
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             @Html.LabelFor(model => model.FullName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.TextBoxFor(model => model.FullName)
-                @Html.ValidationMessageFor(model => model.FullName)
+                @Html.ValidationMessageFor(model => model.FullName,"", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -75,3 +75,10 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<script type="text/javascript">
+    var error = "";
+    var emailC = document.getElementById("emaill");
+    if (emailC = "") {
+        alert("Nhap lai emmail");
+    }
+</script>

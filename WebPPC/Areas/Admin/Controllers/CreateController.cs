@@ -9,7 +9,7 @@ namespace WebPPC.Areas.Admin.Controllers
 {
     public class CreateController : Controller
     {
-        DemoPPCRentalEntities1 db = new DemoPPCRentalEntities1();
+        Team12Entities1 db = new Team12Entities1();
         // GET: /Admin/Create/
         [HttpGet]
         public ActionResult CreateProject()

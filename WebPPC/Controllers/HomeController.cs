@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
 {
     public class HomeController : Controller
     {
-        DemoPPCRentalEntities1 db = new DemoPPCRentalEntities1();
+        Team12Entities1 db = new Team12Entities1();
         public ActionResult Index()
         {
             List<PROPERTY> product = new List<PROPERTY>();
@@ -29,8 +29,8 @@ namespace WebPPC.Controllers
                 return RedirectToAction("Login");
             }
         }
-        
-        
+
+
 
         public ActionResult Contact()
         {
@@ -94,28 +94,42 @@ namespace WebPPC.Controllers
         [HttpPost]
         public ActionResult SignUp(SignUpModel model)
         {
-            if(ModelState.IsValid)
+
+            if (ModelState.IsValid)
             {
-                var sig = new USER();
-                sig.Address = model.Address;
-                sig.Email = model.Email;
-                sig.FullName = model.FullName;
-                sig.Password = model.Password;
-                sig.Phone = model.Phone;
-                sig.Status = true;
-                
-                db.USERs.Add(sig);
-                db.SaveChanges();
-                ViewBag.Success = "Đăng ký thành công";
-                model = new SignUpModel();
-                return RedirectToAction("Index", "Home");
+                var siag = db.USERs.FirstOrDefault(x => x.Email == model.Email);
+                if (siag == null)
+                {
+                    var sig = new USER();
+                    sig.Address = model.Address;
+                    sig.Email = model.Email;
+                    sig.FullName = model.FullName;
+                    sig.Password = model.Password;
+                    sig.Phone = model.Phone;
+                    sig.Status = true;
+
+                    db.USERs.Add(sig);
+                    db.SaveChanges();
+                    ViewBag.Success = "Đăng ký thành công";
+                    model = new SignUpModel();
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Email đã tồn tại");
+
+                }
+                return View();
             }
             else
             {
                 ModelState.AddModelError("", "Đăng ký không thành công");
+
             }
-            return View(model);
+            return View();
+
         }
-        
-    }
+            
+}
+
 }
