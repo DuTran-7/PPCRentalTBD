@@ -63,29 +63,7 @@ namespace WebPPC.Controllers
             }
             return View();
         }
-        //[HttpGet]
-        //public ActionResult Signup()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public ActionResult Signup(USER user, SignUpModel model)
-        //{
-        //    if(ModelState.IsValid)
-        //    {
-
-        //    }
-        //    return View(model);
-        //    var sig = new USER();
-        //    sig.Address = user.Address;
-        //    sig.Email = user.Email;
-        //    sig.FullName = user.FullName;
-        //    sig.Password = user.Password;
-        //    sig.Phone = user.Phone;
-        //    db.USERs.Add(sig);
-        //    db.SaveChanges();
-        //    return RedirectToAction("Index", "Home");
-        //}
+        
         [HttpGet]
         public ActionResult SignUp()
         {

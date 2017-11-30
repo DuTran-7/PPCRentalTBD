@@ -54,6 +54,14 @@ namespace WebPPC.Areas.Admin.Controllers
             model.SaveChanges();
             return RedirectToAction("Index");
         }
-       
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var property = model.PROPERTies.Find(id);
+            model.PROPERTies.Remove(property);
+            model.SaveChanges();
+            return new EmptyResult();
+        }
+
     }
 }

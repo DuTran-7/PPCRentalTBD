@@ -5,15 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Sign</h2>
+<style>
+    #button {
+        background-color: #1C1C1C;
+        color: white;
+        border-radius: 2px;
+        padding: 12px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
 
+    .g {
+        padding-left: 38%;
+    }
+
+    #Email, #Password, #ConfirmPassword, #FullName, #Phone, #Address {
+        width: 50%;
+    }
+</style>
+<h2 style="text-align:center">Sign Up</h2>
+<hr />
 @using (Html.BeginForm("SignUp", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal">
-        <h4></h4>
-        <hr />
+    <div class="form-horizontal g">
+    
+      
         @Html.ValidationSummary(true)
 
         <div class="form-group">
@@ -66,7 +88,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input id="button" type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>

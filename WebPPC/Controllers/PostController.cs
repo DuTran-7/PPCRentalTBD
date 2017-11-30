@@ -105,7 +105,7 @@ namespace WebPPC.Controllers
                 pro.Created_at = DateTime.Now;
                 db.PROPERTies.Add(pro);
                 db.SaveChanges();
-                ViewBag.Success = "Đăng ký thành công";
+                //ViewBag.Success = "Đăng ký thành công";
                 model = new PostModel();
                 return RedirectToAction("Index", "Home");
             }

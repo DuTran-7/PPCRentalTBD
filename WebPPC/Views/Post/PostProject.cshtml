@@ -7,21 +7,31 @@
 }
 
 <style>
-    
-    #avatar{
-        width:500px;
+
+    #button {
+        background-color: #1C1C1C;
+        color: white;
+        border-radius: 2px;
+        padding: 12px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
     }
+   
 </style>
 
-<h2>PostProject</h2>
-
+<h2 style="text-align:center">Post Project</h2>
+<hr />
 @using (Html.BeginForm("PostProject", "Post", FormMethod.Post, new { enctype = "multipart/form-data" })) 
 {
     @Html.AntiForgeryToken()
     
-    <div id="ab" class="form-horizontal">
-        <h4>PostModel</h4>
-        <hr />
+    <div id="ab" class="form-horizontal g">
+      
+        
         @Html.ValidationSummary(true)
 
         <div id="avatar" class="form-group">
@@ -35,8 +45,8 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
-            <div class="col-md-10">
-                <input type="file" name="Avatar" class="form-control"  />
+            <div class="col-md-10" style="width:240px">
+                <input type="file" name="Avatar" class="form-control" />
                 @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger  " })
             </div>
             <p class="help-block text-danger"></p>
@@ -44,7 +54,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10 " style="width:240px">
                 <input type="file" name="Image" class="form-control" required data-validation-required-message="" />
                 @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
             </div>
@@ -123,32 +133,6 @@
         </div>
 
 
-
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.Created_at, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Created_at)
-                @Html.ValidationMessageFor(model => model.Created_at)
-            </div>
-        </div>*@
-
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.Create_post, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Create_post)
-                @Html.ValidationMessageFor(model => model.Create_post)
-            </div>
-        </div>*@
-
-        @*<div class="form-group">
-            @Html.LabelFor(model => model.Status_ID, "Status_ID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Status_ID", String.Empty)
-                @Html.ValidationMessageFor(model => model.Status_ID)
-            </div>
-        </div>*@
-
-
         <div class="form-group">
             @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
 
@@ -160,7 +144,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input id="button" type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>

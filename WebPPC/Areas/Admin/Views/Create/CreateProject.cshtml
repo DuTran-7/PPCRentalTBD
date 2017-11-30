@@ -5,18 +5,18 @@
     //Layout = null;///"~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     Layout = "~/Views/Shared/_Layout.cshtml";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    var db = new DemoPPCRentalEntities1();
+    var db = new Team12Entities1();
 }
 
-<h2>PostProject</h2>
-
+<h2 style="text-align:center">Post Project</h2>
+<hr />
 
 @using (Html.BeginForm("CreateProject", "Create", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <hr />
+       
         @Html.ValidationSummary(true)
 
         <div class="form-group">
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" style="width:210px">
                 <input type="file" name="Avatar" class="form-control" />
                 @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger " })
             </div>
@@ -37,7 +37,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" style="width:210px">
                 <input type="file" name="Image" class="form-control" />
                 @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
             </div>

@@ -14,7 +14,7 @@
         overflow: scroll;
     }
 </style>
-    <a href="/Admin/Create/CreateProject"><h6>Create</h6></a>
+<a href="/Admin/Create/CreateProject"><h6>Create</h6></a>
 <table class="table" id="scroll">
     <tr>
         <th>
@@ -33,56 +33,32 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Area)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BedRoom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BathRoom)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PackingPlace)
+            <p>Feature</p>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PROJECT_STATUS.Status_Name)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Created_at)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Create_post)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Note)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Updated_at)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DISTRICT.DistrictName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.WARD.WardName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.STREET.StreetName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PROPERTY_TYPE.CodeType)
-        </th>
-        
-        <th>
-            @Html.DisplayNameFor(model => model.USER.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PROJECT_STATUS.Status_Name)
-        </th>
-        
+
+        @*<th>
+                @Html.DisplayNameFor(model => model.DISTRICT.DistrictName)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.STREET.StreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.USER.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.WARD.WardName)
+            </th>*@
 
         <th></th>
     </tr>
@@ -90,7 +66,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
+            <td style="text-align: justify;">
                 @Html.DisplayFor(modelItem => item.PropertyName)
             </td>
 
@@ -98,67 +74,32 @@
                 <img src="/img/@item.Avatar" width="100" />
             </td>
 
+
             <td>
-                @*@Html.DisplayFor(modelItem => item.Avatar)*@
-                <img src="/img/@item.Images" width="100" />
+                @Html.DisplayFor(modelItem => item.Avatar)
+            </td>
+            <td style="text-align: justify;">
+                @item.Content
             </td>
             <td>
-                @item.Content;
+
+                @Html.DisplayFor(modelItem => item.Price)   @Html.DisplayFor(modelItem => item.UnitPrice)
+
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitPrice)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Area)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.BedRoom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BathRoom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PackingPlace)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WARD.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Created_at)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Create_post)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Note)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Updated_at)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DISTRICT.DistrictName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.WARD.WardName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.STREET.StreetName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PROPERTY_TYPE.CodeType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.USER.Email)
+                @Html.DisplayFor(modelItem => item.BedRoom)&nbsp;<img src="~/img/iconbed.PNG" alt="Bed-Rooom: " width="20">
+                <br>
+                @Html.DisplayFor(modelItem => item.BathRoom) &nbsp;<img src="~/img/iconbath.PNG" alt="Bath-Room: " width="20">
+                <br>
+                @Html.DisplayFor(modelItem => item.PackingPlace) &nbsp;<img src="~/img/iconparking.PNG" alt="Parking-Place: " width="20">
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
-            </td>         
-            
-            
-
+            </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID })
                 @Html.ActionLink("Details", "Details", new { id = item.ID })

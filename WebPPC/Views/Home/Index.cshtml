@@ -42,7 +42,7 @@
                     </div>
                     <img class="img-fluid" src="/img/@item.Avatar " alt="">
                     <div class="portfolio-caption">
-                        <h4>@item.PropertyName</h4>
+                        <h4>@item.PropertyName.Substring(0, Math.Min(@item.PropertyName.Length, 20))</h4>
                         <p> @item.Content.Substring(0,Math.Min(@item.Content.Length,50))</p>
                         <strong style="color:red; font-size: 140%">$@item.Price</strong>
                         <br>

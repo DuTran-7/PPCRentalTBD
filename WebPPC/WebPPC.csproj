@@ -330,8 +330,6 @@
     <Content Include="Areas\Admin\Views\ProductAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\ProductAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Create\CreateProject2.cshtml" />
-    <Content Include="Areas\Admin\Views\Create\CreateProject1.cshtml" />
     <Content Include="Areas\Admin\Views\Create\CreateProject.cshtml" />
     <Content Include="fonts\style.scss" />
     <EntityDeploy Include="Models\Model1.edmx">
@@ -389,9 +387,6 @@
     <Content Include="Views\Property\Detail.cshtml" />
     <Content Include="Views\Project\Project.cshtml" />
     <Content Include="Views\Project\ProjectI.cshtml" />
-    <Content Include="Views\Post\Post1.cshtml" />
-    <Content Include="Views\Post\PostProject1.cshtml" />
-    <Content Include="Views\Post\Post.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Views\Post\PostProject.cshtml" />
