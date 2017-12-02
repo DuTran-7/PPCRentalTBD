@@ -54,13 +54,47 @@ namespace WebPPC.Areas.Admin.Controllers
             model.SaveChanges();
             return RedirectToAction("Index");
         }
-        [HttpPost]
+        public ActionResult Details(int id)
+        {
+
+            //Lấy ra đối tượng sách theo mã 
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
+            if (property == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            return View(property);
+
+        }
+        [HttpGet]
         public ActionResult Delete(int id)
         {
-            var property = model.PROPERTies.Find(id);
+            //Lấy ra đối tượng sách theo mã 
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
+            if (property == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+
+            return View(property);
+        }
+        [HttpPost, ActionName("Delete")]
+
+        public ActionResult AcceptDelete(int id)
+        {
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
+            if (property == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
             model.PROPERTies.Remove(property);
             model.SaveChanges();
-            return new EmptyResult();
+            return RedirectToAction("Index");
+
         }
 
     }

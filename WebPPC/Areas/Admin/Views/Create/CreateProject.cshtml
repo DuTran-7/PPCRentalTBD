@@ -2,8 +2,8 @@
 @using WebPPC.Models;
 @{
     ViewBag.Title = "CreateProject";
-    //Layout = null;///"~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     var db = new Team12Entities1();
 }
@@ -178,10 +178,10 @@
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
 
 @section Scripts {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />

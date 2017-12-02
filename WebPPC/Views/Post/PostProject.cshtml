@@ -7,7 +7,6 @@
 }
 
 <style>
-
     #button {
         background-color: #1C1C1C;
         color: white;
@@ -20,18 +19,17 @@
         margin: 4px 2px;
         cursor: pointer;
     }
-   
 </style>
 
 <h2 style="text-align:center">Post Project</h2>
 <hr />
-@using (Html.BeginForm("PostProject", "Post", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+@using (Html.BeginForm("PostProject", "Post", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div id="ab" class="form-horizontal g">
-      
-        
+
+
         @Html.ValidationSummary(true)
 
         <div id="avatar" class="form-group">
@@ -67,7 +65,7 @@
         </div>
         <div class="form-group col-md-10">
 
-        @Html.DropDownList("District_ID",
+            @Html.DropDownList("District_ID",
                           new SelectList(db.DISTRICTs, "ID", "DistrictName"),
                                   "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
         </div>
@@ -95,8 +93,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.UnitPrice)
-                @Html.ValidationMessageFor(model => model.UnitPrice)
+                <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND">
             </div>
         </div>
 
@@ -141,10 +138,17 @@
                 @Html.ValidationMessageFor(model => model.Content)
             </div>
         </div>
+        <div class="form-group col-md-10">
+            <select class="form-control control-label col-md-2 valid" id="Status_ID" name="Status_ID">
+                <option value="1">Chưa duyệt</option>
+                <option value="2">Lưu nháp</option>
+            </select>
 
+        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input id="button" type="submit" value="Create" class="btn btn-default" />
+                <input id="button" type="submit" value="Save Drafts" class="btn btn-default" />
             </div>
         </div>
     </div>

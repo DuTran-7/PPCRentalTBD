@@ -79,6 +79,8 @@ namespace WebPPC.Models
         [Required(ErrorMessage = "Vui lòng nhập thông tin cho dự án của bạn")]
         public string Content { set; get; }
 
-        
+
+
+        public int? Status_ID { get; set; }
     }
 }

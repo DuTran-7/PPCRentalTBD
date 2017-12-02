@@ -25,9 +25,23 @@ namespace WebPPC.Controllers
                 || x.BedRoom.Equals(int.Parse(bedroom == "" ? "0" : bedroom))
                || x.BathRoom.Equals(int.Parse(bathroom == "" ? "0" : bathroom))
                || x.PackingPlace.Equals(int.Parse(packingplace == "" ? "0" : packingplace))
-                  || (x.Avatar.Contains(area) && area != ""));
+                 );
 
             return View(pj);
         }
+        public JsonResult GetStreet(int District_id)
+        {
+            return Json(
+            model.STREETs.Where(s => s.District_ID == District_id)
+            .Select(s => new { id = s.ID, text = s.StreetName }).ToList(),
+            JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult GetWard(int District_id)
+        {
+            return Json(
+            model.WARDs.Where(s => s.District_ID == District_id)
+            .Select(s => new { id = s.ID, text = s.WardName }).ToList(),
+            JsonRequestBehavior.AllowGet);
+        } 
     }
 }

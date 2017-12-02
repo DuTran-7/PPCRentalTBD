@@ -1,10 +1,9 @@
 ﻿@model IEnumerable<WebPPC.Models.PROPERTY>
 
 @{
-    ViewBag.Title = "Admin Page";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-
-    }
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
 <h2 style="text-align:center">Project List</h2>
 <style>
@@ -14,8 +13,27 @@
         margin-top: 5px;
         overflow: scroll;
     }
+    .log{
+        text-align:right;
+        padding-right:20px;
+    }
 </style>
-<a href="/Admin/Create/CreateProject"><h6>Create</h6></a>
+<div class="log">
+@if (Session["UserID"] == null)
+{
+    @Html.Partial("_LoginPartial")
+}
+else
+{
+    <a href="#"style="color:black"> Hello, @Session["FullName"]</a>
+    <br>
+    <a href="/Home/Logout/@Session["UserID"]" style="color:black">
+        
+        <img src="~/img/iconlogout.png" width="40" />
+    </a>
+}
+    </div>
+<a href="/Post/PostProject"><h6>Create</h6></a>
 <table class="table" id="scroll">
     <tr>
         <th>
@@ -102,6 +120,7 @@
                 @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
             </td>
             <td>
+              
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID })
                 @Html.ActionLink("Details", "Details", new { id = item.ID })
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID })

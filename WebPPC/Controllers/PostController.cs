@@ -46,6 +46,7 @@ namespace WebPPC.Controllers
             pro.Content = property.Content;
             pro.USER.Email = property.USER.Email;
             pro.USER.Phone = property.USER.Phone;
+            pro.UserID = int.Parse(Session["UserID"].ToString());
             //pro.Create_post = DateTime.Now.;
             pro.Updated_at = DateTime.Now;
             db.PROPERTies.Add(pro);
@@ -101,6 +102,8 @@ namespace WebPPC.Controllers
                 //pr.Email = us.Email;
                 //pr.Phone = us.Phone;
                 //pro.Create_post = DateTime.Now.;
+
+                pro.Status_ID = model.Status_ID;
                 pro.Updated_at = DateTime.Now;
                 pro.Created_at = DateTime.Now;
                 db.PROPERTies.Add(pro);

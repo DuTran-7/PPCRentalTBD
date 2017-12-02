@@ -8,8 +8,7 @@
 
 <style>
     .form-group {
-        width: 60%;
-        padding-left: 40%;
+        padding-left: 35%;
     }
 
     .btn-default {
@@ -42,27 +41,32 @@
     }
 </style>
 
+<h2 style="text-align:center;padding-top:25px;padding-bottom:20px;">Search Project</h2>
+<form class="filter " role="search" action="@Url.Action("Project","Project")" method="get">
 
 
-<form class="filter" role="search" action="@Url.Action("Project","Project")" method="get">
-    <h2 style="text-align:center;padding-top:25px;padding-bottom:20px;">Search Project</h2>
-    <div class="form-group">
+    <div class="form-group form-inline">
         <input type="text" class="form-control" placeholder="Name" name="name">
-        <br>
+        &nbsp;
         <input type="text" class="form-control" placeholder="Price" name="price">
-        <br>
+    </div>
+    <div class="form-group form-inline">
         <input type="text" class="form-control" placeholder="Bedroom" name="bedroom">
-        <br>
+        &nbsp;
         <input type="text" class="form-control" placeholder="BathRoom" name="bathroom">
-        <br>
+    </div>
+    <div class="form-group form-inline">
         <input type="text" class="form-control" placeholder="PackingPlace" name="packingplace">
-        <br>
+        &nbsp;
         <input type="text" class="form-control" placeholder="Area" name="area">
     </div>
+
+
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
 <br>
-<hr style="width:30%;text-align:center;size">
+
+<hr style="width: 30%; text-align: center; " color="black">
 
 <section id="portfolio">
 
@@ -84,9 +88,10 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
+
                     <img class="img-fluid" src="/img/@item.Avatar " alt="">
                     <div class="portfolio-caption">
-                        @*<h4>@item.PropertyName.Substring(0, 15)</h4>*@
+                        <h4>@item.PropertyName.Substring(0, Math.Min(@item.PropertyName.Length, 20))</h4>
                         <p> @item.Content.Substring(0, 50)  ...</p>
                         <strong style="color:red; font-size: 140%">$@item.Price</strong>
                         <br>

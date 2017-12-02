@@ -169,6 +169,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoAgencyController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\PropertyController.cs" />
@@ -253,6 +254,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style1.css" />
+    <Content Include="Content\stylelogin.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -264,6 +266,7 @@
     <Content Include="img\iconbed.png" />
     <Content Include="img\iconfacebook.png" />
     <Content Include="img\iconig.png" />
+    <Content Include="img\iconlogout.png" />
     <Content Include="img\iconmoney.png" />
     <Content Include="img\iconparking.png" />
     <Content Include="img\icontwitter.png" />
@@ -339,9 +342,12 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Admin\Views\ProductAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductAdmin\Details.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\contact_me.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\indexlogin.js" />
     <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -388,8 +394,10 @@
     <Content Include="Views\Project\Project.cshtml" />
     <Content Include="Views\Project\ProjectI.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\Signup.cshtml" />
     <Content Include="Views\Post\PostProject.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\LoAgency\List.cshtml" />
+    <Content Include="Views\Home\Logout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

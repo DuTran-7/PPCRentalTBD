@@ -12,8 +12,9 @@ namespace WebPPC.Controllers
         Team12Entities1 db = new Team12Entities1();
         public ActionResult Index()
         {
-            List<PROPERTY> product = new List<PROPERTY>();
-            product = db.PROPERTies.ToList();
+
+
+            var product = db.PROPERTies.ToList().Where(x => x.Status_ID == 3);
             return View(product);
         }
         public ActionResult Ind()
@@ -38,6 +39,8 @@ namespace WebPPC.Controllers
 
             return View();
         }
+
+
         [HttpGet]
         public ActionResult Login()
         {
@@ -53,7 +56,7 @@ namespace WebPPC.Controllers
                 {
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
-                    return RedirectToAction("PostProject", "Post");
+                    return RedirectToAction("List", "LoAgency");
                 }
             }
 
@@ -63,14 +66,28 @@ namespace WebPPC.Controllers
             }
             return View();
         }
-        
+
+        public ActionResult Logout(int id)
+        {
+            var user = db.USERs.FirstOrDefault(x => x.ID == id);
+            if (user != null)
+            {
+                Session["Fullname"] = null;
+                Session["UserID"] = null;
+            }
+            return RedirectToAction("Login");
+        }
+
+
         [HttpGet]
         public ActionResult SignUp()
         {
             return View();
         }
+
+
         [HttpPost]
-        public ActionResult SignUp(SignUpModel model)
+        public ActionResult SignUp(USER model)
         {
 
             if (ModelState.IsValid)
@@ -85,12 +102,11 @@ namespace WebPPC.Controllers
                     sig.Password = model.Password;
                     sig.Phone = model.Phone;
                     sig.Status = true;
-
                     db.USERs.Add(sig);
                     db.SaveChanges();
                     ViewBag.Success = "Đăng ký thành công";
-                    model = new SignUpModel();
-                    return RedirectToAction("Index", "Home");
+                    model = new USER();
+                    return RedirectToAction("Login", "Home");
                 }
                 else
                 {
@@ -107,7 +123,7 @@ namespace WebPPC.Controllers
             return View();
 
         }
-            
-}
+
+    }
 
 }
