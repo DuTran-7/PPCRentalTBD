@@ -50,13 +50,37 @@
                         <a class="nav-link js-scroll-trigger" href="#about">Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Home/Login">Post</a>
+                        <a class="nav-link js-scroll-trigger" href="/Post/PostProject">Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/Home/Contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Home/Contact">    </a>
+                    </li>
+                    @if (Session["UserID"] == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Home/Signup">ĐĂNG TIN FREE</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#"> Hello, @Session["FullName"]</a>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link js-scroll-trigger" href="/Home/Logout" >
+                                    /  Logout
+                                </a>
+                            </li>
+                    }
+
+                    <li class="nav-item">
+
                     </li>
                 </ul>
             </div>
@@ -76,7 +100,7 @@
 
 
 
-    <hr style="text-decoration:double;width:70%;"  color="black" />
+    <hr style="text-decoration:double;width:70%;" color="black" />
 
     <!-- Footer -->
     <footer>
@@ -111,7 +135,7 @@
                 <div class="col-md-4">
                     <p><strong>Phone:</strong> 096 420 0531   </p>
                     <p> <strong> Hotline:</strong> 092 029 756</p>
-                 
+
                 </div>
             </div>
         </div>

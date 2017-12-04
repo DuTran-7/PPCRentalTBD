@@ -62,15 +62,14 @@ namespace WebPPC.Controllers
 
             else
             {
-                ViewBag.mgs = "Tài khoản không tồn tại";
+                ViewBag.mgs = "Email chưa đăng kí, vui lòng đăng kí !";
             }
             return View();
         }
 
-        public ActionResult Logout(int id)
+        public ActionResult Logout()
         {
-            var user = db.USERs.FirstOrDefault(x => x.ID == id);
-            if (user != null)
+            if (Session["Fullname"] != null)
             {
                 Session["Fullname"] = null;
                 Session["UserID"] = null;

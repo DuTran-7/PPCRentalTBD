@@ -14,6 +14,7 @@ namespace WebPPC.Controllers
         {
             var product = db.PROPERTies.ToList().Where(x => x.UserID==int.Parse(Session["UserID"].ToString()));
             return View(product);
+            ViewBag.nameUser = Session["FullName"].ToString(); 
         }
     }
 }
