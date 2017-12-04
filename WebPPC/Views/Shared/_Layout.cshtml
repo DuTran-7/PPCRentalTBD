@@ -49,9 +49,18 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">Event</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Post/PostProject">Post</a>
-                    </li>
+                    @if (Session["UserID"] != null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Post/PostProject">Post</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/Home/Login">Post</a>
+                        </li>
+                    }
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/Home/Contact">Contact Us</a>
                     </li>
