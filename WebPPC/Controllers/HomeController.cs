@@ -14,7 +14,7 @@ namespace WebPPC.Controllers
         {
 
 
-            var product = db.PROPERTies.ToList().Where(x => x.Status_ID == 3);
+            var product = db.PROPERTies.ToList();
             return View(product);
         }
         public ActionResult Ind()
@@ -56,7 +56,7 @@ namespace WebPPC.Controllers
                 {
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
-                    return RedirectToAction("List", "LoAgency");
+                    return RedirectToAction("Index", "Home");
                 }
             }
 

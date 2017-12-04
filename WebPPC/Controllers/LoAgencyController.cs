@@ -13,8 +13,10 @@ namespace WebPPC.Controllers
         public ActionResult List()
         {
             var product = db.PROPERTies.ToList().Where(x => x.UserID==int.Parse(Session["UserID"].ToString()));
+            int count = product.Count(x => x.UserID == int.Parse(Session["UserID"].ToString()));
+            ViewBag.count = count;
             return View(product);
-            ViewBag.nameUser = Session["FullName"].ToString(); 
+
         }
     }
 }
