@@ -56,7 +56,7 @@ namespace WebPPC.Controllers
                 {
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("List", "LoAgency");
                 }
             }
 
@@ -122,7 +122,35 @@ namespace WebPPC.Controllers
             return View();
 
         }
+        [HttpGet]
+        public ActionResult ChangePw()
+        {
+
+            return View();
+
+        }
+
+        [HttpPost]
+        public ActionResult ChangePw(string curPw, string newPw, string confimNewPw)
+        {
+            ViewBag.err = "";
+            ViewBag.errr = "";
+            int xx = (int)Session["UserID"];
+            var us = db.USERs.Single(x => x.ID == xx);
+            if (us.Password != curPw)
+                ViewBag.err = "Current Password is incorect";
+            if (newPw != confimNewPw)
+                ViewBag.errr = "Password not same";
+            if (ViewBag.err == "" && ViewBag.errr == "")
+            {
+                us.Password = newPw;
+                db.SaveChanges();
+                ViewBag.sc = "Change password success";
+            }
+            return View();
+
+        }
+
 
     }
-
 }

@@ -24,9 +24,11 @@
             height: 100%;
             top: 30%;
         }
+
         .cont {
             background-image: url("https://images3.alphacoders.com/709/thumb-1920-709223.jpg");
         }
+
         .demo {
             height: 70rem;
             margin-top: -34rem;
@@ -42,7 +44,8 @@
                 <p>
                     @if (ViewBag.mgs != null)
                     {
-                        <h1>@ViewBag.mgs</h1>                            }
+                        <h1>@ViewBag.mgs</h1>                            
+                    }
                 </p>
                 <div class="login">
                     <div>
@@ -55,7 +58,7 @@
                             </svg>
                             <input type="text" class="login__input email" placeholder="Email" name="email" data-val-required="*vui lòng nhập email của bạn" />
                             @*<input class="login__input email" data-val="true" data-val-required="*Vui lòng nhập email của bạn" id="Email" placeholder="Email" name="Email" type="text" value="">
-                            <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>*@
 
                         </div>
 
@@ -65,17 +68,17 @@
                             </svg>
                             <input type="password" class="login__input pass" placeholder="Password" name="Password" required />
                             @*<input class="login__input pass" placeholder="Password" data-val="true" data-val-length="*Độ dài mật khẩu không hợp lệ" data-val-length-max="15" data-val-length-min="6" data-val-required="*Vui lòng nhập mật khẩu của bạn" id="Password" name="Password" type="password">
-                            <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>*@
                         </div>
 
                         <div class="login__row">
                             <svg class="login__icon pass svg-icon" viewBox="0 0 20 20">
                                 <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0" />
                             </svg>
-                            
+
                             <input type="password" class="login__input pass" placeholder="Confirm Password" name="ConfirmPassword" required />
                             @*<input class="login__input pass" placeholder="Confirm Password" data-val="true" data-val-equalto="'ConfirmPassword' and 'Password' do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password">
-                            <span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid" data-valmsg-for="ConfirmPassword" data-valmsg-replace="true"></span>*@
 
                         </div>
 
@@ -84,7 +87,7 @@
                             </svg>
                             <input type="text" class="login__input name " placeholder="Full Name" name="FullName" required />
                             @*<input class="login__input name " placeholder="Full Name" data-val="true" data-val-required="*Vui lòng nhập họ và tên của bạn" id="FullName" name="FullName" type="text" value="">
-                            <span class="field-validation-valid text-danger" data-valmsg-for="FullName" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid text-danger" data-valmsg-for="FullName" data-valmsg-replace="true"></span>*@
                         </div>
 
                         <div class="login__row">
@@ -92,7 +95,7 @@
                             </svg>
                             <input type="text" class="login__input name " placeholder="Phone" name="Phone" required />
                             @*<input class="login__input name " placeholder="Phone" id="Phone" name="Phone" type="text" value="">
-                            <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>*@
 
                         </div>
 
@@ -101,12 +104,12 @@
                             </svg>
                             <input type="text" class="login__input name " placeholder="Address" name="Address" required />
                             @*<textarea cols="20" id="Address" name="Address" rows="2" class="login__input name " placeholder="Address"></textarea>
-                            <span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>*@
+                                <span class="field-validation-valid" data-valmsg-for="Address" data-valmsg-replace="true"></span>*@
 
                         </div>
                         <button id="submit" type="submit" class="login__submit">Sign up</button>
                         <p class="login__signup">You want to login? &nbsp;<a href="Login">Sign in</a></p>
-                  
+
                     </div>
                 </div>
 

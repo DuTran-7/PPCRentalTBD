@@ -70,24 +70,25 @@
                     @if (Session["UserID"] == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Home/Signup">ĐĂNG TIN FREE</a>
+                            <a class="nav-link js-scroll-trigger" href="/Home/Login">SIGN IN</a>
                         </li>
                     }
                     else
                     {
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/LoAgency/List"> Hello, @Session["FullName"]</a>
-                        </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger" href="/Home/Logout" >
-                                    /  Logout
-                                </a>
+                            <li class="nav-item dropdown ">
+                                <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, @Session["FullName"]<span class="caret"></span></a>
+                                <ul class="dropdown-menu" style="font-size: 13px; color:white;background-color:black">
+                                    <li><a href="/LoAgency/List"> &nbsp;&nbsp;&nbsp; My Project</a></li>&nbsp;
+                                    <li><a href="/Home/ChangePw">&nbsp;&nbsp;  Change Password</a></li>&nbsp;
+                                    <li><a href="/Home/Logout">&nbsp;&nbsp;  Logout</a></li>&nbsp;
+                                </ul>
                             </li>
                     }
 
                     <li class="nav-item">
 
                     </li>
+
                 </ul>
             </div>
         </div>
