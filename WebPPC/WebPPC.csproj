@@ -399,6 +399,8 @@
     <Content Include="Views\LoAgency\List.cshtml" />
     <Content Include="Views\Home\Logout.cshtml" />
     <Content Include="Views\Home\ChangePw.cshtml" />
+    <Content Include="Views\LoAgency\Edit.cshtml" />
+    <Content Include="Views\LoAgency\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

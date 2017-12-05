@@ -34,6 +34,8 @@
         <div class="row">
             @foreach (var item in Model)
             {
+                if (item.Status_ID == 3)
+                {
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
@@ -43,12 +45,13 @@
                     <img class="img-fluid" src="/img/@item.Avatar " alt="">
                     <div class="portfolio-caption">
                         <h4>@item.PropertyName.Substring(0, Math.Min(@item.PropertyName.Length, 20))</h4>
-                        <p> @item.Content.Substring(0,Math.Min(@item.Content.Length,50))</p>
+                        <p> @item.Content.Substring(0, Math.Min(@item.Content.Length, 50))</p>
                         <strong style="color:red; font-size: 140%">$@item.Price</strong>
                         <br>
                         <a class="button button5" href="/Property/Detail/@item.ID">Detail</a>
                     </div>
                 </div>
+                }
             }
         </div>
     </div>

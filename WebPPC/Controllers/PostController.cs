@@ -111,7 +111,7 @@ namespace WebPPC.Controllers
                 db.SaveChanges();
                 //ViewBag.Success = "Đăng ký thành công";
                 model = new PostModel();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("List", "LoAgency");
             }
             else
             {
