@@ -106,6 +106,7 @@ namespace WebPPC.Controllers
                 pro.Status_ID = model.Status_ID;
                 pro.Updated_at = DateTime.Now;
                 pro.Created_at = DateTime.Now;
+                pro.UserID = (int)Session["UserID"];
                 db.PROPERTies.Add(pro);
                 db.SaveChanges();
                 //ViewBag.Success = "Đăng ký thành công";

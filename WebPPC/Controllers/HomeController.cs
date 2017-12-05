@@ -12,8 +12,6 @@ namespace WebPPC.Controllers
         Team12Entities1 db = new Team12Entities1();
         public ActionResult Index()
         {
-
-
             var product = db.PROPERTies.ToList();
             return View(product);
         }
