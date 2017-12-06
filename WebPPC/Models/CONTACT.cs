@@ -12,12 +12,13 @@ namespace WebPPC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class CONTACT
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Message { get; set; }
+        public bool Status { get; set; }
     }
 }

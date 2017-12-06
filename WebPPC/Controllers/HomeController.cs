@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
 {
     public class HomeController : Controller
     {
-        Team12Entities1 db = new Team12Entities1();
+        team12Entities db = new team12Entities();
         public ActionResult Index()
         {
             var product = db.PROPERTies.ToList();

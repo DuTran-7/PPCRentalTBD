@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
     public class LoAgencyController : Controller
     {
         //
-        Team12Entities1 db = new Team12Entities1();
+        team12Entities db = new team12Entities();
         public ActionResult List()
         {
             var product = db.PROPERTies.ToList().Where(x => x.UserID==int.Parse(Session["UserID"].ToString()));

@@ -9,7 +9,7 @@ namespace WebPPC.Controllers
 {
     public class PropertyController : Controller
     {
-        Team12Entities1 model = new Team12Entities1();
+        team12Entities model = new team12Entities();
         //
         // GET: /Property/
         public ActionResult Detail(int id)

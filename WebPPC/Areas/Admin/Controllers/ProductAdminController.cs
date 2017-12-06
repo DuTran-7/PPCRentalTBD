@@ -8,24 +8,64 @@ namespace WebPPC.Areas.Admin.Controllers
 {
     public class ProductAdminController : Controller
     {
-        Team12Entities1 model = new Team12Entities1();
+        team12Entities model = new team12Entities();
         //
         // GET: /Admin/ProductAdmin/
         public ActionResult Index()
         {
-            var product = model.PROPERTies.OrderByDescending(x => x.ID).ToList();
-            return View(product);
-            //if (Session["UserID"] != null)
-            //{
-            //    var userid = int.Parse(Session["UserID"].ToString());
-            //    var emp = model.USERs.OrderByDescending(x => x.ID).ToList();
-            //    return View(emp);
-            //}
-            //else
-            //{
-            //    return RedirectToAction("Login");
-            //}
+            if (Session["UserID"] != null)
+            {
+                var userid = int.Parse(Session["UserID"].ToString());
+                var emp = model.PROPERTies.OrderByDescending(x => x.ID).ToList();
+                return View(emp);
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(string email, string password)
+        {
+            var user = model.USERs.FirstOrDefault(x => x.Email == email);
+            if (user != null && int.Parse(user.Role) == 1)
+            {
+                if (user.Password.Equals(password))
+                {
+
+                    Session["FullName"] = user.FullName;
+                    Session["UserID"] = user.ID;
+
+                    return RedirectToAction("ProductAdmin", "Admin");
+
+
+
+
+                }
+            }
+
+            else
+            {
+                ViewBag.mgs = "Tài khoản không có quyền truy cập";
+            }
+            return View();
+        }
+
+        public ActionResult Logout()
+        {
+            if (Session["Fullname"] != null)
+            {
+                Session["Fullname"] = null;
+                Session["UserID"] = null;
+            }
+            return RedirectToAction("ProductAdmin", "Admin");
+        }
+
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -57,7 +97,7 @@ namespace WebPPC.Areas.Admin.Controllers
         public ActionResult Details(int id)
         {
 
-            //Lấy ra đối tượng sách theo mã 
+
             PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             if (property == null)
             {
@@ -71,7 +111,7 @@ namespace WebPPC.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            //Lấy ra đối tượng sách theo mã 
+
             PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             if (property == null)
             {

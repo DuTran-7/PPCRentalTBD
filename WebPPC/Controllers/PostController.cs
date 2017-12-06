@@ -10,7 +10,7 @@ namespace WebPPC.Controllers
 {
     public class PostController : Controller
     {
-        Team12Entities1 db = new Team12Entities1();
+        team12Entities db = new team12Entities();
         // GET: /Post/
         [HttpGet]
         public ActionResult Post()

@@ -12,19 +12,9 @@ namespace WebPPC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class WARD
+    public partial class ABOUTU
     {
-        public WARD()
-        {
-            this.PROPERTies = new HashSet<PROPERTY>();
-        }
-    
-        public int ID { get; set; }
-        public string WardName { get; set; }
-        public Nullable<int> District_ID { get; set; }
-        public Nullable<bool> Status { get; set; }
-    
-        public virtual DISTRICT DISTRICT { get; set; }
-        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
+        public int id { get; set; }
+        public string Text { get; set; }
     }
 }
