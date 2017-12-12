@@ -32,8 +32,9 @@ namespace WebPPC.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
+            ViewBag.mgs = "";
             var user = model.USERs.FirstOrDefault(x => x.Email == email);
-            if (user != null && int.Parse(user.Role) == 1)
+            if (user != null)
             {
                 if (user.Password.Equals(password))
                 {
@@ -41,19 +42,28 @@ namespace WebPPC.Areas.Admin.Controllers
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
 
-                    return RedirectToAction("ProductAdmin", "Admin");
+                    if (int.Parse(user.Role) == 1)
+                    {
+                        return RedirectToAction("ProductAdmin", "Admin");
+                    }
+                    else
+                    {
+                        ViewBag.mgs = "Tài khoản không có quyền truy cập";
+                        return RedirectToAction("Login", "ProductAdmin", new { area = "Admin" });
 
+                    }
 
 
 
                 }
+
             }
 
             else
             {
                 ViewBag.mgs = "Tài khoản không có quyền truy cập";
             }
-            return View();
+            return RedirectToAction("Login", "ProductAdmin", new { area = "Admin" });
         }
 
         public ActionResult Logout()
