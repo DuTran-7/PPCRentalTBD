@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using WebPPC.Models;
 namespace WebPPC.Areas.Admin.Controllers
 {
-    public class ProductAdminController : Controller
+    public class ProjectAdminController : Controller
     {
         team12Entities model = new team12Entities();
         //
@@ -21,61 +21,10 @@ namespace WebPPC.Areas.Admin.Controllers
             }
             else
             {
-                return RedirectToAction("Login");
+                return RedirectToAction("Login", "Sale", new { area = "Admin" });
             }
         }
-        [HttpGet]
-        public ActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Login(string email, string password)
-        {
-            ViewBag.mgs = "";
-            var user = model.USERs.FirstOrDefault(x => x.Email == email);
-            if (user != null)
-            {
-                if (user.Password.Equals(password))
-                {
-
-                    Session["FullName"] = user.FullName;
-                    Session["UserID"] = user.ID;
-
-                    if (int.Parse(user.Role) == 1)
-                    {
-                        return RedirectToAction("ProductAdmin", "Admin");
-                    }
-                    else
-                    {
-                        ViewBag.mgs = "Tài khoản không có quyền truy cập";
-                        return RedirectToAction("Login", "ProductAdmin", new { area = "Admin" });
-
-                    }
-
-
-
-                }
-
-            }
-
-            else
-            {
-                ViewBag.mgs = "Tài khoản không có quyền truy cập";
-            }
-            return RedirectToAction("Login", "ProductAdmin", new { area = "Admin" });
-        }
-
-        public ActionResult Logout()
-        {
-            if (Session["Fullname"] != null)
-            {
-                Session["Fullname"] = null;
-                Session["UserID"] = null;
-            }
-            return RedirectToAction("ProductAdmin", "Admin");
-        }
-
+       
         [HttpGet]
         public ActionResult Edit(int id)
         {

@@ -42,7 +42,7 @@
 </style>
 
 <h2 style="text-align:center;padding-top:25px;padding-bottom:20px;">Search Project</h2>
-<form class="filter " role="search" action="@Url.Action("Project","Project")" method="get">
+<form class="filter " role="search" action="@Url.Action("Search","Project")" method="get">
 
 
     <div class="form-group form-inline">
@@ -92,7 +92,7 @@
                     <img class="img-fluid" src="/img/@item.Avatar " alt="">
                     <div class="portfolio-caption">
                         <h4>@item.PropertyName.Substring(0, Math.Min(@item.PropertyName.Length, 20))</h4>
-                        <p> @item.Content.Substring(0, 50)  ...</p>
+                        <p> @item.Content.Substring(0, Math.Min(@item.Content.Length, 50))  ...</p>
                         <strong style="color:red; font-size: 140%">$@item.Price</strong>
                         <br>
                         <a class="button button5" href="/Property/Detail/@item.ID">Detail</a>

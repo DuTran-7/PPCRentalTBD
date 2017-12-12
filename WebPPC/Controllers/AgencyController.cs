@@ -7,7 +7,7 @@ using WebPPC.Models;
 
 namespace WebPPC.Controllers
 {
-    public class HomeController : Controller
+    public class AgencyController : Controller
     {
         team12Entities db = new team12Entities();
         public ActionResult Index()
@@ -15,29 +15,6 @@ namespace WebPPC.Controllers
             var product = db.PROPERTies.ToList();
             return View(product);
         }
-        public ActionResult Ind()
-        {
-            if (Session["UserID"] != null)
-            {
-                var userid = int.Parse(Session["UserID"].ToString());
-                var emp = db.USERs.OrderByDescending(x => x.ID).ToList();
-                return View(emp);
-            }
-            else
-            {
-                return RedirectToAction("Login");
-            }
-        }
-
-
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
 
         [HttpGet]
         public ActionResult Login()
@@ -54,7 +31,7 @@ namespace WebPPC.Controllers
                 {
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
-                    return RedirectToAction("List", "LoAgency");
+                    return RedirectToAction("List", "Project");
                 }
             }
 
@@ -103,7 +80,7 @@ namespace WebPPC.Controllers
                     db.SaveChanges();
                     ViewBag.Success = "Đăng ký thành công";
                     model = new USER();
-                    return RedirectToAction("Login", "Home");
+                    return RedirectToAction("Login", "Agency");
                 }
                 else
                 {

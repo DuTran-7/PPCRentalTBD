@@ -23,8 +23,8 @@
 @if (ViewBag.count != 0)
 {
 
-    <a href="/Post/PostProject"><h4>CREATE</h4></a>
-    
+    <a href="/Project/PostProject"><h4>CREATE</h4></a>
+
     <table class="table" id="scroll">
         <tr>
             <th>
@@ -113,10 +113,10 @@
                 <td>
                     @if (item.Status_ID == 2)
                     {
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID })
                     }
                     <br>
-                    @Html.ActionLink("Details", "Details", new { id = item.ID })
+                    @Html.ActionLink("Details", "Detail", new { id = item.ID })
                 </td>
             </tr>
         }
@@ -126,6 +126,6 @@
 else
 {
     <br /><br />
-    <span><h6>Bạn chưa có bài viết, nhấn vào <a href="/Post/PostProject" style="color:blue">CREATE</a> để tạo bài viết mới nhé ^^ </h6></span>
+    <span><h6>Bạn chưa có bài viết, nhấn vào <a href="/Project/PostProject" style="color:blue">CREATE</a> để tạo bài viết mới nhé </h6></span>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 }

@@ -23,7 +23,7 @@
 
 <h2 style="text-align:center">Post Project</h2>
 <hr />
-@using (Html.BeginForm("PostProject", "Post", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("PostProject", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -148,7 +148,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input id="button" type="submit" value="Create" class="btn btn-default" />
-                
+
             </div>
         </div>
     </div>
