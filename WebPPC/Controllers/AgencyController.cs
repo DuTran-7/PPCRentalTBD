@@ -31,7 +31,14 @@ namespace WebPPC.Controllers
                 {
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
-                    return RedirectToAction("List", "Project");
+                    if (int.Parse(user.Role) == 1)
+                    {
+                        return RedirectToAction("ProjectAdmin", "Admin");
+                    }
+                    else
+                    {
+                        return RedirectToAction("List", "Project");
+                    }
                 }
             }
 
