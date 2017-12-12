@@ -82,10 +82,11 @@ namespace WebPPC.Controllers
                     sig.FullName = model.FullName;
                     sig.Password = model.Password;
                     sig.Phone = model.Phone;
+                    sig.Role = "0";
                     sig.Status = true;
                     db.USERs.Add(sig);
                     db.SaveChanges();
-                    ViewBag.Success = "Đăng ký thành công";
+                   ViewBag.Success = "Đăng ký thành công";
                     model = new USER();
                     return RedirectToAction("Login", "Agency");
                 }
