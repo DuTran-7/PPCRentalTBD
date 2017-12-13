@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using WebPPC.Models;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
 namespace WebPPC.Controllers
 {
     public class ProjectController : Controller
@@ -120,6 +122,49 @@ namespace WebPPC.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(string name, string email, string phone, string message)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var senderemail = new MailAddress("k21t1team2@gmail.com", "Support");//Email Agency
+                    var receiveremail = new MailAddress("ppcrental2017@gmail.com", "PPC Rental"); //Emai Company
+
+                    var password = "Team2ppc";// Password Email  
+                    var sub = name;
+                    var body = " " + "Name: " + name + "\n" + " Email: " + email + "\n" + " Phone: " + phone + "\n" + " Message: " + message;
+                    // Message Content
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(senderemail.Address, password)
+
+                    };
+
+                    using (var mess = new MailMessage(senderemail, receiveremail)
+                    {
+                        Subject = "User",
+                        Body = body
+                    }
+                    )
+                    {
+                        smtp.Send(mess);
+                    }
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "There are some problem in sending email";
+            }
             return View();
         }
         public ActionResult AboutUS()
