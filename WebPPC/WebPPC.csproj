@@ -242,6 +242,7 @@
     <Content Include="Content\6.css" />
     <Content Include="Content\7.css" />
     <Content Include="Content\8.css" />
+    <Content Include="Content\abccc.css" />
     <Content Include="Content\agency.css" />
     <Content Include="Content\agency.min.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -391,6 +392,7 @@
     <Content Include="Views\Project\Edit.cshtml" />
     <Content Include="Views\Project\List.cshtml" />
     <Content Include="Views\Project\Contact.cshtml" />
+    <Content Include="Views\Project\AboutUS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
