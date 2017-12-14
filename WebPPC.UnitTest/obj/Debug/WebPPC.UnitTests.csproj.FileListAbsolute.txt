@@ -1,0 +1,37 @@
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.pdb
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\2\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\2\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
+E:\2\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
+E:\2\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.pdb
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
+E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
+E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.pdb
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb

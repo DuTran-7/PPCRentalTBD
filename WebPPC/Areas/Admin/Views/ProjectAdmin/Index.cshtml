@@ -1,0 +1,112 @@
+﻿@model IEnumerable<WebPPC.Models.PROPERTY>
+
+@{
+    ViewBag.Title = "Admin Page";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h2 style="text-align:center">Project List</h2>
+<style>
+    #scroll {
+        display: block;
+        padding: 5px;
+        margin-top: 5px;
+        overflow: scroll;
+    }
+</style>
+
+<table class="table" id="scroll">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PropertyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Avatar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            <p>Feature</p>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROJECT_STATUS.Status_Name)
+        </th>
+
+        @*<th>
+                @Html.DisplayNameFor(model => model.DISTRICT.DistrictName)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.STREET.StreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.USER.Email)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.WARD.WardName)
+            </th>*@
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align: justify;">
+                @Html.DisplayFor(modelItem => item.PropertyName)
+            </td>
+
+            <td>
+                <img src="/img/@item.Avatar" width="100" />
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Avatar)
+            </td>
+            <td style="text-align: justify;">
+                @item.Content
+            </td>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.Price)   @Html.DisplayFor(modelItem => item.UnitPrice)
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BedRoom)&nbsp;<img src="~/img/iconbed.PNG" alt="Bed-Rooom: " width="20">
+                <br>
+                @Html.DisplayFor(modelItem => item.BathRoom) &nbsp;<img src="~/img/iconbath.PNG" alt="Bath-Room: " width="20">
+                <br>
+                @Html.DisplayFor(modelItem => item.PackingPlace) &nbsp;<img src="~/img/iconparking.PNG" alt="Parking-Place: " width="20">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROJECT_STATUS.Status_Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
