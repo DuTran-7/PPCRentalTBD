@@ -1,0 +1,9 @@
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\bin\Debug\netstandard2.0\PPCRental.AcceptanceTests.deps.json
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\bin\Debug\netstandard2.0\PPCRental.AcceptanceTests.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\bin\Debug\netstandard2.0\PPCRental.AcceptanceTests.pdb
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\ClassLibrary1\obj\Debug\netstandard2.0\PPCRental.AcceptanceTests.pdb

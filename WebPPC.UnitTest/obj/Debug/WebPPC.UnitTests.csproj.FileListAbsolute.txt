@@ -22,6 +22,7 @@ E:\5\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.
 E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
 E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
 E:\5\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb
+<<<<<<< HEAD
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -35,3 +36,21 @@ D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolve
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
 D:\PPC\ABC\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb
+=======
+<<<<<<< HEAD
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\WebPPC.UnitTest.pdb
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.dll
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UnitTest\obj\Debug\WebPPC.UnitTest.pdb
+=======
+>>>>>>> fcc85532ed0ef8fb76a672a9b3fa3f7ce3e1d00c
+>>>>>>> 9ea22dbac0313c8966d8763bfa1f0cf3d7471612

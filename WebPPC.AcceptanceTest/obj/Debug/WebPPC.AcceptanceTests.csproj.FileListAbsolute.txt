@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 D:\PPC\ABC\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
 D:\PPC\ABC\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
+=======
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
+>>>>>>> 9ea22dbac0313c8966d8763bfa1f0cf3d7471612
