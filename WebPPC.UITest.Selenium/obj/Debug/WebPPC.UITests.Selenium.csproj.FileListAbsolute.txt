@@ -8,8 +8,11 @@ E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.pdb
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITests.Selenium.csprojResolveAssemblyReference.cache
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.dll
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.dll
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.pdb
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITests.Selenium.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.dll
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.pdb
+=======
+>>>>>>> fcc85532ed0ef8fb76a672a9b3fa3f7ce3e1d00c

@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="/Home/Index">
+            <a class="navbar-brand js-scroll-trigger" href="/Project/Index">
                 <img src="~/img/logo.png" width="40px" />
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Home/Index">Home</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/ProjectI">Search</a>
+                        <a class="nav-link js-scroll-trigger" href="http://localhost:50775/Project/AboutUS">AboutUS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Project/SearchI">Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">Event</a>
@@ -52,25 +55,25 @@
                     @if (Session["UserID"] != null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Post/PostProject">Post</a>
+                            <a class="nav-link js-scroll-trigger" href="/Project/PostProject">Post</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Home/Login">Post</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Post</a>
                         </li>
                     }
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Home/Contact">Contact Us</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Home/Contact">    </a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">    </a>
                     </li>
                     @if (Session["UserID"] == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Home/Login">SIGN IN</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">SIGN IN</a>
                         </li>
                     }
                     else
@@ -78,9 +81,9 @@
                             <li class="nav-item dropdown ">
                                 <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, @Session["FullName"]<span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="font-size: 13px; color:white;background-color:black">
-                                    <li><a href="/LoAgency/List"> &nbsp;&nbsp;&nbsp; My Project</a></li>&nbsp;
-                                    <li><a href="/Home/ChangePw">&nbsp;&nbsp;  Change Password</a></li>&nbsp;
-                                    <li><a href="/Home/Logout">&nbsp;&nbsp;  Logout</a></li>&nbsp;
+                                    <li><a href="/Project/List"> &nbsp;&nbsp;&nbsp; My Project</a></li>&nbsp;
+                                    <li><a href="/Agency/ChangePw">&nbsp;&nbsp;  Change Password</a></li>&nbsp;
+                                    <li><a href="/Agency/Logout">&nbsp;&nbsp;  Logout</a></li>&nbsp;
                                 </ul>
                             </li>
                     }

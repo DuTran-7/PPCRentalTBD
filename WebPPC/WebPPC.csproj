@@ -31,6 +31,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -170,20 +171,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\CreateController.cs" />
-    <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoAgencyController.cs" />
-    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProjectAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SaleController.cs" />
+    <Compile Include="Controllers\AgencyController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
-    <Compile Include="Controllers\PropertyController.cs" />
     <Compile Include="Dao\Interface1.cs" />
     <Compile Include="Dao\UserDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ABOUTU.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\CONTACT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DISTRICT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -226,9 +229,6 @@
     <Compile Include="Models\STREET.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\USER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -247,6 +247,7 @@
     <Content Include="Content\6.css" />
     <Content Include="Content\7.css" />
     <Content Include="Content\8.css" />
+    <Content Include="Content\abccc.css" />
     <Content Include="Content\agency.css" />
     <Content Include="Content\agency.min.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -259,6 +260,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style1.css" />
+    <Content Include="Content\stylead.css" />
     <Content Include="Content\stylelogin.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -291,16 +293,6 @@
     <Content Include="img\PIS_7389-Edit-stamp.jpg" />
     <Content Include="img\PIS_7432-Edit-stamp.jpg" />
     <Content Include="img\sunshine-benthanh-cityhome-10-stamp.jpg" />
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\1.js" />
     <Content Include="Scripts\10.js" />
     <Content Include="Scripts\11.js" />
@@ -335,20 +327,30 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Create\CreateProject.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectAdmin\Edit.cshtml" />
     <Content Include="fonts\style.scss" />
+    <Content Include="Areas\Admin\Views\ProjectAdmin\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectAdmin\Details.cshtml" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Admin\Views\ProductAdmin\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\ProductAdmin\Details.cshtml" />
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Admin\Views\Sale\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\ProjectAdmin\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\contact_me.js" />
     <Content Include="Scripts\index.js" />
@@ -366,6 +368,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\loginadjquery.minl.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -381,36 +384,24 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Property\Detail.cshtml" />
-    <Content Include="Views\Project\Project.cshtml" />
-    <Content Include="Views\Project\ProjectI.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Post\PostProject.cshtml" />
-    <Content Include="Views\Home\SignUp.cshtml" />
-    <Content Include="Views\LoAgency\List.cshtml" />
-    <Content Include="Views\Home\Logout.cshtml" />
-    <Content Include="Views\Home\ChangePw.cshtml" />
-    <Content Include="Views\LoAgency\Edit.cshtml" />
-    <Content Include="Views\LoAgency\Details.cshtml" />
+    <Content Include="Views\Agency\Login.cshtml" />
+    <Content Include="Views\Agency\SignUp.cshtml" />
+    <Content Include="Views\Agency\ChangePw.cshtml" />
+    <Content Include="Views\Project\Search.cshtml" />
+    <Content Include="Views\Project\SearchI.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\Project\Detail.cshtml" />
+    <Content Include="Views\Project\PostProject.cshtml" />
+    <Content Include="Views\Project\Edit.cshtml" />
+    <Content Include="Views\Project\List.cshtml" />
+    <Content Include="Views\Project\Contact.cshtml" />
+    <Content Include="Views\Project\AboutUS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

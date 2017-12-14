@@ -13,10 +13,10 @@ namespace WebPPC.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Team12Entities1 : DbContext
+    public partial class team12Entities : DbContext
     {
-        public Team12Entities1()
-            : base("name=Team12Entities1")
+        public team12Entities()
+            : base("name=team12Entities")
         {
         }
     
@@ -25,6 +25,8 @@ namespace WebPPC.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ABOUTU> ABOUTUS { get; set; }
+        public virtual DbSet<CONTACT> CONTACTs { get; set; }
         public virtual DbSet<DISTRICT> DISTRICTs { get; set; }
         public virtual DbSet<FEATURE> FEATUREs { get; set; }
         public virtual DbSet<IMAGE> IMAGES { get; set; }
@@ -33,7 +35,6 @@ namespace WebPPC.Models
         public virtual DbSet<PROPERTY_FEATURE> PROPERTY_FEATURE { get; set; }
         public virtual DbSet<PROPERTY_TYPE> PROPERTY_TYPE { get; set; }
         public virtual DbSet<STREET> STREETs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WARD> WARDs { get; set; }
     }

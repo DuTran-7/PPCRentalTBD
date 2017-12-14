@@ -8,9 +8,12 @@ E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.C
 E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTests.Common.csprojResolveAssemblyReference.cache
 E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.dll
 E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.pdb
+<<<<<<< HEAD
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.Common.dll
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.Common.pdb
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTests.Common.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTests.Common.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.dll
 C:\Users\Admin\Desktop\Rental\New folder\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.pdb
+=======
+>>>>>>> fcc85532ed0ef8fb76a672a9b3fa3f7ce3e1d00c

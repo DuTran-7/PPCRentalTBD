@@ -31,14 +31,14 @@
 <body class="fixed-nav sticky-footer " id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-        <a class="navbar-brand" href="/Admin/ProductAdmin/Index">PPC Rental</a>
+        <a class="navbar-brand" href="/Admin/ProjectAdmin/Index">PPC Rental</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-                    <a class="nav-link" href="/Admin/ProductAdmin/Index">
+                    <a class="nav-link" href="/Admin/ProjectAdmin/Index">
                         <i class="fa fa-fw fa-dashboard"></i>
                         <span class="nav-link-text">Dashboard</span>
                     </a>
@@ -52,39 +52,12 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-fw fa-envelope"></i>
-                        <span class="d-lg-none">
-                            Messages
-                            <span class="badge badge-pill badge-primary">12 New</span>
-                        </span>
-                        <span class="indicator text-primary d-none d-lg-block">
-                            <i class="fa fa-fw fa-circle"></i>
-                        </span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="messagesDropdown">
-
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fa fa-fw fa-bell"></i>
-                        <span class="d-lg-none">
-                            Alerts
-                            <span class="badge badge-pill badge-warning">6 New</span>
-                        </span>
-                        <span class="indicator text-warning d-none d-lg-block">
-                            <i class="fa fa-fw fa-circle"></i>
-                        </span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="alertsDropdown">
-
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger">Hello, @Session["FullName"]</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="/Admin/Sale/Login">
                         <i class="fa fa-fw fa-sign-out"></i>Logout
                     </a>
                 </li>
