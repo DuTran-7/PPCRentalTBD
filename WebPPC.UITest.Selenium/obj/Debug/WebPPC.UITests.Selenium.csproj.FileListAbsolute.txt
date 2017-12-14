@@ -8,3 +8,9 @@ E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.pdb
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITests.Selenium.csprojResolveAssemblyReference.cache
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.dll
 E:\5\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.pdb
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.dll
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\bin\Debug\WebPPC.UITest.Selenium.pdb
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITests.Selenium.csprojResolveAssemblyReference.cache
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITests.Selenium.csproj.CoreCompileInputs.cache
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.dll
+D:\PPC\ABC\PPCRentalTBD\WebPPC.UITest.Selenium\obj\Debug\WebPPC.UITest.Selenium.pdb

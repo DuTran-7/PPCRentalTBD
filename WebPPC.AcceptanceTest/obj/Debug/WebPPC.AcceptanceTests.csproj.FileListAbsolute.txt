@@ -1,0 +1,2 @@
+D:\PPC\ABC\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
+D:\PPC\ABC\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
