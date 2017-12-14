@@ -1,5 +1,0 @@
-E:\2\PPCRentalTBD\WebPPC.AcceptanceTest\bin\Debug\WebPPC.AcceptanceTest.dll
-E:\2\PPCRentalTBD\WebPPC.AcceptanceTest\bin\Debug\WebPPC.AcceptanceTest.pdb
-E:\2\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
-E:\2\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTest.dll
-E:\2\PPCRentalTBD\WebPPC.AcceptanceTest\obj\Debug\WebPPC.AcceptanceTest.pdb

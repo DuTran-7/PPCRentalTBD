@@ -3,3 +3,8 @@ E:\2\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.C
 E:\2\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTests.Common.csprojResolveAssemblyReference.cache
 E:\2\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.dll
 E:\2\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.pdb
+E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.Common.dll
+E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\bin\Debug\WebPPC.AcceptanceTest.Common.pdb
+E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTests.Common.csprojResolveAssemblyReference.cache
+E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.dll
+E:\5\PPCRentalTBD\WebPPC.AcceptanceTest.Common\obj\Debug\WebPPC.AcceptanceTest.Common.pdb
