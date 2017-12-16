@@ -283,6 +283,7 @@
     <Content Include="img\location.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\logof.png" />
+    <Content Include="img\logotab.png" />
     <Content Include="img\map-image.png" />
     <Content Include="img\PIS3280-Edit-stamp.jpg" />
     <Content Include="img\PIS3611.jpg" />
