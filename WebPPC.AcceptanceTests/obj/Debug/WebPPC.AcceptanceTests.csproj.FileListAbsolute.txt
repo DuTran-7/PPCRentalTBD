@@ -192,3 +192,7 @@ D:\goc\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\ru\Microsoft.Build.resource
 D:\goc\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\tr\Microsoft.Build.resources.dll
 D:\goc\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\zh-Hans\Microsoft.Build.resources.dll
 D:\goc\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\zh-Hant\Microsoft.Build.resources.dll
+D:\PPC\Fina\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.App.config
+D:\PPC\Fina\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
+D:\PPC\Fina\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
+D:\PPC\Fina\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb
