@@ -16,8 +16,8 @@ namespace WebPPC.UITests.Selenium
         [Given(@"the following projects")]
         public void GivenTheFollowingProjects(Table table)
         {
-            IWebDriver _driver = new FirefoxDriver();
-            _driver.Navigate().GoToUrl("http://localhost:50775/Project");
+            //IWebDriver _driver = new FirefoxDriver();
+            //_driver.Navigate().GoToUrl("http://localhost:50775/Project");
         }
 
         [Given(@"Toi dang o trang chu")]

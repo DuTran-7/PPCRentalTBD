@@ -33,6 +33,22 @@ namespace WebPPC.AcceptanceTests.Drivers.Property
             ProjectAssertions.HomeScreenShouldShow(shownProject, expectedTitles);
         }
 
+        public void NavigateHome()
+        {
+            using (var controller = new ProjectController())
+            {
+                _result = controller.Index();
+            }
+        }
+
+        public void NavigateToSearch()
+        {
+            using (var controller = new ProjectController())
+            {
+                _result = controller.SearchI();
+            }
+        }
+
         public void ClickDetail(string propertyName)
         {
             var db = new team12Entities();
@@ -44,6 +60,17 @@ namespace WebPPC.AcceptanceTests.Drivers.Property
                 _result = controller.Detail(id);
             }
         }
+
+        public void ShowListProject(Table showProject)
+        {
+            //Arrange
+            var expectedProjects = showProject.Rows.Select(r => r["PropertyName"]);
+            //Actual
+            var actualProjects = _result.Model<IEnumerable<WebPPC.Models.PROPERTY>>();
+            //Assert
+            ProjectAssertions.HomeScreenShouldShow(actualProjects, expectedProjects);
+        }
+
         public void ShowDetail(Table expectedDetail)
         {
             //ShowProject(expectedProjet.Rows.Select(r => r["Title"]));

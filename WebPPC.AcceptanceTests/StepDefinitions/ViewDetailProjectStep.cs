@@ -20,7 +20,7 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
         [Given(@"Toi dang o trang chu chua cac du an")]
         public void GivenToiDangOTrangChuChuaCacDuAn()
         {
-            _projectdriver.NavigateToHome();
+            _projectdriver.NavigateHome();
         }
 
         [When(@"Toi chon muc chi tiet cua du an '(.*)'")]

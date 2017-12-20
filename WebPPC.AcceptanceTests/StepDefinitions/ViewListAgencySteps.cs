@@ -21,12 +21,13 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
             _projectdriver = Prodriver;
             _agencydriver = Agdriver;
         }
-        
-        [Given(@"the following projects")]
-        public void GivenTheFollowingProjects(Table table)
+
+        [Given(@"Duoi day là nhung du an co th duoc tim kiem")]
+        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table table)
         {
-           // ScenarioContext.Current.Pending();
+            //ScenarioContext.Current.Pending();
         }
+
 
         [Given(@"Toi dang o trang chu")]
         public void GivenToiDangOTrangChu()

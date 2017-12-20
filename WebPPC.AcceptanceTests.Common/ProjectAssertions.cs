@@ -13,7 +13,8 @@ namespace WebPPC.AcceptanceTests.Common
     {
         public static void HomeScreenShouldShow(IEnumerable<WebPPC.Models.PROPERTY> shownProject, IEnumerable<string> expectedTitles)
         {
-            shownProject.ShouldAllBeEquivalentTo(expectedTitles, option => option.Excluding(o => o.ID).WithStrictOrdering());
+            //shownProject.ShouldAllBeEquivalentTo(expectedTitles, option => option.Excluding(o => o.ID).WithStrictOrdering());
+            shownProject.Select(p => p.PropertyName).Should().BeEquivalentTo(expectedTitles);
         }
 
         public static void HomeScreenShouldShow(IEnumerable<PROPERTY> shownProject, IEnumerable<PROPERTY> expectedProject)

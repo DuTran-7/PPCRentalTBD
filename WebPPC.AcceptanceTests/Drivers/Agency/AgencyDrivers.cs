@@ -6,6 +6,7 @@ using WebPPC.Controllers;
 using System.Web.Mvc;
 using WebPPC.AcceptanceTests.Common;
 using WebPPC.AcceptanceTests.Support;
+using System;
 
 namespace WebPPC.AcceptanceTests.Drivers.Agency
 {
@@ -25,6 +26,14 @@ namespace WebPPC.AcceptanceTests.Drivers.Agency
             using (var controller = new AgencyController())
             {
                 _result = controller.Login(email,password);
+            }
+        }
+
+        public void FilterProject(string propertyName)
+        {
+            using (var controller = new ProjectController())
+            {
+                _result = controller.Search(propertyName, null, null, null, null,null);
             }
         }
     }
