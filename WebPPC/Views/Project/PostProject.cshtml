@@ -4,9 +4,6 @@
     ViewBag.Title = "PostProject";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var db = new team12Entities();
-    var features = db.FEATUREs.ToList();
-    var feature_property = db.PROPERTY_FEATURE.ToList();
-    
 }
 
 <style>
@@ -124,15 +121,14 @@
             </div>
         </div>
 
-        @foreach (var item in features)
-        {
-           
-            <div class="checkbox">
-                    <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
-                </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PackingPlace, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PackingPlace)
+                @Html.ValidationMessageFor(model => model.PackingPlace)
+            </div>
+        </div>
 
-        }
-        
 
         <div class="form-group">
             @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })

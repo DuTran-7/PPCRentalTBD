@@ -22,11 +22,12 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
             _agencydriver = Agdriver;
         }
 
-        [Given(@"Duoi day là nhung du an co th duoc tim kiem")]
-        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table table)
+        [Given(@"the following projects")]
+        public void GivenTheFollowingProjects(Table table)
         {
             //ScenarioContext.Current.Pending();
         }
+
 
 
         [Given(@"Toi dang o trang chu")]
@@ -49,10 +50,11 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
         }
 
         [Then(@"Toi se thay duoc danh sach cac du an cua toi")]
-        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table shownProject)
+        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table showProject)
         {
-            _projectdriver.ShowDetail(shownProject);
+            _projectdriver.ShowListOfProject(showProject);
         }
+
 
     }
 }

@@ -51,7 +51,7 @@ namespace WebPPC.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult PostProject(HttpPostedFileBase Avatar, PROPERTY qqq, HttpPostedFileBase Image, PostModel model, List<string> featuree)
+        public ActionResult PostProject(HttpPostedFileBase Avatar, USER us, HttpPostedFileBase Image, PostModel model)
         {
             if (ModelState.IsValid)
             {
@@ -87,24 +87,11 @@ namespace WebPPC.Controllers
                 pro.BedRoom = model.BedRoom;
                 pro.PackingPlace = model.PackingPlace;
                 pro.Content = model.Content;
+                //pro.UserID = model.UserID;
                 pro.UnitPrice = model.UnitPrice;
-                
-                //add feature
-
-                var fetur = new PROPERTY_FEATURE();
-                if (featuree != null)
-                {
-                    foreach (string fetus in featuree)
-                    {
-
-                       // fetur.Property_ID = qqq.ID;
-                       // fetur.Feature_ID = db.FEATUREs.SingleOrDefault(x => x.FeatureName == fetus).ID;
-                        fetur.Property_ID = 1;
-                        fetur.Feature_ID = 1;
-                        db.PROPERTY_FEATURE.Add(fetur);
-
-                    }
-                }
+                //pr.Email = us.Email;
+                //pr.Phone = us.Phone;
+                //pro.Create_post = DateTime.Now.;
 
                 pro.Status_ID = model.Status_ID;
                 pro.Updated_at = DateTime.Now;
