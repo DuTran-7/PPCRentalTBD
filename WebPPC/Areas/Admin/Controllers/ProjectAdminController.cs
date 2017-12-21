@@ -53,10 +53,13 @@ namespace WebPPC.Areas.Admin.Controllers
             property.WARD = p.WARD;
             property.Area = p.Area;
             property.Status_ID = p.Status_ID;
+
+            //add feature
+            
             foreach (var featu in feature)
             {
                 PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
-
+               
                 proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
                 proferty_fea.Property_ID = p.ID;
                 model.PROPERTY_FEATURE.Add(proferty_fea);
@@ -64,6 +67,10 @@ namespace WebPPC.Areas.Admin.Controllers
 
             model.SaveChanges();
             return RedirectToAction("Index");
+
+            
+
+            
         }
         public ActionResult Details(int id)
         {

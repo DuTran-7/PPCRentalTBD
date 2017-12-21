@@ -35,15 +35,9 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
             _agencydriver.FilterProject(propertyName);
         }
 
-        //[Then(@"Toi se thay duoc du an ma toi tim kiem")]
-        //public void ThenToiSeThayDuocDuAnMaToiTimKiem(Table showProject)
-        //{
-        //    _projectdriver.ShowListProject(showProject);
-        //}
-        [Given(@"Duoi day là nhung du an co th duoc tim kiem")]
-        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table showProject)
+        [Then(@"Toi se thay duoc du an ma toi tim kiem")]
+        public void ThenToiSeThayDuocDuAnMaToiTimKiem(Table showProject)
         {
-            //ScenarioContext.Current.Pending();
             _projectdriver.ShowListProject(showProject);
         }
 

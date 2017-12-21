@@ -16,7 +16,6 @@ namespace WebPPC.Models
     {
         public PROPERTY()
         {
-            this.PICTURE = new HashSet<PICTURE>();
             this.PROPERTY_FEATURE = new HashSet<PROPERTY_FEATURE>();
         }
     
@@ -42,9 +41,14 @@ namespace WebPPC.Models
         public string Note { get; set; }
         public Nullable<System.DateTime> Updated_at { get; set; }
         public Nullable<int> Sale_ID { get; set; }
-        public Nullable<int> Image_ID { get; set; }
     
-        public virtual ICollection<PICTURE> PICTURE { get; set; }
+        public virtual DISTRICT DISTRICT { get; set; }
+        public virtual PROJECT_STATUS PROJECT_STATUS { get; set; }
         public virtual ICollection<PROPERTY_FEATURE> PROPERTY_FEATURE { get; set; }
+        public virtual PROPERTY_TYPE PROPERTY_TYPE { get; set; }
+        public virtual STREET STREET { get; set; }
+        public virtual USER USER { get; set; }
+        public virtual USER USER1 { get; set; }
+        public virtual WARD WARD { get; set; }
     }
 }

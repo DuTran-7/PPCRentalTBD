@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 style="text-align:center">Danh Sách Dự Án</h2>
+<h2 style="text-align:center">Project List</h2>
 <style>
     #scroll {
         display: block;
@@ -23,7 +23,7 @@
 @if (ViewBag.count != 0)
 {
 
-    <a href="/Project/PostProject"><h4>Tạo Mới</h4></a>
+    <a href="/Project/PostProject"><h4>CREATE</h4></a>
 
     <table class="table" id="scroll">
         <tr>
@@ -126,6 +126,6 @@
 else
 {
     <br /><br />
-    <span><h6>Bạn chưa có bài viết, nhấn vào <a href="/Project/PostProject" style="color:blue">Tạo Mới</a> để tạo bài viết mới nhé </h6></span>
+    <span><h6>Bạn chưa có bài viết, nhấn vào <a href="/Project/PostProject" style="color:blue">CREATE</a> để tạo bài viết mới nhé </h6></span>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 }

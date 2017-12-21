@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using WebPPC.AcceptanceTests.Drivers.Agency;
 using WebPPC.AcceptanceTests.Drivers.Property;
-using System.Web.Mvc;
 
 namespace WebPPC.AcceptanceTests.StepDefinitions
 {
@@ -15,20 +14,19 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
     {
         private readonly PropertyDrivers _projectdriver;
         private readonly AgencyDrivers _agencydriver ;
-        //private ActionResult loginResult;
 
-        public  ViewListAgencySteps(PropertyDrivers Prodriver, AgencyDrivers Agdriver)
+
+        public ViewListAgencySteps(PropertyDrivers Prodriver, AgencyDrivers Agdriver)
         {
             _projectdriver = Prodriver;
             _agencydriver = Agdriver;
         }
 
-        [Given(@"the following projects")]
-        public void GivenTheFollowingProjects(Table table)
+        [Given(@"Duoi day là nhung du an co th duoc tim kiem")]
+        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table table)
         {
             //ScenarioContext.Current.Pending();
         }
-
 
 
         [Given(@"Toi dang o trang chu")]
@@ -42,21 +40,19 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
         {
             _agencydriver.GotoLogin();
         }
-        
 
         [When(@"Toi dang nhap email '(.*)' va '(.*)'")]
         public void WhenToiDangNhapEmailVa(string email, string password)
         {
-             _agencydriver.Login(email, password);
-            //ScenarioContext.Current.Add("loginResult",_agencydriver.Login(email, password));
+
+            _agencydriver.Login(email, password);
         }
 
         [Then(@"Toi se thay duoc danh sach cac du an cua toi")]
-        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table showProject)
+        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table shownProject)
         {
-            _projectdriver.ShowListOfProject(showProject);
+            _projectdriver.ShowDetail(shownProject);
         }
-
 
     }
 }

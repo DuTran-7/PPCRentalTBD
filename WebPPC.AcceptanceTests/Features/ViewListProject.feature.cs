@@ -94,7 +94,8 @@ namespace WebPPC.AcceptanceTests.Features
                         "BedRoom",
                         "PathRoom",
                         "PackingPlace",
-                        "Status_Name"});
+                        "Status_Name",
+                        "Email"});
             table1.AddRow(new string[] {
                         "Bigroom with Riverview",
                         "Very close to the Super Market Co.op.",
@@ -103,19 +104,20 @@ namespace WebPPC.AcceptanceTests.Features
                         "6",
                         "4",
                         "2",
-                        "Chưa duyệt"});
+                        "Chưa duyệt",
+                        "tmy@gmail.com"});
 #line 6
 testRunner.Given("the following projects", ((string)(null)), table1, "Given ");
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View List Projects")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View List of Agency Projects")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02WebPPCViewListProject")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
-        public virtual void ViewListProjects()
+        public virtual void ViewListOfAgencyProjects()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View List Projects", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View List of Agency Projects", new string[] {
                         "automation"});
 #line 12
 this.ScenarioSetup(scenarioInfo);
@@ -129,9 +131,25 @@ this.FeatureBackground();
  testRunner.When("Toi dang nhap email \'tmy@gmail.com\' va \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name Project"});
+                        "Name Project",
+                        "Content",
+                        "Price",
+                        "Area",
+                        "BedRoom",
+                        "PathRoom",
+                        "PackingPlace",
+                        "Status_Name",
+                        "Email"});
             table2.AddRow(new string[] {
-                        "Bigroom with Riverview"});
+                        "Bigroom with Riverview",
+                        "Very close to the Super Market Co.op.",
+                        "5000",
+                        "1200m2",
+                        "6",
+                        "4",
+                        "2",
+                        "Chưa duyệt",
+                        "tmy@gmail.com"});
 #line 16
  testRunner.Then("Toi se thay duoc danh sach cac du an cua toi", ((string)(null)), table2, "Then ");
 #line hidden

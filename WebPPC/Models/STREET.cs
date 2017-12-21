@@ -14,11 +14,17 @@ namespace WebPPC.Models
     
     public partial class STREET
     {
+        public STREET()
+        {
+            this.PROPERTies = new HashSet<PROPERTY>();
+        }
+    
         public int ID { get; set; }
         public string StreetName { get; set; }
         public Nullable<int> District_ID { get; set; }
         public Nullable<bool> Status { get; set; }
     
         public virtual DISTRICT DISTRICT { get; set; }
+        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
     }
 }

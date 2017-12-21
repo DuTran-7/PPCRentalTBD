@@ -14,6 +14,12 @@ namespace WebPPC.Models
     
     public partial class USER
     {
+        public USER()
+        {
+            this.PROPERTies = new HashSet<PROPERTY>();
+            this.PROPERTies1 = new HashSet<PROPERTY>();
+        }
+    
         public int ID { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -22,5 +28,8 @@ namespace WebPPC.Models
         public string Address { get; set; }
         public string Role { get; set; }
         public Nullable<bool> Status { get; set; }
+    
+        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
+        public virtual ICollection<PROPERTY> PROPERTies1 { get; set; }
     }
 }

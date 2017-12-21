@@ -6,6 +6,7 @@
     var db = new team12Entities();
     var features = db.FEATUREs.ToList();
     var feature_property = db.PROPERTY_FEATURE.ToList();
+    
 }
 
 <style>
@@ -62,31 +63,28 @@
 
     <div class="row">
         <div class="col-md-2">
-            <label>Chọn hình ảnh cho dự án của bạn:</label>
+            <label>Chọn ảnh cho dự án của bạn:</label>
         </div>
         <div class="col-md-8">
 
             <div class="row">
                 <div class="col-md-10" style="width:240px">
-                    <input type="file" name="Images" class="form-control" />
+                    <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
                 <div class="col-md-10" style="width:240px">
-                    <input type="file" name="Images" class="form-control" />
+                    <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
                 <div class="col-md-10" style="width:240px">
-                    <input type="file" name="Images" class="form-control" />
+                    <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
                 <div class="col-md-10" style="width:240px">
-                    <input type="file" name="Images" class="form-control" />
+                    <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
-                <div class="col-md-10" style="width:240px">
-                    <input type="file" name="Images" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
-                </div>
+               
             </div>
 
         </div>
@@ -94,27 +92,27 @@
 
     <div class="form-group col-md-10">
         @Html.DropDownList("PropertyType_ID",
-                                                  new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
-                                               "--Property Type--", new { @class = "form-control control-label col-md-2" })
+                                             new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
+                                          "--Property Type--", new { @class = "form-control control-label col-md-2" })
 
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownList("District_ID",
-                                new SelectList(db.DISTRICTs, "ID", "DistrictName"),
-                                        "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
+                           new SelectList(db.DISTRICTs, "ID", "DistrictName"),
+                                   "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Ward_ID,
-                                    new SelectList(db.WARDs.Take(0), "ID", "WardName"),
-                                            "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
+                               new SelectList(db.WARDs.Take(0), "ID", "WardName"),
+                                       "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Street_ID,
-                                    new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
-                                            "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
+                               new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
+                                       "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
     </div>
 
     <div class="form-group">
@@ -153,14 +151,6 @@
         <div class="col-md-10">
             @Html.EditorFor(model => model.BathRoom)
             @Html.ValidationMessageFor(model => model.BathRoom)
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.PackingPlace, new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.PackingPlace)
-            @Html.ValidationMessageFor(model => model.PackingPlace)
         </div>
     </div>
 

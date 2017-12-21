@@ -41,31 +41,31 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/Index">Trang Chủ</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="http://localhost:50775/Project/AboutUS">Giới Thiệu</a>
+                        <a class="nav-link js-scroll-trigger" href="http://localhost:50775/Project/AboutUS">About US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/SearchI">Tìm kiếm</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/SearchI">Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">Tin Tức</a>
+                        <a class="nav-link js-scroll-trigger" href="#about">Event</a>
                     </li>
                     @if (Session["UserID"] != null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Project/PostProject">Đăng Dự Án</a>
+                            <a class="nav-link js-scroll-trigger" href="/Project/PostProject">Post</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Đăng Dự Án</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Post</a>
                         </li>
                     }
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">Liên Hệ</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/Project/Contact">    </a>
@@ -73,17 +73,17 @@
                     @if (Session["UserID"] == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Đăng nhập</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">SIGN IN</a>
                         </li>
                     }
                     else
                     {
                             <li class="nav-item dropdown ">
-                                <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Xin Chào @Session["FullName"]<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, @Session["FullName"]<span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="font-size: 13px; color:white;background-color:black">
-                                    <li><a href="/Project/List"> &nbsp;&nbsp;&nbsp; Dự Án Của Bạn</a></li>&nbsp;
-                                    <li><a href="/Agency/ChangePw">&nbsp;&nbsp;  Thay Đổi Mật Khẩu</a></li>&nbsp;
-                                    <li><a href="/Agency/Logout">&nbsp;&nbsp;  Đăng Xuất</a></li>&nbsp;
+                                    <li><a href="/Project/List"> &nbsp;&nbsp;&nbsp; My Project</a></li>&nbsp;
+                                    <li><a href="/Agency/ChangePw">&nbsp;&nbsp;  Change Password</a></li>&nbsp;
+                                    <li><a href="/Agency/Logout">&nbsp;&nbsp;  Logout</a></li>&nbsp;
                                 </ul>
                             </li>
                     }

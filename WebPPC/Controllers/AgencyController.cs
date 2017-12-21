@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebPPC.Models;
@@ -7,10 +9,10 @@ namespace WebPPC.Controllers
 {
     public class AgencyController : Controller
     {
-        Team12Entities db = new Team12Entities();
+        team12Entities db = new team12Entities();
         public ActionResult Index()
         {
-            var product = db.PROPERTY.ToList();
+            var product = db.PROPERTies.ToList();
             return View(product);
         }
 
@@ -22,18 +24,11 @@ namespace WebPPC.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-<<<<<<< HEAD
-            var user = db.USER.FirstOrDefault(x => x.Email == email);
-=======
-
             var user = db.USERs.FirstOrDefault(x => x.Email == email);
->>>>>>> 1e868a091848ec17ddb016d367fabc6ffa2f54de
             if (user != null)
             {
-                
                 if (user.Password.Equals(password))
                 {
-
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
                     if (int.Parse(user.Role) == 1)
@@ -56,9 +51,9 @@ namespace WebPPC.Controllers
 
         public ActionResult Logout()
         {
-            if (Session["FullName"] != null)
+            if (Session["Fullname"] != null)
             {
-                Session["FullName"] = null;
+                Session["Fullname"] = null;
                 Session["UserID"] = null;
             }
             return RedirectToAction("Login");
@@ -78,7 +73,7 @@ namespace WebPPC.Controllers
 
             if (ModelState.IsValid)
             {
-                var siag = db.USER.FirstOrDefault(x => x.Email == model.Email);
+                var siag = db.USERs.FirstOrDefault(x => x.Email == model.Email);
                 if (siag == null)
                 {
                     var sig = new USER();
@@ -89,7 +84,7 @@ namespace WebPPC.Controllers
                     sig.Phone = model.Phone;
                     sig.Role = "0";
                     sig.Status = true;
-                    db.USER.Add(sig);
+                    db.USERs.Add(sig);
                     db.SaveChanges();
                    ViewBag.Success = "Đăng ký thành công";
                     model = new USER();
@@ -124,7 +119,7 @@ namespace WebPPC.Controllers
             ViewBag.err = "";
             ViewBag.errr = "";
             int xx = (int)Session["UserID"];
-            var us = db.USER.Single(x => x.ID == xx);
+            var us = db.USERs.Single(x => x.ID == xx);
             if (us.Password != curPw)
                 ViewBag.err = "Current Password is incorect";
             if (newPw != confimNewPw)
