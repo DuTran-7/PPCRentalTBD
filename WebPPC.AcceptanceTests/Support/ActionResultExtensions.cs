@@ -12,10 +12,7 @@ namespace WebPPC.AcceptanceTests.Support
                          .Which.ViewData.Model.Should().NotBeNull()
                          .And.Subject.Should().BeAssignableTo<TModel>()
                          .Subject;
-            //return result.Should()
-            //             .Subject.Should().BeAssignableTo<ViewResult>()
-            //             .Which.ViewData.Model.Should().Subject.Should().BeAssignableTo<TModel>()
-            //             .Subject;
+                        
         }
     }
 }

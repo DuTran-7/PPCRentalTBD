@@ -15,6 +15,7 @@ namespace WebPPC.AcceptanceTests.Drivers.Agency
     public class AgencyDrivers
     {
         private ActionResult _result;
+        private ActionResult loginResult;
         public void GotoLogin()
         {
             using (var controller = new AgencyController())
@@ -22,17 +23,22 @@ namespace WebPPC.AcceptanceTests.Drivers.Agency
                 _result = controller.Login();
             }
         }
-
+        
         public void Login(string email, string password)
         {
 
             using (var controller = new AgencyController())
             {
+                
                 var mContext = new Mock<ControllerContext>();
                 var mSession = new Mock<HttpSessionStateBase>();
                 mContext.SetupGet(c => c.HttpContext.Session).Returns(mSession.Object);
                 controller.ControllerContext = mContext.Object;
+
                 _result = controller.Login(email,password);
+                //loginResult = controller.Login("tmy@gmail.com", "123456");
+                //ScenarioContext.Current.Add(loginResult, _result);
+
             }
         }
 
