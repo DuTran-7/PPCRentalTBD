@@ -9,7 +9,7 @@ Given the following projects
 		
 
 @automation
-Scenario: View List of Agency Projects
+Scenario: View List Projects
 	Given Toi dang o trang chu
 	And Toi di den dang nhap
 	When Toi dang nhap email 'tmy@gmail.com' va '123456'

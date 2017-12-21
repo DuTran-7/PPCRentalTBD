@@ -51,7 +51,7 @@ namespace WebPPC.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult PostProject(HttpPostedFileBase Avatar, USER us, HttpPostedFileBase Image, PostModel model)
+        public ActionResult PostProject(HttpPostedFileBase Avatar, List<string> feature, USER us, HttpPostedFileBase Image, PostModel model, PROPERTY property, List<HttpPostedFileBase> images)
         {
             if (ModelState.IsValid)
             {
@@ -63,20 +63,49 @@ namespace WebPPC.Controllers
                     Avatar.SaveAs(path);
                     avatar = filename;
                 }
-                string image = "";
-                if (Image.ContentLength > 0)
-                {
-                    var filename = Path.GetFileName(Image.FileName);
-                    var path = Path.Combine(Server.MapPath("~/img"), filename);
-                    Image.SaveAs(path);
-                    image = filename;
-                }
+                //string image = "";
+                //if (Image.ContentLength > 0)
+                //{
+                //    var filename = Path.GetFileName(Image.FileName);
+                //    var path = Path.Combine(Server.MapPath("~/img"), filename);
+                //    Image.SaveAs(path);
+                //    image = filename;
+                //}
                 var pro = new PROPERTY();
                 pro.PropertyName = model.PropertyName;
                 pro.PropertyType_ID = model.PropertyType_ID;
                 pro.Avatar = avatar;
-                pro.Images = image;
+                //pro.Images = image;
                 //pro.DISTRICT = model.DISTRICT;
+                //add feture
+                //var fetur = new PROPERTY_FEATURE();
+                //if (featuree != null)
+                //{
+                //    foreach (string fetus in featuree)
+                //    {
+
+                //        // fetur.Property_ID = qqq.ID;
+                //        fetur.Feature_ID = db.FEATUREs.SingleOrDefault(x => x.FeatureName == fetus).ID;
+                //        fetur.Property_ID = property.ID;
+                //        //fetur.Feature_ID = property.ID;
+                //        db.PROPERTY_FEATURE.Add(fetur);
+
+                //    }
+                //}
+                var fetur = new PROPERTY_FEATURE();
+                if (feature != null)
+                {
+                    foreach (string fetus in feature)
+                    {
+                        //PROPERTY_FEATURE profeature = new PROPERTY_FEATURE();
+                        // fetur.Property_ID = qqq.ID;
+                        fetur.Feature_ID = db.FEATUREs.SingleOrDefault(x => x.FeatureName == fetus).ID;
+                        fetur.Property_ID = property.ID;
+                        //fetur.Feature_ID = 1;
+                        db.PROPERTY_FEATURE.Add(fetur);
+
+                    }
+                }
                 pro.District_ID = model.District_ID;
                 pro.Street_ID = model.Street_ID;
                 pro.Ward_ID = model.Ward_ID;

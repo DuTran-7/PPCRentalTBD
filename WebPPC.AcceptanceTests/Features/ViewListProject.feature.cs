@@ -110,12 +110,12 @@ testRunner.Given("the following projects", ((string)(null)), table1, "Given ");
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View List of Agency Projects")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("View List Projects")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "US02WebPPCViewListProject")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
-        public virtual void ViewListOfAgencyProjects()
+        public virtual void ViewListProjects()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View List of Agency Projects", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View List Projects", new string[] {
                         "automation"});
 #line 12
 this.ScenarioSetup(scenarioInfo);

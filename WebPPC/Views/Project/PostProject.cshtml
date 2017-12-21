@@ -52,36 +52,69 @@
         <p class="help-block text-danger"></p>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
-        <div class="col-md-10 " style="width:240px">
-            <input type="file" name="Image" class="form-control" required data-validation-required-message="" />
-            @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
+            <div class="col-md-10 " style="width:240px">
+                <input type="file" name="Image" class="form-control" required data-validation-required-message="" />
+                @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
+            </div>
+        </div>*@
+
+    <div class="row">
+        <div class="col-md-2">
+            <label>Chọn hình ảnh cho dự án của bạn:</label>
+        </div>
+        <div class="col-md-8">
+
+            <div class="row">
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+            </div>
+
         </div>
     </div>
+
     <div class="form-group col-md-10">
         @Html.DropDownList("PropertyType_ID",
-                                             new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
-                                          "--Property Type--", new { @class = "form-control control-label col-md-2" })
+                                                  new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
+                                               "--Property Type--", new { @class = "form-control control-label col-md-2" })
 
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownList("District_ID",
-                           new SelectList(db.DISTRICTs, "ID", "DistrictName"),
-                                   "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
+                                new SelectList(db.DISTRICTs, "ID", "DistrictName"),
+                                        "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Ward_ID,
-                               new SelectList(db.WARDs.Take(0), "ID", "WardName"),
-                                       "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
+                                    new SelectList(db.WARDs.Take(0), "ID", "WardName"),
+                                            "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Street_ID,
-                               new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
-                                       "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
+                                    new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
+                                            "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
     </div>
 
     <div class="form-group">
