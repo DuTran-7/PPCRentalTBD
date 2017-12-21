@@ -12,11 +12,11 @@ namespace WebPPC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class PROPERTY_TYPE
+    public partial class PICTURE
     {
-        public int ID { get; set; }
-        public string CodeType { get; set; }
-        public string Description { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public int id { get; set; }
+        public int Property_id { get; set; }
+    
+        public virtual PROPERTY PROPERTY { get; set; }
     }
 }

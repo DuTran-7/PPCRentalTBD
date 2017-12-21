@@ -110,3 +110,4 @@ D:\PPC\Fina\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
 D:\PPC\Fina\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\PPC\Fina\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
 D:\PPC\Fina\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
+D:\PPC\Fina\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
