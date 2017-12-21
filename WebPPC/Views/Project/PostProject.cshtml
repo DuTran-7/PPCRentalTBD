@@ -6,7 +6,6 @@
     var db = new team12Entities();
     var features = db.FEATUREs.ToList();
     var feature_property = db.PROPERTY_FEATURE.ToList();
-    
 }
 
 <style>
@@ -30,132 +29,173 @@
 {
     @Html.AntiForgeryToken()
 
-    <div id="ab" class="form-horizontal g">
+<div id="ab" class="form-horizontal g">
 
 
-        @Html.ValidationSummary(true)
+    @Html.ValidationSummary(true)
 
-        <div id="avatar" class="form-group">
-            @Html.LabelFor(model => model.PropertyName, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.PropertyName, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.PropertyName)
-            </div>
-
+    <div id="avatar" class="form-group">
+        @Html.LabelFor(model => model.PropertyName, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PropertyName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PropertyName)
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
-            <div class="col-md-10" style="width:240px">
-                <input type="file" name="Avatar" class="form-control" />
-                @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger  " })
-            </div>
-            <p class="help-block text-danger"></p>
-        </div>
+    </div>
 
-        <div class="form-group">
+    <div class="form-group">
+        @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
+        <div class="col-md-10" style="width:240px">
+            <input type="file" name="Avatar" class="form-control" />
+            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger  " })
+        </div>
+        <p class="help-block text-danger"></p>
+    </div>
+
+    @*<div class="form-group">
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
             <div class="col-md-10 " style="width:240px">
                 <input type="file" name="Image" class="form-control" required data-validation-required-message="" />
                 @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
             </div>
-        </div>
-        <div class="form-group col-md-10">
-            @Html.DropDownList("PropertyType_ID",
-                                            new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
-                                         "--Property Type--", new { @class = "form-control control-label col-md-2" })
+        </div>*@
 
+    <div class="row">
+        <div class="col-md-2">
+            <label>Chọn hình ảnh cho dự án của bạn:</label>
         </div>
-        <div class="form-group col-md-10">
+        <div class="col-md-8">
 
-            @Html.DropDownList("District_ID",
-                          new SelectList(db.DISTRICTs, "ID", "DistrictName"),
-                                  "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
-        </div>
-        <div class="form-group col-md-10">
-
-            @Html.DropDownListFor(m => m.Ward_ID,
-                              new SelectList(db.WARDs.Take(0), "ID", "WardName"),
-                                      "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
-        </div>
-        <div class="form-group col-md-10">
-
-            @Html.DropDownListFor(m => m.Street_ID,
-                              new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
-                                      "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Price)
-                @Html.ValidationMessageFor(model => model.Price)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND">
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Area)
-                @Html.ValidationMessageFor(model => model.Area)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.BedRoom, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BedRoom)
-                @Html.ValidationMessageFor(model => model.BedRoom)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.BathRoom, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.BathRoom)
-                @Html.ValidationMessageFor(model => model.BathRoom)
-            </div>
-        </div>
-
-        @foreach (var item in features)
-        {
-           
-            <div class="checkbox">
-                    <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
+            <div class="row">
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
-
-        }
-        
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
-
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Content)
-                @Html.ValidationMessageFor(model => model.Content)
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
+                <div class="col-md-10" style="width:240px">
+                    <input type="file" name="Images" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
+                </div>
             </div>
-        </div>
-        <div class="form-group col-md-10">
-            <select class="form-control control-label col-md-2 valid" id="Status_ID" name="Status_ID">
-                <option value="1">Chưa duyệt</option>
-                <option value="2">Lưu nháp</option>
-            </select>
 
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input id="button" type="submit" value="Create" class="btn btn-default" />
-
-            </div>
         </div>
     </div>
+
+    <div class="form-group col-md-10">
+        @Html.DropDownList("PropertyType_ID",
+                                                  new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
+                                               "--Property Type--", new { @class = "form-control control-label col-md-2" })
+
+    </div>
+    <div class="form-group col-md-10">
+
+        @Html.DropDownList("District_ID",
+                                new SelectList(db.DISTRICTs, "ID", "DistrictName"),
+                                        "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
+    </div>
+    <div class="form-group col-md-10">
+
+        @Html.DropDownListFor(m => m.Ward_ID,
+                                    new SelectList(db.WARDs.Take(0), "ID", "WardName"),
+                                            "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
+    </div>
+    <div class="form-group col-md-10">
+
+        @Html.DropDownListFor(m => m.Street_ID,
+                                    new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
+                                            "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND">
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Area)
+            @Html.ValidationMessageFor(model => model.Area)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BedRoom, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BedRoom)
+            @Html.ValidationMessageFor(model => model.BedRoom)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BathRoom, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.BathRoom)
+            @Html.ValidationMessageFor(model => model.BathRoom)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PackingPlace, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.PackingPlace)
+            @Html.ValidationMessageFor(model => model.PackingPlace)
+        </div>
+    </div>
+
+    @foreach (var item in features)
+    {
+
+        <div class="checkbox">
+            <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
+        </div>
+
+    }
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.Content)
+            @Html.ValidationMessageFor(model => model.Content)
+        </div>
+    </div>
+    <div class="form-group col-md-10">
+        <select class="form-control control-label col-md-2 valid" id="Status_ID" name="Status_ID">
+            <option value="1">Chưa duyệt</option>
+            <option value="2">Lưu nháp</option>
+        </select>
+
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="button" type="submit" value="Create" class="btn btn-default" />
+
+        </div>
+    </div>
+</div>
 }
 
 <div>

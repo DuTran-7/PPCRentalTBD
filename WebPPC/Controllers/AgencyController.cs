@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebPPC.Models;
@@ -24,11 +22,18 @@ namespace WebPPC.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
+<<<<<<< HEAD
             var user = db.USER.FirstOrDefault(x => x.Email == email);
+=======
+
+            var user = db.USERs.FirstOrDefault(x => x.Email == email);
+>>>>>>> 1e868a091848ec17ddb016d367fabc6ffa2f54de
             if (user != null)
             {
+                
                 if (user.Password.Equals(password))
                 {
+
                     Session["FullName"] = user.FullName;
                     Session["UserID"] = user.ID;
                     if (int.Parse(user.Role) == 1)
@@ -51,9 +56,9 @@ namespace WebPPC.Controllers
 
         public ActionResult Logout()
         {
-            if (Session["Fullname"] != null)
+            if (Session["FullName"] != null)
             {
-                Session["Fullname"] = null;
+                Session["FullName"] = null;
                 Session["UserID"] = null;
             }
             return RedirectToAction("Login");

@@ -66,6 +66,18 @@ namespace WebPPC.AcceptanceTests.Drivers.Property
             //Arrange
             var expectedProjects = showProject.Rows.Select(r => r["PropertyName"]);
             //Actual
+            var actualProjects = _result.Model<IEnumerable<PROPERTY>>();
+            //Assert
+            ProjectAssertions.HomeScreenShouldShow(actualProjects, expectedProjects);
+        }
+
+        
+
+        public void ShowListOfProject(Table showProject)
+        {
+            //Arrange
+            var expectedProjects = showProject.Rows.Select(r => r["PropertyName"]);
+            //Actual
             var actualProjects = _result.Model<IEnumerable<WebPPC.Models.PROPERTY>>();
             //Assert
             ProjectAssertions.HomeScreenShouldShow(actualProjects, expectedProjects);

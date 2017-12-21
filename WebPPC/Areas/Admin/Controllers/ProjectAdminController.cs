@@ -33,9 +33,13 @@ namespace WebPPC.Areas.Admin.Controllers
             return View(property);
         }
         [HttpPost]
-        public ActionResult Edit(int id, PROPERTY p)
+        public ActionResult Edit(int id, PROPERTY p, List<string> feature)
         {
+            PROPERTY proper = model.PROPERTies.Find(p.ID);
             var property = model.PROPERTies.FirstOrDefault(x => x.ID == id);
+            var feat = model.PROPERTY_FEATURE.Where(x => x.Property_ID == p.ID).ToList();
+            model.PROPERTY_FEATURE.RemoveRange(feat);
+
             property.PropertyName = p.PropertyName;
             property.UnitPrice = p.UnitPrice;
             property.Price = p.Price;
@@ -49,7 +53,14 @@ namespace WebPPC.Areas.Admin.Controllers
             property.WARD = p.WARD;
             property.Area = p.Area;
             property.Status_ID = p.Status_ID;
+            foreach (var featu in feature)
+            {
+                PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
 
+                proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
+                proferty_fea.Property_ID = p.ID;
+                model.PROPERTY_FEATURE.Add(proferty_fea);
+            }
 
             model.SaveChanges();
             return RedirectToAction("Index");
