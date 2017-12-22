@@ -1,14 +1,14 @@
 ﻿@model WebPPC.Models.PROPERTY
 @using WebPPC.Models
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Sửa dự án";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     var db = new team12Entities();
     var features = db.FEATUREs.ToList();
     var feature_property = db.PROPERTY_FEATURE.ToList();
 }
 
-<h2>Edit Project</h2>
+<h2>Sửa dự án</h2>
 
 
 @using (Html.BeginForm())
@@ -16,7 +16,7 @@
     @Html.AntiForgeryToken()
 
 <div class="form-horizontal">
-    <h4>PROPERTY</h4>
+    <h4>Dự án</h4>
 
     <hr />
     @Html.ValidationSummary(true)
@@ -169,11 +169,11 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+            <input type="submit" value="Lưu" class="btn btn-default" />
         </div>
     </div>
 </div>
 }
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về", "Index")
 </div>

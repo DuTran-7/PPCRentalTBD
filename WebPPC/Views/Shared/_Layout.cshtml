@@ -41,31 +41,32 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/Index">Home</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Index">Trang chủ</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="/Project/SearchI">Tìm kiếm</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="http://localhost:50775/Project/AboutUS">About US</a>
+                        <a class="nav-link js-scroll-trigger" href="http://localhost:50775/Project/AboutUS">Lịch sử</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/SearchI">Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">Event</a>
+                        <a class="nav-link js-scroll-trigger" href="#about">Sự kiện</a>
                     </li>
                     @if (Session["UserID"] != null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Project/PostProject">Post</a>
+                            <a class="nav-link js-scroll-trigger" href="/Project/PostProject">Đăng bài</a>
                         </li>
                     }
                     else
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Post</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Đăng bài</a>
                         </li>
                     }
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">Contact Us</a>
+                        <a class="nav-link js-scroll-trigger" href="/Project/Contact">Liên hệ</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="/Project/Contact">    </a>
@@ -73,17 +74,17 @@
                     @if (Session["UserID"] == null)
                     {
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">SIGN IN</a>
+                            <a class="nav-link js-scroll-trigger" href="/Agency/Login">Đăng nhập</a>
                         </li>
                     }
                     else
                     {
                             <li class="nav-item dropdown ">
-                                <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, @Session["FullName"]<span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle nav-link js-scroll-trigger" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Chào, @Session["FullName"]<span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="font-size: 13px; color:white;background-color:black">
-                                    <li><a href="/Project/List"> &nbsp;&nbsp;&nbsp; My Project</a></li>&nbsp;
-                                    <li><a href="/Agency/ChangePw">&nbsp;&nbsp;  Change Password</a></li>&nbsp;
-                                    <li><a href="/Agency/Logout">&nbsp;&nbsp;  Logout</a></li>&nbsp;
+                                    <li><a href="/Project/List"> &nbsp;&nbsp;&nbsp; Dự án của tôi</a></li>&nbsp;
+                                    <li><a href="/Agency/ChangePw">&nbsp;&nbsp;  Đổi mật khẩu</a></li>&nbsp;
+                                    <li><a href="/Agency/Logout">&nbsp;&nbsp;  Đăng xuất</a></li>&nbsp;
                                 </ul>
                             </li>
                     }
@@ -119,8 +120,7 @@
 
                 <div class="col-md-4">
                     <h2>Perfect Property Company VietNam</h2>
-                    <img src="~/images/23513265_1830010197290625_593480001_n.png" />
-
+                
 
 
                 </div>

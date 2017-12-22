@@ -6,7 +6,7 @@
     var db = new team12Entities();
 }
 
-<h2>Edit Project</h2>
+<h2>Sửa dự án</h2>
 
 
 @using (Html.BeginForm())
@@ -14,7 +14,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>PROPERTY</h4>
+        <h4>Dự án</h4>
 
         <hr />
         @Html.ValidationSummary(true)
@@ -134,5 +134,5 @@
     </div>
 }
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về", "Index")
 </div>

@@ -24,7 +24,7 @@
     }
 </style>
 
-<h2 style="text-align:center">Post Project</h2>
+<h2 style="text-align:center">Đăng dự án</h2>
 <hr />
 @using (Html.BeginForm("PostProject", "Project", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -181,7 +181,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input id="button" type="submit" value="Create" class="btn btn-default" />
+            <input id="button" type="submit" value="Tạo" class="btn btn-default" />
 
         </div>
     </div>
@@ -189,7 +189,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Trở về", "Index")
 </div>
 @section Scripts {
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />

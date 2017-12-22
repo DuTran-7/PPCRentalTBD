@@ -487,3 +487,7 @@ D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTest
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.App.config
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb

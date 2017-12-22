@@ -1,14 +1,14 @@
 ﻿@model WebPPC.Models.PROPERTY
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Chi tiết";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Chi tiết</h2>
 
 <div>
-    <h4>PROPERTY</h4>
+    <h4>Dự án</h4>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
@@ -182,6 +182,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Sửa", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Trở về", "Index")
 </p>

@@ -1,7 +1,7 @@
 ﻿@model WebPPC.Models.PROPERTY
 
 @{
-    ViewBag.Title = "Detail";
+    ViewBag.Title = "Chi tiết";
 
 }
 <style>
@@ -32,7 +32,7 @@
         float: right;
     }
 </style>
-<h2 class="section-heading text-uppercase" style="padding-left:40%;padding-top:50px;padding-bottom:20px;">Detail Project</h2>
+<h2 class="section-heading text-uppercase" style="padding-left:40%;padding-top:50px;padding-bottom:20px;">Chi tiết dự án</h2>
 
 <img style="padding-left:5%" src="~/img/@Model.Avatar" alt="@Html.DisplayNameFor(model => Model.PropertyName)" width="95%" />
 <br /><hr /><br />
@@ -89,14 +89,14 @@
         <dl class="dl-horizontal">
 
             <dt>
-                <a>Project Type</a>
+                <a>Loại dự án</a>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.PROPERTY_TYPE.CodeType)
             </dd>
             <br />
             <dt>
-                <a>Created At</a>
+                <a>Thời gian tạo</a>
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.Created_at)
@@ -128,7 +128,7 @@
 
 <div id="cuoi">
     <div id="left" style="float:left; margin-left:20px; width:60%; margin-bottom:30px">
-        <h3>Apartment Structure:</h3>
+        <h3>Thiết kế mặt phẳng:</h3>
         <img src="~/img/apartment_structure.jpg" width="70%" />
     </div>
 
