@@ -21,8 +21,28 @@
         font-size: 12px;
         margin: 4px 2px;
         cursor: pointer;
+       
+    }
+    #text-box single-line {
+        width: 400px;
     }
 </style>
+@section jsFooter{
+    <script>
+        $('#btnSelectImage').on('click', function (e) {
+            e.preventDefault();
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (url) {
+                $('#txtAvatar').val(url);
+            };
+            finder.popup();
+        })
+
+        var editor = CKEDITOR.replace('txtContent', {
+            customConfig: 'Plugins/ckeditor/config.js',
+        });
+    </script>
+}
 
 <h2 style="text-align:center">Đăng dự án</h2>
 <hr />
@@ -30,15 +50,15 @@
 {
     @Html.AntiForgeryToken()
 
-<div id="ab" class="form-horizontal g">
+<div  class="form-horizontal" style="padding-left:20%;">
 
 
     @Html.ValidationSummary(true)
 
     <div id="avatar" class="form-group">
         @Html.LabelFor(model => model.PropertyName, new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.PropertyName, new { @class = "form-control" })
+        <div class="col-md-12">
+            @Html.TextBoxFor(model => model.PropertyName, new { style = "width: 400px;   padding: 12px 22px;" })
             @Html.ValidationMessageFor(model => model.PropertyName)
         </div>
 
@@ -46,13 +66,14 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
-        <div class="col-md-10" style="width:240px">
+        <div class="col-md-4" >
             <input type="file" name="Avatar" class="form-control" />
-            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger  " })
+            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger g ", style = "width:50px;  text-align: center;"})
         </div>
         <p class="help-block text-danger"></p>
     </div>
 
+  
     @*<div class="form-group">
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
             <div class="col-md-10 " style="width:240px">
@@ -60,27 +81,28 @@
                 @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger " })
             </div>
         </div>*@
-
-    <div class="row">
-        <div class="col-md-2">
+    <br>
+    <div class="form-group">
+        <div class="col-md-10">
             <label>Chọn ảnh cho dự án của bạn:</label>
         </div>
-        <div class="col-md-8">
+        
+        <div class="col-md-10">
 
             <div class="row">
-                <div class="col-md-10" style="width:240px">
+                <div class="col-md-5" style="width:240px">
                     <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
-                <div class="col-md-10" style="width:240px">
+                <div class="col-md-5" style="width:240px">
                     <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
-                <div class="col-md-10" style="width:240px">
+                <div class="col-md-5" style="width:240px">
                     <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
-                <div class="col-md-10" style="width:240px">
+                <div class="col-md-5" style="width:200px">
                     <input type="file" name="Image" class="form-control" />
                     @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
                 </div>
@@ -118,7 +140,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Price)
+            @Html.TextBoxFor(model => model.Price,new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.Price)
         </div>
     </div>
@@ -126,14 +148,14 @@
     <div class="form-group">
         @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND">
+            <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND" style="width: 400px" >
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" ,style="width:200px"})
         <div class="col-md-10">
-            @Html.EditorFor(model => model.Area)
+            @Html.TextBoxFor(model => model.Area, new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.Area)
         </div>
     </div>
@@ -141,7 +163,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.BedRoom, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.BedRoom)
+            @Html.TextBoxFor(model => model.BedRoom, new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.BedRoom)
         </div>
     </div>
@@ -149,26 +171,27 @@
     <div class="form-group">
         @Html.LabelFor(model => model.BathRoom, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.BathRoom)
+            @Html.TextBoxFor(model => model.BathRoom, new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.BathRoom)
         </div>
     </div>
 
     @foreach (var item in features)
-    {
-
+{
+    <div class="col-md-10">
         <div class="checkbox">
             <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
         </div>
+    </div>
 
-    }
+}
 
-
+    <br>
     <div class="form-group">
-        @Html.LabelFor(model => model.Content, new { @class = "control-label col-md-2" })
+     
 
         <div class="col-md-10">
-            @Html.TextAreaFor(model => model.Content)
+            @Html.TextAreaFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" }, id = "txtContent" })
             @Html.ValidationMessageFor(model => model.Content)
         </div>
     </div>

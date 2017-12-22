@@ -80,7 +80,7 @@
                 @Html.DisplayFor(modelItem => item.Avatar)
             </td>
             <td style="text-align: justify;">
-                @item.Content
+                @Html.Raw(item.Content)
             </td>
             <td>
 

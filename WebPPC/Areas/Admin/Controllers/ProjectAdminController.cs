@@ -33,6 +33,7 @@ namespace WebPPC.Areas.Admin.Controllers
             return View(property);
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Edit(int id, PROPERTY p, List<string> feature)
         {
             PROPERTY proper = model.PROPERTies.Find(p.ID);
@@ -56,21 +57,21 @@ namespace WebPPC.Areas.Admin.Controllers
 
             //add feature
             
-            foreach (var featu in feature)
-            {
-                PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
+        //    foreach (var featu in feature)
+        //    {
+        //        PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
                
-                proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
-                proferty_fea.Property_ID = p.ID;
-                model.PROPERTY_FEATURE.Add(proferty_fea);
-            }
+        //        proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
+        //        proferty_fea.Property_ID = p.ID;
+        //        model.PROPERTY_FEATURE.Add(proferty_fea);
+        //    }
 
             model.SaveChanges();
             return RedirectToAction("Index");
 
-            
 
-            
+
+
         }
         public ActionResult Details(int id)
         {

@@ -165,11 +165,14 @@
 
     <script src="~/Scripts/jqBootstrapValidation.js"></script>
     <script src="~/Scripts/contact_me.js"></script>
+    <script src="/Plugins/ckfinder/ckfinder.js"></script>
+    <script src="~/Plugins/ckeditor/ckeditor.js"></script>
     <!-- Custom scripts for this template -->
 
     <script src="~/Scripts/agency.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("jsFooter", required: false)
     @RenderSection("scripts", required: false)
 </body>
 

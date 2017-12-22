@@ -51,6 +51,7 @@ namespace WebPPC.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult PostProject(HttpPostedFileBase Avatar, PROPERTY property, HttpPostedFileBase Image, PostModel model, List<string> feature)
         {
             if (ModelState.IsValid)

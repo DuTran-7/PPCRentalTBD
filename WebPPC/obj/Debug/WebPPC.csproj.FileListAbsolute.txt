@@ -397,3 +397,11 @@ E:\8\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\8\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
 E:\8\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
 E:\8\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder.dll
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.dll
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.dll
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.dll
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder.pdb
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.pdb
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.pdb
+E:\8\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.pdb

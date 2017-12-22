@@ -46,7 +46,7 @@
         <img src="~/img/location.PNG" width="10" style="" /> Đường @Html.DisplayFor(model => Model.STREET.StreetName) ,Phường @Html.DisplayFor(model => Model.WARD.WardName), Quận @Html.DisplayFor(model => Model.DISTRICT.DistrictName)
         <br /><br /><br /><br />
         <h4 style="text-transform: uppercase">Giới thiệu dự án</h4>
-        <p style="text-indent: 50px ; word-wrap:break-word;text-align:justify">@Html.DisplayFor(model => model.Content)</p>
+        <p style="text-indent: 50px ; word-wrap:break-word;text-align:justify">@Html.Raw(Model.Content)</p>
         <br />
         <br />
 
