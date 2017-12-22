@@ -68,7 +68,7 @@ namespace WebPPC.Controllers
 
 
         [HttpPost]
-        public ActionResult SignUp(USER model)
+        public ActionResult SignUp(SignUpModel model)
         {
 
             if (ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace WebPPC.Controllers
                     db.USERs.Add(sig);
                     db.SaveChanges();
                    ViewBag.Success = "Đăng ký thành công";
-                    model = new USER();
+                    model = new SignUpModel();
                     return RedirectToAction("Login", "Agency");
                 }
                 else
