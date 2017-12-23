@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Trang chủ";
 }
 @using WebPPC.Models
 
@@ -28,7 +28,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-uppercase">Projects List</h2>
+                <h2 class="section-heading text-uppercase">Danh sách dự án</h2>
                 <h3 class="section-subheading text-muted">Perfect Property Company.</h3>
             </div>
         </div>
@@ -46,10 +46,10 @@
                         <img class="img-fluid" src="/img/@item.Avatar " alt="">
                         <div class="portfolio-caption">
                             <h4>@item.PropertyName.Substring(0, Math.Min(@item.PropertyName.Length, 20))</h4>
-                            <p> @item.Content.Substring(0, Math.Min(@item.Content.Length, 50))</p>
+                            <p> @Html.Raw(item.Content.Substring(0, Math.Min(@item.Content.Length, 50)))</p>
                             <strong style="color:red; font-size: 140%">$@item.Price</strong>
                             <br>
-                            <a class="button button5" href="/Project/Detail/@item.ID">Detail</a>
+                            <a class="button button5" href="/Project/Detail/@item.ID">Chi tiết</a>
                         </div>
                     </div>
                 }

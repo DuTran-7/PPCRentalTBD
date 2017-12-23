@@ -1,6 +1,6 @@
 ﻿@model WebPPC.Models.USER
 @{
-    ViewBag.Title = "ChangePw";
+    ViewBag.Title = "Đổi mật khẩu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
@@ -8,7 +8,7 @@
         text-align:center;
     }
 </style>
-<h2 style="text-align:center">ChangePw</h2>
+<h2 style="text-align:center">Đổi mật khẩu</h2>
 
 @if (ViewBag.err != null && ViewBag.errr != null)
 {
@@ -23,7 +23,7 @@
     }
    
     <div class="form-group " style="text-align:center" >
-        <input class="form-control" type="password" name="curPw" placeholder="Current Password" />
+        <input class="form-control" type="password" name="curPw" placeholder="Mật khẩu hiện tại" />
     </div>
     @if (ViewBag.errr != null)
     {
@@ -31,7 +31,7 @@
     }
    
     <div style="text-align:center" class="form-group">
-        <input type="password" class="form-control" name="newPw" placeholder="New Password"/>
+        <input type="password" class="form-control" name="newPw" placeholder="Mật khẩu mới"/>
 
     </div>
     @if (ViewBag.errr != null)
@@ -40,8 +40,8 @@
     }
    
     <div style="text-align:center" class="form-group">
-        <input type="password" class="form-control" name="confimNewPw" placeholder="Confirm New Password" />
+        <input type="password" class="form-control" name="confimNewPw" placeholder="Nhập lại mật khẩu mới" />
     </div>
-    <input type="submit" class="form-control" value="SUBMIT" name="submit"/>
+    <input type="submit" class="form-control" value="Gửi" name="submit" style="background-color:aliceblue"/>
 </form>
 <br /><br /><br /><br />

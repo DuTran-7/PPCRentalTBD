@@ -487,6 +487,7 @@ D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTest
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
 D:\team2\goc\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb
+<<<<<<< HEAD
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\WebPPC.AcceptanceTests.dll.config
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\WebPPC.AcceptanceTests.dll
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\bin\Debug\WebPPC.AcceptanceTests.pdb
@@ -584,3 +585,9 @@ D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.Acceptan
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.CoreCompileInputs.cache
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb
+=======
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csproj.App.config
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.csprojResolveAssemblyReference.cache
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.dll
+E:\8\PPCRentalTBD\WebPPC.AcceptanceTests\obj\Debug\WebPPC.AcceptanceTests.pdb
+>>>>>>> 503c4130f7d37429c98efd327838c8d57e13fc1b

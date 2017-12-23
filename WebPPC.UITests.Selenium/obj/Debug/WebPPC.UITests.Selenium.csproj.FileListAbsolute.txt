@@ -76,6 +76,7 @@ D:\team2\test\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Sele
 D:\team2\test\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.csproj.CoreCompileInputs.cache
 D:\team2\test\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.dll
 D:\team2\test\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.pdb
+<<<<<<< HEAD
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\bin\Debug\WebPPC.UITests.Selenium.dll.config
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\bin\Debug\WebPPC.UITests.Selenium.dll
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\bin\Debug\WebPPC.UITests.Selenium.pdb
@@ -101,3 +102,8 @@ D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.csproj.CoreCompileInputs.cache
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.dll
 D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.pdb
+=======
+E:\8\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.csprojResolveAssemblyReference.cache
+E:\8\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.dll
+E:\8\PPCRentalTBD\WebPPC.UITests.Selenium\obj\Debug\WebPPC.UITests.Selenium.pdb
+>>>>>>> 503c4130f7d37429c98efd327838c8d57e13fc1b
