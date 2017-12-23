@@ -16,12 +16,20 @@ namespace WebPPC.AcceptanceTests.Drivers.Property
     public class PropertyDrivers
     {
         private ActionResult _result;
-
+        team12Entities db = new team12Entities();
         public void NavigateToHome()
         {
             using (var controller = new AgencyController())
             {
                 _result = controller.Login();
+            }
+        }
+
+        internal void NavigateToPostProject()
+        {
+            using (var controller = new ProjectController())
+            {
+                _result = controller.PostProject();
             }
         }
 
@@ -31,6 +39,39 @@ namespace WebPPC.AcceptanceTests.Drivers.Property
             var shownProject = _result.Model<IEnumerable<PROPERTY>>();
             //Assert
             ProjectAssertions.HomeScreenShouldShow(shownProject, expectedTitles);
+        }
+
+        internal void InsertProject(Table duAn)
+        {
+            var row = duAn.Rows[0];
+            var databro = new PROPERTY
+            {
+                PropertyName = row["PropertyName"],
+                Avatar = row["Avatar"],
+                BedRoom = int.Parse(row["BedRoom"]),
+                PropertyType_ID = int.Parse(row["Property_Type"]),
+                BathRoom = int.Parse(row["BathRoom"]),
+                Content = row["Content"],
+                Area = row["BathRoom"],
+                District_ID = int.Parse(row["District"]),
+                Ward_ID = int.Parse(row["Ward"]),
+                Street_ID = int.Parse(row["Street"])
+            };
+            db.PROPERTies.Add(databro);
+            db.SaveChanges();
+            ScenarioContext.Current.Add("Property", databro);
+        }
+
+        internal void SaveProject()
+        {
+            //Arange
+            var exProperty = ScenarioContext.Current.Get<PROPERTY>("Property");
+
+            //Act
+            var actProperty = db.PROPERTies.Single(x => x.PropertyName.Equals(exProperty.PropertyName));
+
+            //Assert
+            ProjectAssertions.HomeScreenShouldShow(exProperty, actProperty);
         }
 
         public void NavigateHome()

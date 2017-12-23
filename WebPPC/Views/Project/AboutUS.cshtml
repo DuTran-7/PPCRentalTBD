@@ -1,7 +1,9 @@
-﻿
+﻿@using WebPPC.Models
+@model List<ABOUTU>
 @{
-    
+
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <!DOCTYPE html>
@@ -15,74 +17,83 @@
 </head>
 <body>
     <div class="page_container"
-        <div class="wrap">
+    <div class="wrap">
 
-            <div class="container">
-                <section>
-                    <div class="row">
-                        <div class="span4">
-                            <h2 class="title">Our History</h2>
-                            <p>By driving leads and working to find solutions for our clients, AmazingBiz has grown to become one of the largest and most successful digital media agencies. Founded in 2000, we are servicing more than 150 clients worldwide.</p> <p>Our decades of experience in connecting buyers is the basis for our future success. We know where to find the leads and convert them to revenue streams.</p>
-                        </div>
-                        <div class="span4">
-                            <h2 class="title">Our Mission</h2>
-                            <p>Evolution is part of our mission and culture. It is also the driving engine of our market. That means embracing new technologies and expanding your horizons. Because true innovation can only happen when you have the curiosity to explore new ideas and the courage to discover better solutions.</p>
-                            <p>We are always looking for a better way to deliver qualified prospects to your business.</p>
+    <div class="container">
+    <section>
+    <div class="row">
+    @foreach (var item in Model)
+    {
+      <div class="col-md-3">
+          <p>@item.aboutname</p>
+          <img src="/img/@item.aboutavt" class="img-responsive" />
+          <p>@item.aboutcontent</p>
+      </div>
 
-                        </div>
-                        <div class="span4">
-                            <h2 class="title">How Makes Us Different</h2>
-                            <p>We are marketing scientists. Everything we do is based on the strongest possible foundation. Our work is defined by measurable objectives and proven techniques, and our team helps pilot programs that lead to a positive business impact for our clients.</p>
+    }
+    <div class="span4">
+    <h2 class="title">Our History</h2>
+    <p>By driving leads and working to find solutions for our clients, AmazingBiz has grown to become one of the largest and most successful digital media agencies. Founded in 2000, we are servicing more than 150 clients worldwide.</p> <p>Our decades of experience in connecting buyers is the basis for our future success. We know where to find the leads and convert them to revenue streams.</p>
+    </div>
+    <div class="span4">
+    <h2 class="title">Our Mission</h2>
+    <p>Evolution is part of our mission and culture. It is also the driving engine of our market. That means embracing new technologies and expanding your horizons. Because true innovation can only happen when you have the curiosity to explore new ideas and the courage to discover better solutions.</p>
+    <p>We are always looking for a better way to deliver qualified prospects to your business.</p>
 
-                            <p>And like the finest scientists, we never guess. Particularly when it comes to your business.</p>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2 class="title">Our Team</h2>
-                    <p>We are proud of our company, not only for its unqiue identity, but because of the people that drive it! Listed here are the most seasoned members of the AmazingBiz team.</p>
-                    <div class="row">
-                        <div class="span3">
-                            <div class="profile">
-                                <img alt="" src="22154291_1351362008309762_2031085944162246522_n.jpg">
-                                <img src="~/img/PIS_7389-Edit-stamp.jpg" />
-                                <h4>Bon Makliejii</h4>
-                                <div class="profile_title">Market Analyst</div>
-                                <p>Bob is a recognized leader in applying database and direct marketing to branded products using traditional and electronic direct marketing.</p>
-                            </div>
-                        </div>
-                        <div class="span3">
-                            <div class="profile">
-                                <img alt="" src="22221526_1351361901643106_1102168170208034041_n.jpg">
-                                <img src="~/img/PIS_7319-Edit-stamp.jpg" />
-                                <h4>Bill Batwanjry</h4>
-                                <div class="profile_title">Marketing Consultant</div>
-                                <p>Bill provides invaluable strategic guidance to our clients. He has more than 20 years of  experience in marketing planning and direct marketing.</p>
-                            </div>
-                        </div>
-                        <div class="span3">
-                            <div class="profile">
-                                <img alt="" src="22221966_1351361968309766_4552551465182198591_n.jpg">
-                                <img src="~/img/PIS_6656-Edit-stamp.jpg" />
-                                <h4>Don Parvana</h4>
-                                <div class="profile_title">Corporate Relations</div>
-                                <p>Don leads campaigns that help our clients explore new channels, reach untapped segments and make their marketing efforts more effective.</p>
-                            </div>
-                        </div>
-                        <div class="span3">
-                            <div class="profile">
-                                <img alt="" src="CHo.jpg">
-                                <img src="~/img/bitexco.jpg" />
-                                <h4>Eric Charseela</h4>
-          
-                                                      <div class="profile_title">Accounts Manager</div>
-                                <p>Eric is in charge of account management, developing highly successful marketing and promotional programs. </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+    </div>
+    <div class="span4">
+    <h2 class="title">How Makes Us Different</h2>
+    <p>We are marketing scientists. Everything we do is based on the strongest possible foundation. Our work is defined by measurable objectives and proven techniques, and our team helps pilot programs that lead to a positive business impact for our clients.</p>
+
+    <p>And like the finest scientists, we never guess. Particularly when it comes to your business.</p>
+    </div>
+    </>
+    </section>
+    <section>
+    <h2 class="title">Our Team</h2>
+    <p>We are proud of our company, not only for its unqiue identity, but because of the people that drive it! Listed here are the most seasoned members of the AmazingBiz team.</p>
+    <div class="row">
+    <div class="span3">
+    <div class="profile">
+    <img alt="" src="22154291_1351362008309762_2031085944162246522_n.jpg">
+    <img src="~/img/PIS_7389-Edit-stamp.jpg" />
+    <h4>Bon Makliejii</h4>
+    <div class="profile_title">Market Analyst</div>
+    <p>Bob is a recognized leader in applying database and direct marketing to branded products using traditional and electronic direct marketing.</p>
+    </div>
+    </div>
+    <div class="span3">
+    <div class="profile">
+    <img alt="" src="22221526_1351361901643106_1102168170208034041_n.jpg">
+    <img src="~/img/PIS_7319-Edit-stamp.jpg" />
+    <h4>Bill Batwanjry</h4>
+    <div class="profile_title">Marketing Consultant</div>
+    <p>Bill provides invaluable strategic guidance to our clients. He has more than 20 years of  experience in marketing planning and direct marketing.</p>
+    </div>
+    </div>
+    <div class="span3">
+    <div class="profile">
+    <img alt="" src="22221966_1351361968309766_4552551465182198591_n.jpg">
+    <img src="~/img/PIS_6656-Edit-stamp.jpg" />
+    <h4>Don Parvana</h4>
+    <div class="profile_title">Corporate Relations</div>
+    <p>Don leads campaigns that help our clients explore new channels, reach untapped segments and make their marketing efforts more effective.</p>
+    </div>
+    </div>
+    <div class="span3">
+    <div class="profile">
+    <img alt="" src="CHo.jpg">
+    <img src="~/img/bitexco.jpg" />
+    <h4>Eric Charseela</h4>
+
+    <div class="profile_title">Accounts Manager</div>
+    <p>Eric is in charge of account management, developing highly successful marketing and promotional programs. </p>
+    </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    </div>
     </div>
 </body>
 </html>

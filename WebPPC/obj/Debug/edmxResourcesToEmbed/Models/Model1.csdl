@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="team12Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="team12Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="ABOUTU">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="Text" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="aboutname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aboutavt" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aboutcontent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="aboutimges" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CONTACT">
     <Key>
@@ -46,6 +49,14 @@
     <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
     <Property Name="filepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
+  <EntityType Name="PICTURE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Property_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PROPERTY" Relationship="Self.FK__PICTURE__Propert__22AA2996" FromRole="PICTURE" ToRole="PROPERTY" />
+  </EntityType>
   <EntityType Name="PROJECT_STATUS">
     <Key>
       <PropertyRef Name="ID" />
@@ -82,6 +93,7 @@
     <Property Name="Updated_at" Type="DateTime" Precision="0" />
     <Property Name="Sale_ID" Type="Int32" />
     <NavigationProperty Name="DISTRICT" Relationship="Self.FK_PROPERTY_DISTRICT" FromRole="PROPERTY" ToRole="DISTRICT" />
+    <NavigationProperty Name="PICTUREs" Relationship="Self.FK__PICTURE__Propert__22AA2996" FromRole="PROPERTY" ToRole="PICTURE" />
     <NavigationProperty Name="PROJECT_STATUS" Relationship="Self.FK_PROPERTY_PROJECT_STATUS" FromRole="PROPERTY" ToRole="PROJECT_STATUS" />
     <NavigationProperty Name="PROPERTY_FEATURE" Relationship="Self.FK_PROPERTY_FEATURE_PROPERTY" FromRole="PROPERTY" ToRole="PROPERTY_FEATURE" />
     <NavigationProperty Name="PROPERTY_TYPE" Relationship="Self.FK_PROPERTY_PROPERTY_TYPE" FromRole="PROPERTY" ToRole="PROPERTY_TYPE" />
@@ -195,6 +207,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__PICTURE__Propert__22AA2996">
+    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="1" />
+    <End Role="PICTURE" Type="Self.PICTURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPERTY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PICTURE">
+        <PropertyRef Name="Property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_PROPERTY_PROJECT_STATUS">
     <End Role="PROJECT_STATUS" Type="Self.PROJECT_STATUS" Multiplicity="0..1" />
     <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
@@ -285,6 +309,7 @@
     <EntitySet Name="DISTRICTs" EntityType="Self.DISTRICT" />
     <EntitySet Name="FEATUREs" EntityType="Self.FEATURE" />
     <EntitySet Name="IMAGES" EntityType="Self.IMAGE" />
+    <EntitySet Name="PICTUREs" EntityType="Self.PICTURE" />
     <EntitySet Name="PROJECT_STATUS" EntityType="Self.PROJECT_STATUS" />
     <EntitySet Name="PROPERTies" EntityType="Self.PROPERTY" />
     <EntitySet Name="PROPERTY_FEATURE" EntityType="Self.PROPERTY_FEATURE" />
@@ -307,6 +332,10 @@
     <AssociationSet Name="FK_PROPERTY_FEATURE_FEATURE" Association="Self.FK_PROPERTY_FEATURE_FEATURE">
       <End Role="FEATURE" EntitySet="FEATUREs" />
       <End Role="PROPERTY_FEATURE" EntitySet="PROPERTY_FEATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PICTURE__Propert__22AA2996" Association="Self.FK__PICTURE__Propert__22AA2996">
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
+      <End Role="PICTURE" EntitySet="PICTUREs" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_PROJECT_STATUS" Association="Self.FK_PROPERTY_PROJECT_STATUS">
       <End Role="PROJECT_STATUS" EntitySet="PROJECT_STATUS" />

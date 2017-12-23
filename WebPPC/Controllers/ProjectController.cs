@@ -75,8 +75,7 @@ namespace WebPPC.Controllers
                 pro.PropertyName = model.PropertyName;
                 pro.PropertyType_ID = model.PropertyType_ID;
                 pro.Avatar = avatar;
-                pro.Images = image;
-                //pro.DISTRICT = model.DISTRICT;
+                //pro.Images = image;
                 pro.District_ID = model.District_ID;
                 pro.Street_ID = model.Street_ID;
                 pro.Ward_ID = model.Ward_ID;
@@ -182,9 +181,9 @@ namespace WebPPC.Controllers
         }
         public ActionResult AboutUS()
         {
-           
-
-            return View();
+            List<ABOUTU> minhphe = new List<ABOUTU>();
+            minhphe = db.ABOUTUS.ToList();
+            return View(minhphe);
         }
 
         public ActionResult Edit(int id)

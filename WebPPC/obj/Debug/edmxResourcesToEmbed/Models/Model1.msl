@@ -5,7 +5,10 @@
       <EntityTypeMapping TypeName="team12Model.ABOUTU">
         <MappingFragment StoreEntitySet="ABOUTUS">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="aboutname" ColumnName="aboutname" />
+          <ScalarProperty Name="aboutavt" ColumnName="aboutavt" />
+          <ScalarProperty Name="aboutcontent" ColumnName="aboutcontent" />
+          <ScalarProperty Name="aboutimges" ColumnName="aboutimges" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -45,6 +48,14 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="filepath" ColumnName="filepath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PICTUREs">
+      <EntityTypeMapping TypeName="team12Model.PICTURE">
+        <MappingFragment StoreEntitySet="PICTURE">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Property_id" ColumnName="Property_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
