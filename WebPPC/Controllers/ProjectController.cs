@@ -138,6 +138,13 @@ namespace WebPPC.Controllers
 
             return View();
         }
+
+        public ActionResult News()
+        {
+            ViewBag.Message = "News page.";
+
+            return View();
+        }
         [HttpPost]
         public ActionResult Contact(string name, string email, string phone, string message)
         {
