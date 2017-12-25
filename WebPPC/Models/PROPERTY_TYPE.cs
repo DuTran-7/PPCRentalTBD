@@ -14,6 +14,7 @@ namespace WebPPC.Models
     
     public partial class PROPERTY_TYPE
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PROPERTY_TYPE()
         {
             this.PROPERTies = new HashSet<PROPERTY>();
@@ -24,6 +25,7 @@ namespace WebPPC.Models
         public string Description { get; set; }
         public Nullable<bool> Status { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY> PROPERTies { get; set; }
     }
 }

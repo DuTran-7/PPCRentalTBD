@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -29,16 +30,21 @@ namespace WebPPC.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
+            // var property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
+            //var picture = model.PICTUREs.SingleOrDefault(x => x.id == id);
+            var property = model.PROPERTies.Find(id);
             return View(property);
         }
         [HttpPost]
-        [ValidateInput(false)]
-        public ActionResult Edit(int id, PROPERTY p, List<string> feature)
+        //[ValidateInput(false)]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, PROPERTY p, List<string> feature, List<HttpPostedFileBase> Images)
         {
             PROPERTY proper = model.PROPERTies.Find(p.ID);
             var property = model.PROPERTies.FirstOrDefault(x => x.ID == id);
             var feat = model.PROPERTY_FEATURE.Where(x => x.Property_ID == p.ID).ToList();
+            var image = model.PICTUREs.Where(x => x.Property_id == p.ID);
+            model.PICTUREs.RemoveRange(image);
             model.PROPERTY_FEATURE.RemoveRange(feat);
 
             property.PropertyName = p.PropertyName;
@@ -54,17 +60,41 @@ namespace WebPPC.Areas.Admin.Controllers
             property.WARD = p.WARD;
             property.Area = p.Area;
             property.Status_ID = p.Status_ID;
+            foreach (HttpPostedFileBase img in Images)
+            {
+                if (img != null)
+                {
+                    if (img.ContentLength > 0)
+                    {
+                        var filename = Path.GetFileName(img.FileName);
+                        var path = Path.Combine(Server.MapPath("~/img/"), filename);
+                        img.SaveAs(path);
+                        PICTURE pic = new PICTURE();
+                        pic.Name_Image = filename;
+                        pic.Property_id = property.ID;
+                        model.PICTUREs.Add(pic);
+                    }
+                    else
+                    {
+                        model.SaveChanges();
+                    }
 
+                }
+                else
+                {
+                    model.SaveChanges();
+                }
+            }
             //add feature
-            
-        //    foreach (var featu in feature)
-        //    {
-        //        PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
-               
-        //        proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
-        //        proferty_fea.Property_ID = p.ID;
-        //        model.PROPERTY_FEATURE.Add(proferty_fea);
-        //    }
+
+            //    foreach (var featu in feature)
+            //    {
+            //        PROPERTY_FEATURE proferty_fea = new PROPERTY_FEATURE();
+
+            //        proferty_fea.Feature_ID = model.FEATUREs.SingleOrDefault(x => x.FeatureName == featu).ID;
+            //        proferty_fea.Property_ID = p.ID;
+            //        model.PROPERTY_FEATURE.Add(proferty_fea);
+            //    }
 
             model.SaveChanges();
             return RedirectToAction("Index");

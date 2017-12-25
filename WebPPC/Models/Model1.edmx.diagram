@@ -4,22 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="28c365a100ef4a35baf8eb5659167f09" Name="Diagram1">
+      <Diagram DiagramId="9940a17ec66f4ef095d4d68f591b11bc" Name="Diagram1">
+        <EntityTypeShape EntityType="team12Model.ABOUTU" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.CONTACT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.DISTRICT" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.FEATURE" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.DISTRICT" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.FEATURE" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.IMAGE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.PROJECT_STATUS" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.PROPERTY" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.PROPERTY_FEATURE" Width="1.5" PointX="7.5" PointY="11.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.PROPERTY_TYPE" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.STREET" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.USER" Width="1.5" PointX="3" PointY="19.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="team12Model.WARD" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.PICTURE" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.PROJECT_STATUS" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.PROPERTY" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.PROPERTY_FEATURE" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.PROPERTY_TYPE" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.STREET" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.USER" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.WARD" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_DISTRICT" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_STREET_DISTRICT" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_WARD_DISTRICT" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_FEATURE_FEATURE" ManuallyRouted="false" />
+        <AssociationConnector Association="team12Model.FK__PICTURE__Propert__22AA2996" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_PROJECT_STATUS" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_FEATURE_PROPERTY" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_PROPERTY_TYPE" ManuallyRouted="false" />
@@ -27,8 +31,6 @@
         <AssociationConnector Association="team12Model.FK_PROPERTY_USER" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_USER1" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_WARD" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="team12Model.PICTURE" Width="1.5" PointX="7.5" PointY="14.5" />
-        <AssociationConnector Association="team12Model.FK__PICTURE__Propert__22AA2996" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
