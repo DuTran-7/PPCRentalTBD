@@ -25,7 +25,6 @@ namespace WebPPC.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ABOUTU> ABOUTUS { get; set; }
         public virtual DbSet<CONTACT> CONTACTs { get; set; }
         public virtual DbSet<DISTRICT> DISTRICTs { get; set; }
         public virtual DbSet<FEATURE> FEATUREs { get; set; }
@@ -37,7 +36,6 @@ namespace WebPPC.Models
         public virtual DbSet<STREET> STREETs { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WARD> WARDs { get; set; }
-        public object OrderLines { get; set; }
-        public object Orders { get; set; }
+        public virtual DbSet<PICTURE> PICTUREs { get; set; }
     }
 }

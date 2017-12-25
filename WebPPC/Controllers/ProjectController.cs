@@ -47,12 +47,12 @@ namespace WebPPC.Controllers
         public ActionResult PostProject()
         {
             //ViewBag.Message = "Your application description page.";
-
+            var property = new PROPERTY();
             return View();
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult PostProject(HttpPostedFileBase Avatar, PROPERTY property, HttpPostedFileBase Image, PostModel model, List<string> feature)
+        public ActionResult PostProject(HttpPostedFileBase Avatar, PROPERTY property,List<HttpPostedFileBase> Images, PostModel model, List<string> feature)
         {
             if (ModelState.IsValid)
             {
@@ -64,19 +64,44 @@ namespace WebPPC.Controllers
                     Avatar.SaveAs(path);
                     avatar = filename;
                 }
-                string image = "";
-                if (Image.ContentLength > 0)
+                //add picture
+                foreach (  HttpPostedFileBase img in Images)
                 {
-                    var filename = Path.GetFileName(Image.FileName);
-                    var path = Path.Combine(Server.MapPath("~/img"), filename);
-                    Image.SaveAs(path);
-                    image = filename;
+                    if (img != null)
+                    {
+                        if (img.ContentLength > 0)
+                        {
+                            var filename = Path.GetFileName(img.FileName);
+                            var path = Path.Combine(Server.MapPath("~/img/"), filename);
+                            img.SaveAs(path);
+                            PICTURE pic = new PICTURE();
+                            pic.Name_Image = filename;
+                            pic.Property_id = property.ID;
+                            db.PICTUREs.Add(pic);
+                        }
+
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
+
+
+
+                //string image = "";
+                //if (Image.ContentLength > 0)
+                //{
+                //    var filename = Path.GetFileName(Image.FileName);
+                //    var path = Path.Combine(Server.MapPath("~/img"), filename);
+                //    Image.SaveAs(path);
+                //    image = filename;
+                //}
                 var pro = new PROPERTY();
                 pro.PropertyName = model.PropertyName;
                 pro.PropertyType_ID = model.PropertyType_ID;
                 pro.Avatar = avatar;
-                pro.Images = image;
+                //pro.Images = image;
                 //pro.DISTRICT = model.DISTRICT;
                 pro.District_ID = model.District_ID;
                 pro.Street_ID = model.Street_ID;
@@ -135,13 +160,6 @@ namespace WebPPC.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        public ActionResult News()
-        {
-            ViewBag.Message = "News page.";
 
             return View();
         }

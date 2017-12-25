@@ -17,6 +17,7 @@ namespace WebPPC.Models
         public PROPERTY()
         {
             this.PROPERTY_FEATURE = new HashSet<PROPERTY_FEATURE>();
+            this.PICTUREs = new HashSet<PICTURE>();
         }
     
         public int ID { get; set; }
@@ -50,5 +51,6 @@ namespace WebPPC.Models
         public virtual USER USER { get; set; }
         public virtual USER USER1 { get; set; }
         public virtual WARD WARD { get; set; }
+        public virtual ICollection<PICTURE> PICTUREs { get; set; }
     }
 }

@@ -6,6 +6,7 @@
     var db = new team12Entities();
     var features = db.FEATUREs.ToList();
     var feature_property = db.PROPERTY_FEATURE.ToList();
+    var picture = db.PICTUREs.ToList();
     
 }
 
@@ -93,23 +94,20 @@
         <div class="col-md-10">
 
             <div class="row">
-                <div class="col-md-5" style="width:240px">
-                    <input type="file" name="Image" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
-                </div>
-                <div class="col-md-5" style="width:240px">
-                    <input type="file" name="Image" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
-                </div>
-                <div class="col-md-5" style="width:240px">
-                    <input type="file" name="Image" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
-                </div>
-                <div class="col-md-5" style="width:200px">
-                    <input type="file" name="Image" class="form-control" />
-                    @Html.ValidationMessageFor(model => model.Images, "", new { @class = "text-danger  " })
-                </div>
+               <div class="col-md-5" style="width:240px">
+                   <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+        </div>
+        <div class="col-md-5" style="width:240px">
+            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+        </div>
+        <div class="col-md-5" style="width:240px">
+            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+        </div>
+        <div class="col-md-5" style="width:200px">
+            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+        </div>
                
+
             </div>
 
         </div>

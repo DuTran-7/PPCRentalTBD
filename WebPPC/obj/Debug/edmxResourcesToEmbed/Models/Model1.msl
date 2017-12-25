@@ -1,14 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="team12ModelStoreContainer" CdmEntityContainer="team12Entities">
-    <EntitySetMapping Name="ABOUTUS">
-      <EntityTypeMapping TypeName="team12Model.ABOUTU">
-        <MappingFragment StoreEntitySet="ABOUTUS">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="Text" ColumnName="Text" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="CONTACTs">
       <EntityTypeMapping TypeName="team12Model.CONTACT">
         <MappingFragment StoreEntitySet="CONTACT">
@@ -135,6 +127,15 @@
           <ScalarProperty Name="WardName" ColumnName="WardName" />
           <ScalarProperty Name="District_ID" ColumnName="District_ID" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PICTUREs">
+      <EntityTypeMapping TypeName="team12Model.PICTURE">
+        <MappingFragment StoreEntitySet="PICTURE">
+          <ScalarProperty Name="Name_Image" ColumnName="Name_Image" />
+          <ScalarProperty Name="Property_id" ColumnName="Property_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

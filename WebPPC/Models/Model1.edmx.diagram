@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="28c365a100ef4a35baf8eb5659167f09" Name="Diagram1">
-        <EntityTypeShape EntityType="team12Model.ABOUTU" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.CONTACT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.DISTRICT" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.FEATURE" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
@@ -28,6 +27,8 @@
         <AssociationConnector Association="team12Model.FK_PROPERTY_USER" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_USER1" ManuallyRouted="false" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_WARD" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="team12Model.PICTURE" Width="1.5" PointX="7.5" PointY="14.5" />
+        <AssociationConnector Association="team12Model.FK__PICTURE__Propert__22AA2996" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

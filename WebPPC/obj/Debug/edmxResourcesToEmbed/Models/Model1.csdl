@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="team12Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="ABOUTU">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" />
-    <Property Name="Text" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-  </EntityType>
   <EntityType Name="CONTACT">
     <Key>
       <PropertyRef Name="ID" />
@@ -89,6 +82,7 @@
     <NavigationProperty Name="USER" Relationship="Self.FK_PROPERTY_USER" FromRole="PROPERTY" ToRole="USER" />
     <NavigationProperty Name="USER1" Relationship="Self.FK_PROPERTY_USER1" FromRole="PROPERTY" ToRole="USER" />
     <NavigationProperty Name="WARD" Relationship="Self.FK_PROPERTY_WARD" FromRole="PROPERTY" ToRole="WARD" />
+    <NavigationProperty Name="PICTUREs" Relationship="team12Model.FK__PICTURE__Propert__22AA2996" FromRole="PROPERTY" ToRole="PICTURE" />
   </EntityType>
   <EntityType Name="PROPERTY_FEATURE">
     <Key>
@@ -280,7 +274,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="team12Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ABOUTUS" EntityType="Self.ABOUTU" />
     <EntitySet Name="CONTACTs" EntityType="Self.CONTACT" />
     <EntitySet Name="DISTRICTs" EntityType="Self.DISTRICT" />
     <EntitySet Name="FEATUREs" EntityType="Self.FEATURE" />
@@ -336,5 +329,31 @@
       <End Role="WARD" EntitySet="WARDs" />
       <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
+    <EntitySet Name="PICTUREs" EntityType="team12Model.PICTURE" />
+    <AssociationSet Name="FK__PICTURE__Propert__22AA2996" Association="team12Model.FK__PICTURE__Propert__22AA2996">
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
+      <End Role="PICTURE" EntitySet="PICTUREs" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="PICTURE">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Property_id" Type="Int32" Nullable="false" />
+    <Property Name="Name_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PROPERTY" Relationship="team12Model.FK__PICTURE__Propert__22AA2996" FromRole="PICTURE" ToRole="PROPERTY" />
+  </EntityType>
+  <Association Name="FK__PICTURE__Propert__22AA2996">
+    <End Type="team12Model.PROPERTY" Role="PROPERTY" Multiplicity="1" />
+    <End Type="team12Model.PICTURE" Role="PICTURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROPERTY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PICTURE">
+        <PropertyRef Name="Property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
