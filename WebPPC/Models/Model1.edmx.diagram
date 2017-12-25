@@ -4,19 +4,32 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="ea1887ebc1cf4ca29444d2cf61a00c37" Name="Diagram1" ZoomLevel="99">
         <EntityTypeShape EntityType="team12Model.ABOUTUS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.CONTACT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.DISTRICT" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.FEATURE" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.IMAGES" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+=======
+      <Diagram DiagramId="9940a17ec66f4ef095d4d68f591b11bc" Name="Diagram1">
+        <EntityTypeShape EntityType="team12Model.ABOUTU" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.CONTACT" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.DISTRICT" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.FEATURE" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="team12Model.IMAGE" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
         <EntityTypeShape EntityType="team12Model.PICTURE" Width="1.5" PointX="7.5" PointY="11.625" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.PROJECT_STATUS" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.PROPERTY" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.PROPERTY_FEATURE" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.PROPERTY_TYPE" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.STREET" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="team12Model.sysdiagrams" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="team12Model.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
         <EntityTypeShape EntityType="team12Model.USER" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
         <EntityTypeShape EntityType="team12Model.WARD" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
         <AssociationConnector Association="team12Model.FK_PROPERTY_DISTRICT" ManuallyRouted="false" />

@@ -191,7 +191,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\ABOUTUS.cs">
+=======
+    <Compile Include="Models\ABOUTU.cs">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
@@ -243,7 +247,11 @@
     <Compile Include="Models\STREET.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\sysdiagrams.cs">
+=======
+    <Compile Include="Models\sysdiagram.cs">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USER.cs">

@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+<<<<<<< HEAD
   <EntityContainerMapping StorageEntityContainer="team12ModelStoreContainer" CdmEntityContainer="team12Entities1">
     <EntitySetMapping Name="ABOUTUS">
       <EntityTypeMapping TypeName="team12Model.ABOUTUS">
+=======
+  <EntityContainerMapping StorageEntityContainer="team12ModelStoreContainer" CdmEntityContainer="team12Entities">
+    <EntitySetMapping Name="ABOUTUS">
+      <EntityTypeMapping TypeName="team12Model.ABOUTU">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
         <MappingFragment StoreEntitySet="ABOUTUS">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="aboutname" ColumnName="aboutname" />
@@ -12,7 +18,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+<<<<<<< HEAD
     <EntitySetMapping Name="CONTACT">
+=======
+    <EntitySetMapping Name="CONTACTs">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
       <EntityTypeMapping TypeName="team12Model.CONTACT">
         <MappingFragment StoreEntitySet="CONTACT">
           <ScalarProperty Name="ID" ColumnName="ID" />
@@ -51,7 +61,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+<<<<<<< HEAD
     <EntitySetMapping Name="PICTURE">
+=======
+    <EntitySetMapping Name="PICTUREs">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
       <EntityTypeMapping TypeName="team12Model.PICTURE">
         <MappingFragment StoreEntitySet="PICTURE">
           <ScalarProperty Name="id" ColumnName="id" />
@@ -127,7 +141,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
+<<<<<<< HEAD
       <EntityTypeMapping TypeName="team12Model.sysdiagrams">
+=======
+      <EntityTypeMapping TypeName="team12Model.sysdiagram">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -137,7 +155,11 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+<<<<<<< HEAD
     <EntitySetMapping Name="USER">
+=======
+    <EntitySetMapping Name="USERs">
+>>>>>>> b2780d8960e96c931fe09e395407948809dddfef
       <EntityTypeMapping TypeName="team12Model.USER">
         <MappingFragment StoreEntitySet="USER">
           <ScalarProperty Name="ID" ColumnName="ID" />
