@@ -21,9 +21,5 @@ namespace WebPPC.AcceptanceTests.Common
         {
             shownProject.ShouldAllBeEquivalentTo(expectedProject, option => option.Excluding(o => o.ID).WithStrictOrdering());
         }
-        public static void HomeScreenShouldShow(PROPERTY ex, PROPERTY ac)
-        {
-            ex.ShouldBeEquivalentTo(ac, option => option.Excluding(o => o.ID));
-        }
     }
 }

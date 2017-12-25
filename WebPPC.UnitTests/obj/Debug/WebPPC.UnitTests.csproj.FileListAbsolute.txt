@@ -49,21 +49,6 @@ D:\team2\test\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csprojRes
 D:\team2\test\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
 D:\team2\test\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.dll
 D:\team2\test\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.pdb
-<<<<<<< HEAD
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\WebPPC.UnitTests.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\WebPPC.UnitTests.pdb
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.dll
-D:\PPC\umbacalabum\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.pdb
-=======
 E:\8\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 E:\8\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 E:\8\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -76,4 +61,3 @@ E:\8\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform
 E:\8\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
 E:\8\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.dll
 E:\8\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.pdb
->>>>>>> 503c4130f7d37429c98efd327838c8d57e13fc1b

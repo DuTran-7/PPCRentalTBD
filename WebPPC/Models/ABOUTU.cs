@@ -15,9 +15,6 @@ namespace WebPPC.Models
     public partial class ABOUTU
     {
         public int id { get; set; }
-        public string aboutname { get; set; }
-        public string aboutavt { get; set; }
-        public string aboutcontent { get; set; }
-        public string aboutimges { get; set; }
+        public string Text { get; set; }
     }
 }

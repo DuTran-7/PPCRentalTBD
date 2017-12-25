@@ -105,11 +105,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FilterProject.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\PostProject.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PostProject.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\ViewDetailProject.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,7 +117,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinitions\FilterProjectStep.cs" />
-    <Compile Include="StepDefinitions\PostProjectSteps.cs" />
     <Compile Include="StepDefinitions\ViewDetailProjectStep.cs" />
     <Compile Include="StepDefinitions\ViewListAgencySteps.cs" />
     <Compile Include="Support\ActionResultExtensions.cs" />
@@ -132,14 +126,6 @@
     <Compile Include="Support\ReferenceBookList.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebPPC.AcceptanceTests.Common\WebPPC.AcceptanceTests.Common.csproj">
-      <Project>{bd6f387d-7297-42cf-aa24-07a7b8c5265b}</Project>
-      <Name>WebPPC.AcceptanceTests.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebPPC.UITests.Selenium\WebPPC.UITests.Selenium.csproj">
-      <Project>{64a8f989-16cc-4e12-af69-8b04ab8502bd}</Project>
-      <Name>WebPPC.UITests.Selenium</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebPPC\WebPPC.csproj">
       <Project>{070a0883-7119-4085-b9b2-6359a29a2083}</Project>
       <Name>WebPPC</Name>
@@ -150,10 +136,6 @@
     <None Include="Features\FilterProject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FilterProject.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\PostProject.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>PostProject.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\ViewDetailProject.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

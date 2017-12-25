@@ -1,14 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="team12Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="team12Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ABOUTUS">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" />
-    <Property Name="aboutname" Type="nvarchar(max)" />
-    <Property Name="aboutavt" Type="nvarchar(max)" />
-    <Property Name="aboutcontent" Type="nvarchar(max)" />
-    <Property Name="aboutimges" Type="nvarchar(max)" />
+    <Property Name="Text" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="CONTACT">
     <Key>
@@ -44,13 +41,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="300" />
     <Property Name="filepath" Type="varchar(max)" />
-  </EntityType>
-  <EntityType Name="PICTURE">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Property_id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PROJECT_STATUS">
     <Key>
@@ -135,18 +125,6 @@
     <Property Name="District_ID" Type="int" />
     <Property Name="Status" Type="bit" />
   </EntityType>
-  <Association Name="FK__PICTURE__Propert__22AA2996">
-    <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="1" />
-    <End Role="PICTURE" Type="Self.PICTURE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="PROPERTY">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="PICTURE">
-        <PropertyRef Name="Property_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_PROPERTY_DISTRICT">
     <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
     <End Role="PROPERTY" Type="Self.PROPERTY" Multiplicity="*" />
@@ -285,7 +263,6 @@
     <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FEATURE" EntityType="Self.FEATURE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="IMAGES" EntityType="Self.IMAGES" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="PICTURE" EntityType="Self.PICTURE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PROJECT_STATUS" EntityType="Self.PROJECT_STATUS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PROPERTY" EntityType="Self.PROPERTY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PROPERTY_FEATURE" EntityType="Self.PROPERTY_FEATURE" Schema="dbo" store:Type="Tables" />
@@ -293,10 +270,6 @@
     <EntitySet Name="STREET" EntityType="Self.STREET" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="WARD" EntityType="Self.WARD" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__PICTURE__Propert__22AA2996" Association="Self.FK__PICTURE__Propert__22AA2996">
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
-      <End Role="PICTURE" EntitySet="PICTURE" />
-    </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_DISTRICT" Association="Self.FK_PROPERTY_DISTRICT">
       <End Role="DISTRICT" EntitySet="DISTRICT" />
       <End Role="PROPERTY" EntitySet="PROPERTY" />

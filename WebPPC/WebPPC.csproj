@@ -223,9 +223,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\PICTURE.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\PostModel.cs" />
     <Compile Include="Models\PROJECT_STATUS.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -307,19 +304,8 @@
     <Content Include="img\PIS_7319-Edit-stamp.jpg" />
     <Content Include="img\PIS_7389-Edit-stamp.jpg" />
     <Content Include="img\PIS_7432-Edit-stamp.jpg" />
+    <Content Include="img\section.jpg" />
     <Content Include="img\sunshine-benthanh-cityhome-10-stamp.jpg" />
-<<<<<<< HEAD
-    <Content Include="Models\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-=======
     <Content Include="Plugins\ckeditor\adapters\jquery.js" />
     <Content Include="Plugins\ckeditor\build-config.js" />
     <Content Include="Plugins\ckeditor\ckeditor.js" />
@@ -1366,7 +1352,6 @@
     <Content Include="Plugins\ckfinder\_samples\skin_v1.html" />
     <Content Include="Plugins\ckfinder\_samples\standalone.html" />
     <Content Include="Plugins\ckfinder\_samples\standalone_v1.html" />
->>>>>>> 503c4130f7d37429c98efd327838c8d57e13fc1b
     <Content Include="Scripts\1.js" />
     <Content Include="Scripts\10.js" />
     <Content Include="Scripts\11.js" />
@@ -1400,23 +1385,26 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\ProjectAdmin\Edit.cshtml" />
     <Content Include="fonts\style.scss" />
     <Content Include="Areas\Admin\Views\ProjectAdmin\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\ProjectAdmin\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Sale\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\ProjectAdmin\Index.cshtml" />
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-<<<<<<< HEAD
-=======
     <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -1451,7 +1439,6 @@
     <Content Include="Plugins\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Plugins\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Plugins\ckfinder\userfiles\.htaccess" />
->>>>>>> 503c4130f7d37429c98efd327838c8d57e13fc1b
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\contact_me.js" />
     <Content Include="Scripts\index.js" />
@@ -1474,7 +1461,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
