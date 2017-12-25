@@ -7,28 +7,31 @@ using WebPPC.Models;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
+using WebPPC.Models;
+
+
 namespace WebPPC.Controllers
 {
     public class ProjectController : Controller
     {
 
-        team12Entities db = new team12Entities();
+        team12Entities1 db = new team12Entities1();
        
         public ActionResult Index()
         {
-            var product = db.PROPERTies.ToList();
+            var product = db.PROPERTY.ToList();
             return View(product);
         }
         public ActionResult SearchI()
         {
-            var pj = db.PROPERTies.ToList();
+            var pj = db.PROPERTY.ToList();
             return View(pj);
         }
         [HttpGet]
         public ActionResult Search(string name, string price, string bathroom, string bedroom, string packingplace, string area)
         {
 
-            var pj = db.PROPERTies.ToList().Where(x => (x.PropertyName.Contains(name) && name != "")
+            var pj = db.PROPERTY.ToList().Where(x => (x.PropertyName.Contains(name) && name != "")
                 || (x.Content.Contains(name) && name != "")
                 || x.Price.Equals(int.Parse(price == "" ? "0" : price))
                 || x.BedRoom.Equals(int.Parse(bedroom == "" ? "0" : bedroom))
@@ -40,7 +43,7 @@ namespace WebPPC.Controllers
         }
         public ActionResult Detail(int id)
         {
-            PROPERTY product = db.PROPERTies.FirstOrDefault(x => x.ID == id);
+            PROPERTY product = db.PROPERTY.FirstOrDefault(x => x.ID == id);
             return View(product);
         }
         [HttpGet]
@@ -77,7 +80,7 @@ namespace WebPPC.Controllers
                             PICTURE pic = new PICTURE();
                             pic.Name_Image = filename;
                             pic.Property_id = property.ID;
-                            db.PICTUREs.Add(pic);
+                            db.PICTURE.Add(pic);
                         }
 
                     }
@@ -124,7 +127,7 @@ namespace WebPPC.Controllers
                     {
                         //PROPERTY_FEATURE profeature = new PROPERTY_FEATURE();
                        // fetur.Property_ID = qqq.ID;
-                        fetur.Feature_ID = db.FEATUREs.SingleOrDefault(x => x.FeatureName == fetus).ID;
+                        fetur.Feature_ID = db.FEATURE.SingleOrDefault(x => x.FeatureName == fetus).ID;
                         fetur.Property_ID = property.ID;
                         //fetur.Feature_ID = 1;
                         db.PROPERTY_FEATURE.Add(fetur);
@@ -136,7 +139,7 @@ namespace WebPPC.Controllers
                 pro.Updated_at = DateTime.Now;
                 pro.Created_at = DateTime.Now;
                 pro.UserID = (int)Session["UserID"];
-               db.PROPERTies.Add(pro);
+               db.PROPERTY.Add(pro);
                db.SaveChanges();
                 //ViewBag.Success = "Đăng ký thành công";
                 model = new PostModel();
@@ -150,7 +153,7 @@ namespace WebPPC.Controllers
         }
         public ActionResult List()
         {
-            var product = db.PROPERTies.ToList().Where(x => x.UserID == int.Parse(Session["UserID"].ToString()));
+            var product = db.PROPERTY.ToList().Where(x => x.UserID == int.Parse(Session["UserID"].ToString()));
             int count = product.Count(x => x.UserID == int.Parse(Session["UserID"].ToString()));
             ViewBag.count = count;
             return View(product);
@@ -208,20 +211,24 @@ namespace WebPPC.Controllers
         }
         public ActionResult AboutUS()
         {
-           
+            //var db = new team12Entities();
+            List<ABOUTUS> minhphe = new List<ABOUTUS>();
+            
+            minhphe = db.ABOUTUS.ToList();
+            return View(minhphe);
+            
 
-            return View();
         }
 
         public ActionResult Edit(int id)
         {
-            var property = db.PROPERTies.SingleOrDefault(x => x.ID == id);
+            var property = db.PROPERTY.SingleOrDefault(x => x.ID == id);
             return View(property);
         }
         [HttpPost]
         public ActionResult Edit(int id, PROPERTY p)
         {
-            var property = db.PROPERTies.FirstOrDefault(x => x.ID == id);
+            var property = db.PROPERTY.FirstOrDefault(x => x.ID == id);
             property.PropertyName = p.PropertyName;
             property.UnitPrice = p.UnitPrice;
             property.Price = p.Price;
@@ -244,14 +251,14 @@ namespace WebPPC.Controllers
         public JsonResult GetStreet(int District_id)
         {
             return Json(
-            db.STREETs.Where(s => s.District_ID == District_id)
+            db.STREET.Where(s => s.District_ID == District_id)
             .Select(s => new { id = s.ID, text = s.StreetName }).ToList(),
             JsonRequestBehavior.AllowGet);
         }
         public JsonResult GetWard(int District_id)
         {
             return Json(
-            db.WARDs.Where(s => s.District_ID == District_id)
+            db.WARD.Where(s => s.District_ID == District_id)
             .Select(s => new { id = s.ID, text = s.WardName }).ToList(),
             JsonRequestBehavior.AllowGet);
         } 

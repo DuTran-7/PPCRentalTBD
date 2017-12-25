@@ -9,10 +9,10 @@ namespace WebPPC.Controllers
 {
     public class AgencyController : Controller
     {
-        team12Entities db = new team12Entities();
+        team12Entities1 db = new team12Entities1();
         public ActionResult Index()
         {
-            var product = db.PROPERTies.ToList();
+            var product = db.PROPERTY.ToList();
             return View(product);
         }
 
@@ -24,7 +24,7 @@ namespace WebPPC.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-            var user = db.USERs.FirstOrDefault(x => x.Email == email);
+            var user = db.USER.FirstOrDefault(x => x.Email == email);
             if (user != null)
             {
                 if (user.Password.Equals(password))
@@ -73,7 +73,7 @@ namespace WebPPC.Controllers
 
             if (ModelState.IsValid)
             {
-                var siag = db.USERs.FirstOrDefault(x => x.Email == model.Email);
+                var siag = db.USER.FirstOrDefault(x => x.Email == model.Email);
                 if (siag == null)
                 {
                     var sig = new USER();
@@ -84,7 +84,7 @@ namespace WebPPC.Controllers
                     sig.Phone = model.Phone;
                     sig.Role = "0";
                     sig.Status = true;
-                    db.USERs.Add(sig);
+                    db.USER.Add(sig);
                     db.SaveChanges();
                    ViewBag.Success = "Đăng ký thành công";
                     model = new SignUpModel();
@@ -119,7 +119,7 @@ namespace WebPPC.Controllers
             ViewBag.err = "";
             ViewBag.errr = "";
             int xx = (int)Session["UserID"];
-            var us = db.USERs.Single(x => x.ID == xx);
+            var us = db.USER.Single(x => x.ID == xx);
             if (us.Password != curPw)
                 ViewBag.err = "Current Password is incorect";
             if (newPw != confimNewPw)

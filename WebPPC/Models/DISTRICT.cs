@@ -14,19 +14,23 @@ namespace WebPPC.Models
     
     public partial class DISTRICT
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DISTRICT()
         {
-            this.PROPERTies = new HashSet<PROPERTY>();
-            this.STREETs = new HashSet<STREET>();
-            this.WARDs = new HashSet<WARD>();
+            this.PROPERTY = new HashSet<PROPERTY>();
+            this.STREET = new HashSet<STREET>();
+            this.WARD = new HashSet<WARD>();
         }
     
         public int ID { get; set; }
         public string DistrictName { get; set; }
         public Nullable<bool> Status { get; set; }
     
-        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
-        public virtual ICollection<STREET> STREETs { get; set; }
-        public virtual ICollection<WARD> WARDs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PROPERTY> PROPERTY { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<STREET> STREET { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WARD> WARD { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace WebPPC.Areas.Admin.Controllers
 {
     public class SaleController : Controller
     {
-        team12Entities model = new team12Entities();
+        team12Entities1 model = new team12Entities1();
         //
         // GET: /Admin/Sale/
         [HttpGet]
@@ -22,7 +22,7 @@ namespace WebPPC.Areas.Admin.Controllers
         public ActionResult Login(string email, string password)
         {
             ViewBag.mgs = "";
-            var user = model.USERs.FirstOrDefault(x => x.Email == email);
+            var user = model.USER.FirstOrDefault(x => x.Email == email);
             if (user != null)
             {
                 if (user.Password.Equals(password))

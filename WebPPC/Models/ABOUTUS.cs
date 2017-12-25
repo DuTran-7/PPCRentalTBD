@@ -12,10 +12,12 @@ namespace WebPPC.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class IMAGE
+    public partial class ABOUTUS
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public string filepath { get; set; }
+        public string aboutname { get; set; }
+        public string aboutavt { get; set; }
+        public string aboutcontent { get; set; }
+        public string aboutimges { get; set; }
     }
 }

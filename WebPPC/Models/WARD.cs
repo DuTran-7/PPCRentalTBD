@@ -14,9 +14,10 @@ namespace WebPPC.Models
     
     public partial class WARD
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public WARD()
         {
-            this.PROPERTies = new HashSet<PROPERTY>();
+            this.PROPERTY = new HashSet<PROPERTY>();
         }
     
         public int ID { get; set; }
@@ -25,6 +26,7 @@ namespace WebPPC.Models
         public Nullable<bool> Status { get; set; }
     
         public virtual DISTRICT DISTRICT { get; set; }
-        public virtual ICollection<PROPERTY> PROPERTies { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PROPERTY> PROPERTY { get; set; }
     }
 }

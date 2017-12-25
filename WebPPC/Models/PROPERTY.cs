@@ -14,10 +14,11 @@ namespace WebPPC.Models
     
     public partial class PROPERTY
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PROPERTY()
         {
+            this.PICTURE = new HashSet<PICTURE>();
             this.PROPERTY_FEATURE = new HashSet<PROPERTY_FEATURE>();
-            this.PICTUREs = new HashSet<PICTURE>();
         }
     
         public int ID { get; set; }
@@ -44,13 +45,15 @@ namespace WebPPC.Models
         public Nullable<int> Sale_ID { get; set; }
     
         public virtual DISTRICT DISTRICT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PICTURE> PICTURE { get; set; }
         public virtual PROJECT_STATUS PROJECT_STATUS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY_FEATURE> PROPERTY_FEATURE { get; set; }
         public virtual PROPERTY_TYPE PROPERTY_TYPE { get; set; }
         public virtual STREET STREET { get; set; }
         public virtual USER USER { get; set; }
         public virtual USER USER1 { get; set; }
         public virtual WARD WARD { get; set; }
-        public virtual ICollection<PICTURE> PICTUREs { get; set; }
     }
 }

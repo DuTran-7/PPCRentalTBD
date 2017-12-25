@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap v2.3.2
  *
  * Copyright 2012 Twitter, Inc
@@ -8,13 +8,25 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-
-
-
-
-a:hover,
+.max-lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    font-size: 20px; /* Cỡ chữ */
+    line-height: 1em; /* khoảng cách dòng */
+    max-height: 20px; /* Chiều cao tối đa */
+    -webkit-line-clamp: 2; /* Số dòng hiển thị */
+    -webkit-box-orient: vertical;
+}
+.max-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+}
 a:active {
-  outline: 0;
+    outline: 0;
 }
 
 sub,
