@@ -63,3 +63,16 @@ D:\FinalProject\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csprojR
 D:\FinalProject\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
 D:\FinalProject\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.dll
 D:\FinalProject\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.pdb
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\WebPPC.UnitTests.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\WebPPC.UnitTests.pdb
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\k\PPCRentalTBD\WebPPC.UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\k\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csprojResolveAssemblyReference.cache
+D:\k\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.csproj.CoreCompileInputs.cache
+D:\k\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.dll
+D:\k\PPCRentalTBD\WebPPC.UnitTests\obj\Debug\WebPPC.UnitTests.pdb

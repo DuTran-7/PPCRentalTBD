@@ -36,7 +36,7 @@ namespace WebPPC.Areas.Admin.Controllers
             return View(property);
         }
         [HttpPost]
-        //[ValidateInput(false)]
+        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, PROPERTY p, List<string> feature, List<HttpPostedFileBase> Images)
         {

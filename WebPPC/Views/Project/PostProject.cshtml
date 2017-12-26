@@ -54,7 +54,7 @@
 {
     @Html.AntiForgeryToken()
 
-<div  class="form-horizontal" style="padding-left:20%;">
+<div class="form-horizontal" style="padding-left:20%;">
 
 
     @Html.ValidationSummary(true)
@@ -70,14 +70,14 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.Avatar, htmlAttributes: new { @class = "control-label  col-md-2" })
-        <div class="col-md-4" >
+        <div class="col-md-4">
             <input type="file" name="Avatar" class="form-control" />
-            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger g ", style = "width:50px;  text-align: center;"})
+            @Html.ValidationMessageFor(model => model.Avatar, "", new { @class = "text-danger g ", style = "width:50px;  text-align: center;" })
         </div>
         <p class="help-block text-danger"></p>
     </div>
 
-  
+
     @*<div class="form-group">
             @Html.LabelFor(model => model.Images, htmlAttributes: new { @class = "control-label  col-md-2" })
             <div class="col-md-10 " style="width:240px">
@@ -90,23 +90,23 @@
         <div class="col-md-10">
             <label>Chọn ảnh cho dự án của bạn:</label>
         </div>
-        
+
         <div class="col-md-10">
 
             <div class="row">
-               <div class="col-md-5" style="width:240px">
-                   <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
-        </div>
-        <div class="col-md-5" style="width:240px">
-            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
-        </div>
-        <div class="col-md-5" style="width:240px">
-            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
-        </div>
-        <div class="col-md-5" style="width:200px">
-            <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
-        </div>
-               
+                <div class="col-md-5" style="width:240px">
+                    <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+                </div>
+                <div class="col-md-5" style="width:240px">
+                    <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+                </div>
+                <div class="col-md-5" style="width:240px">
+                    <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+                </div>
+                <div class="col-md-5" style="width:200px">
+                    <div class="img-picker"><div class="form-control btn btn-default btn-block img-upload-btn"><i class="glyphicon glyphicon-plus"></i><input type="file" class="imgin" name="images"></div></div>
+                </div>
+
 
             </div>
 
@@ -115,33 +115,33 @@
 
     <div class="form-group col-md-10">
         @Html.DropDownList("PropertyType_ID",
-                                             new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
-                                          "--Property Type--", new { @class = "form-control control-label col-md-2" })
+                                                  new SelectList(db.PROPERTY_TYPE, "ID", "CodeType"),
+                                               "--Property Type--", new { @class = "form-control control-label col-md-2" })
 
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownList("District_ID",
-                           new SelectList(db.DISTRICTs, "ID", "DistrictName"),
-                                   "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
+                                new SelectList(db.DISTRICTs, "ID", "DistrictName"),
+                                        "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Ward_ID,
-                               new SelectList(db.WARDs.Take(0), "ID", "WardName"),
-                                       "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
+                                    new SelectList(db.WARDs.Take(0), "ID", "WardName"),
+                                            "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Street_ID,
-                               new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
-                                       "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
+                                    new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
+                                            "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Price,new { style = "width: 400px" })
+            @Html.TextBoxFor(model => model.Price, new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.Price)
         </div>
     </div>
@@ -149,12 +149,12 @@
     <div class="form-group">
         @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND" style="width: 400px" >
+            <input class="text-box single-line valid" data-val="true" data-val-required="Vui lòng nhập đơn vị tiền cho dự án của bạn" id="UnitPrice" name="UnitPrice" type="text" value="VND" style="width: 400px">
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2" ,style="width:200px"})
+        @Html.LabelFor(model => model.Area, new { @class = "control-label col-md-2", style = "width:200px" })
         <div class="col-md-10">
             @Html.TextBoxFor(model => model.Area, new { style = "width: 400px" })
             @Html.ValidationMessageFor(model => model.Area)
@@ -176,20 +176,27 @@
             @Html.ValidationMessageFor(model => model.BathRoom)
         </div>
     </div>
-
-    @foreach (var item in features)
-{
-    <div class="col-md-10">
-        <div class="checkbox">
-            <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PackingPlace, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.PackingPlace, new { style = "width: 400px" })
+            @Html.ValidationMessageFor(model => model.PackingPlace)
         </div>
     </div>
 
-}
+    @foreach (var item in features)
+    {
+        <div class="col-md-10">
+            <div class="checkbox">
+                <label><input type="checkbox" value="@item.FeatureName" name="feature">@item.FeatureName</label>
+            </div>
+        </div>
+
+    }
 
     <br>
     <div class="form-group">
-     
+
 
         <div class="col-md-10">
             @Html.TextAreaFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" }, id = "txtContent" })

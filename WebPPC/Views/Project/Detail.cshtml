@@ -1,7 +1,8 @@
 ﻿@model WebPPC.Models.PROPERTY
-
+@using WebPPC.Models;
 @{
     ViewBag.Title = "Chi tiết";
+    var pic = new PICTURE();
 
 }
 
@@ -53,7 +54,7 @@
         <p style="text-indent: 50px ; word-wrap:break-word;text-align:justify">@Html.Raw(Model.Content)</p>
         <br />
         <br />
-
+        <img src="~/img/@pic.Name_Image" />
         <div class="row" style="text-align:center">
             <div class="col-xs-6 col-md-3">
                 <p style="text-align:center;"><img src="~/img/iconmoney.PNG" width="30"></p>
