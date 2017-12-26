@@ -24,7 +24,13 @@ namespace WebPPC.Controllers
             var pj = db.PROPERTies.ToList();
             return View(pj);
         }
-        [HttpGet]
+        public ActionResult News()
+         {
+             ViewBag.Message = "News page.";
+ 
+            return View();
+         }
+    [HttpGet]
         public ActionResult Search(string name, string price, string bathroom, string bedroom, string packingplace, string area)
         {
 
@@ -38,6 +44,7 @@ namespace WebPPC.Controllers
 
             return View(pj);
         }
+
         public ActionResult Detail(int id)
         {
             PROPERTY product = db.PROPERTies.FirstOrDefault(x => x.ID == id);

@@ -1494,6 +1494,7 @@
     <Content Include="Views\Project\List.cshtml" />
     <Content Include="Views\Project\Contact.cshtml" />
     <Content Include="Views\Project\AboutUS.cshtml" />
+    <Content Include="Views\Project\News.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
