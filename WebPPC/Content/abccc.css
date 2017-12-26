@@ -8,6 +8,14 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
+
+
+
+a:hover,
+a:active {
+  outline: 0;
+}
 .max-lines {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -25,10 +33,6 @@
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 }
-a:active {
-    outline: 0;
-}
-
 sub,
 sup {
   position: relative;

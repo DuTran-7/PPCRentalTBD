@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using WebPPC.AcceptanceTests.Drivers.Agency;
 using WebPPC.AcceptanceTests.Drivers.Property;
+using WebPPC.Models;
 
 namespace WebPPC.AcceptanceTests.StepDefinitions
 {
     [Binding, Scope(Tag = "automation")]
     public class ViewListAgencySteps
     {
+        team12Entities db = new team12Entities();
         private readonly PropertyDrivers _projectdriver;
         private readonly AgencyDrivers _agencydriver ;
 
@@ -22,11 +24,28 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
             _agencydriver = Agdriver;
         }
 
-        [Given(@"Duoi day là nhung du an co th duoc tim kiem")]
-        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table table)
+        //[Given(@"the following projects")]
+        //public void GivenTheFollowingProjects(Table table)
+        //{
+        //    //ScenarioContext.Current.Pending();
+        //    //DBNull.savechanges
+        //    //    var userID = db.USER.FirstOrDefault(uint => uint.Email == email).ID;
+
+        //}
+        [Given(@"the following users")]
+        public void GivenTheFollowingUsers(Table user)
         {
-            //ScenarioContext.Current.Pending();
+            // ScenarioContext.Current.Pending();
+            _agencydriver.User(user);
         }
+
+        [Given(@"the following projects")]
+        public void GivenTheFollowingProjects(Table project)
+        {
+            _projectdriver.Property(project);
+        }
+
+
 
 
         [Given(@"Toi dang o trang chu")]
@@ -44,15 +63,15 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
         [When(@"Toi dang nhap email '(.*)' va '(.*)'")]
         public void WhenToiDangNhapEmailVa(string email, string password)
         {
-
             _agencydriver.Login(email, password);
         }
 
         [Then(@"Toi se thay duoc danh sach cac du an cua toi")]
-        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table shownProject)
+        public void ThenToiSeThayDuocDanhSachCacDuAnCuaToi(Table showProject)
         {
-            _projectdriver.ShowDetail(shownProject);
+            _projectdriver.ShowListOfProject(showProject);
         }
+
 
     }
 }

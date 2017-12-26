@@ -17,9 +17,9 @@ namespace WebPPC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DISTRICT()
         {
-            this.PROPERTY = new HashSet<PROPERTY>();
-            this.STREET = new HashSet<STREET>();
-            this.WARD = new HashSet<WARD>();
+            this.PROPERTies = new HashSet<PROPERTY>();
+            this.STREETs = new HashSet<STREET>();
+            this.WARDs = new HashSet<WARD>();
         }
     
         public int ID { get; set; }
@@ -27,18 +27,10 @@ namespace WebPPC.Models
         public Nullable<bool> Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-<<<<<<< HEAD
-        public virtual ICollection<PROPERTY> PROPERTY { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<STREET> STREET { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<WARD> WARD { get; set; }
-=======
         public virtual ICollection<PROPERTY> PROPERTies { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STREET> STREETs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<WARD> WARDs { get; set; }
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     }
 }

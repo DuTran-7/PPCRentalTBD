@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿// T4 code generation is enabled for model 'D:\PPC\cccc\PPCRentalTBD\WebPPC\Models\Model1.edmx'. 
-=======
 ﻿// T4 code generation is enabled for model 'D:\teamBT\PPCRentalTBD\WebPPC\Models\Model1.edmx'. 
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

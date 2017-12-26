@@ -89,9 +89,9 @@ namespace WebPPC.AcceptanceTests.Features
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "PropertyName",
                         "Price",
-                        "Bedroom",
+                        "BedRoom",
                         "PackingPlace",
-                        "Bathroom",
+                        "BathRoom",
                         "Area"});
             table1.AddRow(new string[] {
                         "Bigroom with Riverview",
@@ -101,7 +101,7 @@ namespace WebPPC.AcceptanceTests.Features
                         "4",
                         "1200m2"});
 #line 7
- testRunner.Given("Duoi day là nhung du an co th duoc tim kiem", ((string)(null)), table1, "Given ");
+ testRunner.Given("Duoi day la nhung du an co th duoc tim kiem", ((string)(null)), table1, "Given ");
 #line hidden
         }
         
@@ -128,6 +128,141 @@ this.FeatureBackground();
                         "Bigroom with Riverview"});
 #line 15
  testRunner.Then("Toi se thay duoc du an ma toi tim kiem", ((string)(null)), table2, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Project By Price")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FilterProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
+        public virtual void FilterProjectByPrice()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Project By Price", new string[] {
+                        "automation"});
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 21
+ testRunner.Given("Toi dang o trang tim kiem du an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+ testRunner.When("Toi nhap thong tin gia du an \'5000\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Price"});
+            table3.AddRow(new string[] {
+                        "5000"});
+#line 23
+ testRunner.Then("Toi se thay duoc danh sach du an", ((string)(null)), table3, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Project By BedRoom")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FilterProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
+        public virtual void FilterProjectByBedRoom()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Project By BedRoom", new string[] {
+                        "automation"});
+#line 28
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 29
+ testRunner.Given("Toi dang o trang tim kiem du an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+ testRunner.When("Toi nhap thong tin so phong ngu cua du an \'6\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "BedRoom"});
+            table4.AddRow(new string[] {
+                        "6"});
+#line 31
+ testRunner.Then("Toi se thay duoc danh sach du an co chua so phong do", ((string)(null)), table4, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Project By PackingPlace")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FilterProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
+        public virtual void FilterProjectByPackingPlace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Project By PackingPlace", new string[] {
+                        "automation"});
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 37
+ testRunner.Given("Toi dang o trang tim kiem du an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 38
+ testRunner.When("Toi nhap thong tin so PackingPlace cua du an \'2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "PackingPalce"});
+            table5.AddRow(new string[] {
+                        "2"});
+#line 39
+ testRunner.Then("Toi se thay duoc danh sach du an co chua so packinglace do", ((string)(null)), table5, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Project By BathRoom")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FilterProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
+        public virtual void FilterProjectByBathRoom()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Project By BathRoom", new string[] {
+                        "automation"});
+#line 44
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 45
+ testRunner.Given("Toi dang o trang tim kiem du an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 46
+ testRunner.When("Toi nhap thong tin so phong tam cua du an \'4\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "BathRoom"});
+            table6.AddRow(new string[] {
+                        "4"});
+#line 47
+ testRunner.Then("Toi se thay duoc danh sach du an co chua so phong tam do", ((string)(null)), table6, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Filter Project By Area")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "FilterProject")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("automation")]
+        public virtual void FilterProjectByArea()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Filter Project By Area", new string[] {
+                        "automation"});
+#line 52
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 53
+ testRunner.Given("Toi dang o trang tim kiem du an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 54
+ testRunner.When("Toi nhap thong tin so dien tich cua du an \'1200m2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Area"});
+            table7.AddRow(new string[] {
+                        "1200m2"});
+#line 55
+ testRunner.Then("Toi se thay duoc danh sach du an co chua so dien tich do", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

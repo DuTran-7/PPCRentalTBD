@@ -10,7 +10,7 @@ namespace WebPPC.Areas.Admin.Controllers
 {
     public class ProjectAdminController : Controller
     {
-        team12Entities1 model = new team12Entities1();
+        team12Entities model = new team12Entities();
         //
         // GET: /Admin/ProductAdmin/
         public ActionResult Index()
@@ -18,7 +18,7 @@ namespace WebPPC.Areas.Admin.Controllers
             if (Session["UserID"] != null)
             {
                 var userid = int.Parse(Session["UserID"].ToString());
-                var emp = model.PROPERTY.OrderByDescending(x => x.ID).ToList();
+                var emp = model.PROPERTies.OrderByDescending(x => x.ID).ToList();
                 return View(emp);
             }
             else
@@ -30,13 +30,9 @@ namespace WebPPC.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-<<<<<<< HEAD
-            var property = model.PROPERTY.SingleOrDefault(x => x.ID == id);
-=======
             // var property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             //var picture = model.PICTUREs.SingleOrDefault(x => x.id == id);
             var property = model.PROPERTies.Find(id);
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
             return View(property);
         }
         [HttpPost]
@@ -44,8 +40,8 @@ namespace WebPPC.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, PROPERTY p, List<string> feature, List<HttpPostedFileBase> Images)
         {
-            PROPERTY proper = model.PROPERTY.Find(p.ID);
-            var property = model.PROPERTY.FirstOrDefault(x => x.ID == id);
+            PROPERTY proper = model.PROPERTies.Find(p.ID);
+            var property = model.PROPERTies.FirstOrDefault(x => x.ID == id);
             var feat = model.PROPERTY_FEATURE.Where(x => x.Property_ID == p.ID).ToList();
             var image = model.PICTUREs.Where(x => x.Property_id == p.ID);
             model.PICTUREs.RemoveRange(image);
@@ -111,7 +107,7 @@ namespace WebPPC.Areas.Admin.Controllers
         {
 
 
-            PROPERTY property = model.PROPERTY.SingleOrDefault(x => x.ID == id);
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             if (property == null)
             {
                 Response.StatusCode = 404;
@@ -125,7 +121,7 @@ namespace WebPPC.Areas.Admin.Controllers
         public ActionResult Delete(int id)
         {
 
-            PROPERTY property = model.PROPERTY.SingleOrDefault(x => x.ID == id);
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             if (property == null)
             {
                 Response.StatusCode = 404;
@@ -138,13 +134,13 @@ namespace WebPPC.Areas.Admin.Controllers
 
         public ActionResult AcceptDelete(int id)
         {
-            PROPERTY property = model.PROPERTY.SingleOrDefault(x => x.ID == id);
+            PROPERTY property = model.PROPERTies.SingleOrDefault(x => x.ID == id);
             if (property == null)
             {
                 Response.StatusCode = 404;
                 return null;
             }
-            model.PROPERTY.Remove(property);
+            model.PROPERTies.Remove(property);
             model.SaveChanges();
             return RedirectToAction("Index");
 

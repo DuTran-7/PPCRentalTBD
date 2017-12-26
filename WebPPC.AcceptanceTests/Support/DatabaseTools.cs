@@ -14,7 +14,8 @@ namespace WebPPC.AcceptanceTests.Support
                // db.OrderLines.RemoveRange(db.OrderLines);
                // db.Orders.RemoveRange(db.Orders);
                // db.PROPERTies.RemoveRange(db.PROPERTies);
-               // db.SaveChanges();
+               
+                //db.SaveChanges();
             }
         }
     }

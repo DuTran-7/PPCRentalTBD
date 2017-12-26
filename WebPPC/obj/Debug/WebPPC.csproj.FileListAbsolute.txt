@@ -537,71 +537,6 @@ D:\Final_duphong\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyRefer
 D:\Final_duphong\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
 D:\Final_duphong\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
 D:\Final_duphong\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
-<<<<<<< HEAD
-D:\PPC\cccc\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
-D:\PPC\cccc\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\WebPPC.dll.config
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\WebPPC.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\WebPPC.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\EntityFramework.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Web.Infrastructure.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Owin.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Razor.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\WebGrease.dll
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\EntityFramework.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.Razor.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.pdb
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\PPC\cccc\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
-=======
 D:\teamBT\PPCRentalTBD\WebPPC\bin\WebPPC.dll.config
 D:\teamBT\PPCRentalTBD\WebPPC\bin\WebPPC.dll
 D:\teamBT\PPCRentalTBD\WebPPC\bin\WebPPC.pdb
@@ -668,4 +603,267 @@ D:\teamBT\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.ca
 D:\teamBT\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
 D:\teamBT\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
 D:\teamBT\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\WebPPC.dll.config
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\WebPPC.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\WebPPC.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\EntityFramework.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Web.Infrastructure.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Owin.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Razor.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\WebGrease.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\EntityFramework.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.Razor.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.xml
+D:\PPC\lancuoi\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\WebPPC.dll.config
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\WebPPC.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\WebPPC.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\EntityFramework.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Owin.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Razor.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\WebGrease.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\EntityFramework.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.Razor.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.pdb
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
+C:\Users\My\Downloads\PPCRentalTBD (1)\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\WebPPC.dll.config
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\WebPPC.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\WebPPC.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Antlr3.Runtime.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_FileEditor.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_ImageResize.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_Watermark.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\EntityFramework.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\EntityFramework.SqlServer.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Google.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Web.Infrastructure.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Newtonsoft.Json.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Owin.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Helpers.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Mvc.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Optimization.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Razor.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.Deployment.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.Razor.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\WebGrease.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_FileEditor.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_ImageResize.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\CKFinder_Watermark.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\EntityFramework.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\EntityFramework.SqlServer.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Helpers.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Mvc.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Optimization.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.Razor.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.Deployment.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\System.Web.WebPages.Razor.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Newtonsoft.Json.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Antlr3.Runtime.pdb
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Google.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\obj\Debug\WebPPC.dll
+D:\team2\CoHong2\PPCRentalTBD-master\WebPPC\obj\Debug\WebPPC.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\WebPPC.dll.config
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\WebPPC.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\WebPPC.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\EntityFramework.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Web.Infrastructure.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Owin.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Razor.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\WebGrease.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_FileEditor.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_ImageResize.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\CKFinder_Watermark.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\EntityFramework.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\EntityFramework.SqlServer.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.VisualStudio.DebuggerVisualizers.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Helpers.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Mvc.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Optimization.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.Razor.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Deployment.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\System.Web.WebPages.Razor.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Newtonsoft.Json.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Antlr3.Runtime.pdb
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Core.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Facebook.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Cookies.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.OAuth.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Google.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.Twitter.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\FinalProject\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csprojResolveAssemblyReference.cache
+D:\FinalProject\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.csproj.CoreCompileInputs.cache
+D:\FinalProject\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.dll
+D:\FinalProject\PPCRentalTBD\WebPPC\obj\Debug\WebPPC.pdb

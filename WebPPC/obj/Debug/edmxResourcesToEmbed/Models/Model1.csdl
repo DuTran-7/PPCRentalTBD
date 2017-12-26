@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="team12Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-<<<<<<< HEAD
-  <EntityType Name="ABOUTUS">
-=======
   <EntityType Name="ABOUTU">
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -32,9 +28,9 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DistrictName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="Boolean" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_DISTRICT" FromRole="DISTRICT" ToRole="PROPERTY" />
-    <NavigationProperty Name="STREET" Relationship="Self.FK_STREET_DISTRICT" FromRole="DISTRICT" ToRole="STREET" />
-    <NavigationProperty Name="WARD" Relationship="Self.FK_WARD_DISTRICT" FromRole="DISTRICT" ToRole="WARD" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_DISTRICT" FromRole="DISTRICT" ToRole="PROPERTY" />
+    <NavigationProperty Name="STREETs" Relationship="Self.FK_STREET_DISTRICT" FromRole="DISTRICT" ToRole="STREET" />
+    <NavigationProperty Name="WARDs" Relationship="Self.FK_WARD_DISTRICT" FromRole="DISTRICT" ToRole="WARD" />
   </EntityType>
   <EntityType Name="FEATURE">
     <Key>
@@ -45,7 +41,7 @@
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="PROPERTY_FEATURE" Relationship="Self.FK_PROPERTY_FEATURE_FEATURE" FromRole="FEATURE" ToRole="PROPERTY_FEATURE" />
   </EntityType>
-  <EntityType Name="IMAGES">
+  <EntityType Name="IMAGE">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -69,7 +65,7 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Status_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="Boolean" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_PROJECT_STATUS" FromRole="PROJECT_STATUS" ToRole="PROPERTY" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_PROJECT_STATUS" FromRole="PROJECT_STATUS" ToRole="PROPERTY" />
   </EntityType>
   <EntityType Name="PROPERTY">
     <Key>
@@ -98,11 +94,7 @@
     <Property Name="Updated_at" Type="DateTime" Precision="0" />
     <Property Name="Sale_ID" Type="Int32" />
     <NavigationProperty Name="DISTRICT" Relationship="Self.FK_PROPERTY_DISTRICT" FromRole="PROPERTY" ToRole="DISTRICT" />
-<<<<<<< HEAD
-    <NavigationProperty Name="PICTURE" Relationship="Self.FK__PICTURE__Propert__22AA2996" FromRole="PROPERTY" ToRole="PICTURE" />
-=======
     <NavigationProperty Name="PICTUREs" Relationship="Self.FK__PICTURE__Propert__22AA2996" FromRole="PROPERTY" ToRole="PICTURE" />
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     <NavigationProperty Name="PROJECT_STATUS" Relationship="Self.FK_PROPERTY_PROJECT_STATUS" FromRole="PROPERTY" ToRole="PROJECT_STATUS" />
     <NavigationProperty Name="PROPERTY_FEATURE" Relationship="Self.FK_PROPERTY_FEATURE_PROPERTY" FromRole="PROPERTY" ToRole="PROPERTY_FEATURE" />
     <NavigationProperty Name="PROPERTY_TYPE" Relationship="Self.FK_PROPERTY_PROPERTY_TYPE" FromRole="PROPERTY" ToRole="PROPERTY_TYPE" />
@@ -129,7 +121,7 @@
     <Property Name="CodeType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="Boolean" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_PROPERTY_TYPE" FromRole="PROPERTY_TYPE" ToRole="PROPERTY" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_PROPERTY_TYPE" FromRole="PROPERTY_TYPE" ToRole="PROPERTY" />
   </EntityType>
   <EntityType Name="STREET">
     <Key>
@@ -140,17 +132,7 @@
     <Property Name="District_ID" Type="Int32" />
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="DISTRICT" Relationship="Self.FK_STREET_DISTRICT" FromRole="STREET" ToRole="DISTRICT" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_STREET1" FromRole="STREET" ToRole="PROPERTY" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_STREET1" FromRole="STREET" ToRole="PROPERTY" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -174,8 +156,8 @@
     <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Role" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Status" Type="Boolean" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_USER" FromRole="USER" ToRole="PROPERTY" />
-    <NavigationProperty Name="PROPERTY1" Relationship="Self.FK_PROPERTY_USER1" FromRole="USER" ToRole="PROPERTY" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_USER" FromRole="USER" ToRole="PROPERTY" />
+    <NavigationProperty Name="PROPERTies1" Relationship="Self.FK_PROPERTY_USER1" FromRole="USER" ToRole="PROPERTY" />
   </EntityType>
   <EntityType Name="WARD">
     <Key>
@@ -186,7 +168,7 @@
     <Property Name="District_ID" Type="Int32" />
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="DISTRICT" Relationship="Self.FK_WARD_DISTRICT" FromRole="WARD" ToRole="DISTRICT" />
-    <NavigationProperty Name="PROPERTY" Relationship="Self.FK_PROPERTY_WARD" FromRole="WARD" ToRole="PROPERTY" />
+    <NavigationProperty Name="PROPERTies" Relationship="Self.FK_PROPERTY_WARD" FromRole="WARD" ToRole="PROPERTY" />
   </EntityType>
   <Association Name="FK_PROPERTY_DISTRICT">
     <End Role="DISTRICT" Type="Self.DISTRICT" Multiplicity="0..1" />
@@ -332,15 +314,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-<<<<<<< HEAD
-  <EntityContainer Name="team12Entities1" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="ABOUTUS" EntityType="Self.ABOUTUS" />
-    <EntitySet Name="CONTACT" EntityType="Self.CONTACT" />
-    <EntitySet Name="DISTRICT" EntityType="Self.DISTRICT" />
-    <EntitySet Name="FEATURE" EntityType="Self.FEATURE" />
-    <EntitySet Name="IMAGES" EntityType="Self.IMAGES" />
-    <EntitySet Name="PICTURE" EntityType="Self.PICTURE" />
-=======
   <EntityContainer Name="team12Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="ABOUTUS" EntityType="Self.ABOUTU" />
     <EntitySet Name="CONTACTs" EntityType="Self.CONTACT" />
@@ -348,79 +321,61 @@
     <EntitySet Name="FEATUREs" EntityType="Self.FEATURE" />
     <EntitySet Name="IMAGES" EntityType="Self.IMAGE" />
     <EntitySet Name="PICTUREs" EntityType="Self.PICTURE" />
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     <EntitySet Name="PROJECT_STATUS" EntityType="Self.PROJECT_STATUS" />
-    <EntitySet Name="PROPERTY" EntityType="Self.PROPERTY" />
+    <EntitySet Name="PROPERTies" EntityType="Self.PROPERTY" />
     <EntitySet Name="PROPERTY_FEATURE" EntityType="Self.PROPERTY_FEATURE" />
     <EntitySet Name="PROPERTY_TYPE" EntityType="Self.PROPERTY_TYPE" />
-<<<<<<< HEAD
-    <EntitySet Name="STREET" EntityType="Self.STREET" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="USER" EntityType="Self.USER" />
-    <EntitySet Name="WARD" EntityType="Self.WARD" />
-=======
     <EntitySet Name="STREETs" EntityType="Self.STREET" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="USERs" EntityType="Self.USER" />
     <EntitySet Name="WARDs" EntityType="Self.WARD" />
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     <AssociationSet Name="FK_PROPERTY_DISTRICT" Association="Self.FK_PROPERTY_DISTRICT">
-      <End Role="DISTRICT" EntitySet="DISTRICT" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="DISTRICT" EntitySet="DISTRICTs" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_STREET_DISTRICT" Association="Self.FK_STREET_DISTRICT">
-      <End Role="DISTRICT" EntitySet="DISTRICT" />
-      <End Role="STREET" EntitySet="STREET" />
+      <End Role="DISTRICT" EntitySet="DISTRICTs" />
+      <End Role="STREET" EntitySet="STREETs" />
     </AssociationSet>
     <AssociationSet Name="FK_WARD_DISTRICT" Association="Self.FK_WARD_DISTRICT">
-      <End Role="DISTRICT" EntitySet="DISTRICT" />
-      <End Role="WARD" EntitySet="WARD" />
+      <End Role="DISTRICT" EntitySet="DISTRICTs" />
+      <End Role="WARD" EntitySet="WARDs" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_FEATURE_FEATURE" Association="Self.FK_PROPERTY_FEATURE_FEATURE">
-      <End Role="FEATURE" EntitySet="FEATURE" />
+      <End Role="FEATURE" EntitySet="FEATUREs" />
       <End Role="PROPERTY_FEATURE" EntitySet="PROPERTY_FEATURE" />
     </AssociationSet>
     <AssociationSet Name="FK__PICTURE__Propert__22AA2996" Association="Self.FK__PICTURE__Propert__22AA2996">
-<<<<<<< HEAD
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
-      <End Role="PICTURE" EntitySet="PICTURE" />
-=======
       <End Role="PROPERTY" EntitySet="PROPERTies" />
       <End Role="PICTURE" EntitySet="PICTUREs" />
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_PROJECT_STATUS" Association="Self.FK_PROPERTY_PROJECT_STATUS">
       <End Role="PROJECT_STATUS" EntitySet="PROJECT_STATUS" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_FEATURE_PROPERTY" Association="Self.FK_PROPERTY_FEATURE_PROPERTY">
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
       <End Role="PROPERTY_FEATURE" EntitySet="PROPERTY_FEATURE" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_PROPERTY_TYPE" Association="Self.FK_PROPERTY_PROPERTY_TYPE">
       <End Role="PROPERTY_TYPE" EntitySet="PROPERTY_TYPE" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_STREET1" Association="Self.FK_PROPERTY_STREET1">
-      <End Role="STREET" EntitySet="STREET" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="STREET" EntitySet="STREETs" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_USER" Association="Self.FK_PROPERTY_USER">
-      <End Role="USER" EntitySet="USER" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="USER" EntitySet="USERs" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_USER1" Association="Self.FK_PROPERTY_USER1">
-      <End Role="USER" EntitySet="USER" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
+      <End Role="USER" EntitySet="USERs" />
+      <End Role="PROPERTY" EntitySet="PROPERTies" />
     </AssociationSet>
     <AssociationSet Name="FK_PROPERTY_WARD" Association="Self.FK_PROPERTY_WARD">
-<<<<<<< HEAD
-      <End Role="WARD" EntitySet="WARD" />
-      <End Role="PROPERTY" EntitySet="PROPERTY" />
-=======
       <End Role="WARD" EntitySet="WARDs" />
       <End Role="PROPERTY" EntitySet="PROPERTies" />
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
     </AssociationSet>
   </EntityContainer>
 </Schema>

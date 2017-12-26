@@ -17,11 +17,7 @@ namespace WebPPC.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PROPERTY()
         {
-<<<<<<< HEAD
-            this.PICTURE = new HashSet<PICTURE>();
-=======
             this.PICTUREs = new HashSet<PICTURE>();
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
             this.PROPERTY_FEATURE = new HashSet<PROPERTY_FEATURE>();
         }
     
@@ -50,11 +46,7 @@ namespace WebPPC.Models
     
         public virtual DISTRICT DISTRICT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-<<<<<<< HEAD
-        public virtual ICollection<PICTURE> PICTURE { get; set; }
-=======
         public virtual ICollection<PICTURE> PICTUREs { get; set; }
->>>>>>> b2780d8960e96c931fe09e395407948809dddfef
         public virtual PROJECT_STATUS PROJECT_STATUS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PROPERTY_FEATURE> PROPERTY_FEATURE { get; set; }

@@ -17,11 +17,18 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
             _agencydriver = Agdriver;
         }
 
-        [Given(@"Duoi day la noi dung co th tim kiem du an")]
-        public void GivenDuoiDayLaNoiDungCoThTimKiemDuAn(Table table)
+        //[Given(@"Duoi day la noi dung co th tim kiem du an")]
+        //public void GivenDuoiDayLaNoiDungCoThTimKiemDuAn(Table filter)
+        //{
+        //    _projectdriver.Filter(filter);
+        //}
+        [Given(@"Duoi day la nhung du an co th duoc tim kiem")]
+        public void GivenDuoiDayLaNhungDuAnCoThDuocTimKiem(Table filter)
         {
-           
+            //_projectdriver.Filter(filter);
         }
+
+
 
         [Given(@"Toi dang o trang tim kiem du an")]
         public void GivenToiDangOTrangTimKiemDuAn()
@@ -40,6 +47,66 @@ namespace WebPPC.AcceptanceTests.StepDefinitions
         {
             _projectdriver.ShowListProject(showProject);
         }
+        // filter by Price
+        [When(@"Toi nhap thong tin gia du an '(.*)'")]
+        public void WhenToiNhapThongTinGiaDuAn(string price)
+        {
+            _projectdriver.FilterByPrice(price);
+        }
+
+        [Then(@"Toi se thay duoc danh sach du an")]
+        public void ThenToiSeThayDuocDanhSachDuAn(Table showProject)
+        {
+            _projectdriver.ShowListProjectByPrice(showProject);
+        }
+
+        [When(@"Toi nhap thong tin so phong ngu cua du an '(.*)'")]
+        public void WhenToiNhapThongTinSoPhongNguCuaDuAn(string bedRoom)
+        {
+            _projectdriver.FilterByBedRoom(bedRoom);
+        }
+        [Then(@"Toi se thay duoc danh sach du an co chua so phong do")]
+        public void ThenToiSeThayDuocDanhSachDuAnCoChuaSoPhongDo(Table showProjectByBedRoom)
+        {
+            _projectdriver.ShowListProjectByBedroom(showProjectByBedRoom);
+        }
+        ///
+        [When(@"Toi nhap thong tin so PackingPlace cua du an '(.*)'")]
+        public void WhenToiNhapThongTinSoPackingPlaceCuaDuAn(string packingpalce)
+        {
+            _projectdriver.FilterByPackingPlace(packingpalce);
+        }
+
+        [Then(@"Toi se thay duoc danh sach du an co chua so packinglace do")]
+        public void ThenToiSeThayDuocDanhSachDuAnCoChuaSoPackinglaceDo(Table showProjectByPackingPlace)
+        {
+            _projectdriver.ShowListProjectByPackingPlace(showProjectByPackingPlace);
+        }
+        //        
+        [When(@"Toi nhap thong tin so phong tam cua du an '(.*)'")]
+        public void WhenToiNhapThongTinSoPhongTamCuaDuAn(string bathRoom)
+        {
+            _projectdriver.FilterByBathRoom(bathRoom);
+        }
+
+        [Then(@"Toi se thay duoc danh sach du an co chua so phong tam do")]
+        public void ThenToiSeThayDuocDanhSachDuAnCoChuaSoPhongTamDo(Table showProjectByBathRoom)
+        {
+            _projectdriver.ShowListProjectByBathRoom(showProjectByBathRoom);
+        }
+        //        
+        [When(@"Toi nhap thong tin so dien tich cua du an '(.*)'")]
+        public void WhenToiNhapThongTinSoDienTichCuaDuAn(string area)
+        {
+            _projectdriver.FilterByArea(area);
+        }
+
+        [Then(@"Toi se thay duoc danh sach du an co chua so dien tich do")]
+        public void ThenToiSeThayDuocDanhSachDuAnCoChuaSoDienTichDo(Table showprojectArea)
+        {
+            _projectdriver.ShowListProjectByArea(showprojectArea);
+        }
+
 
     }
 }

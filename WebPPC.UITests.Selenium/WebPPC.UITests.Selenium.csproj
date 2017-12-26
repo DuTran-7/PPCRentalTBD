@@ -67,11 +67,21 @@
     <Compile Include="Support\SeleniumStepsBase.cs" />
     <Compile Include="Support\SeleniumSupport.cs" />
     <Compile Include="Support\WebDriverExtensions.cs" />
-    <Compile Include="ViewListProjectStep.cs" />
+    <Compile Include="ViewListOfAgencyProject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebPPC.AcceptanceTests.Common\WebPPC.AcceptanceTests.Common.csproj">
+      <Project>{bd6f387d-7297-42cf-aa24-07a7b8c5265b}</Project>
+      <Name>WebPPC.AcceptanceTests.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebPPC\WebPPC.csproj">
+      <Project>{070a0883-7119-4085-b9b2-6359a29a2083}</Project>
+      <Name>WebPPC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

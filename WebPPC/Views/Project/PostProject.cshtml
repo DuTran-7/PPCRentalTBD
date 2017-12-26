@@ -3,10 +3,10 @@
 @{
     ViewBag.Title = "PostProject";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var db = new team12Entities1();
-    var features = db.FEATURE.ToList();
+    var db = new team12Entities();
+    var features = db.FEATUREs.ToList();
     var feature_property = db.PROPERTY_FEATURE.ToList();
-    var picture = db.PICTURE.ToList();
+    var picture = db.PICTUREs.ToList();
     
 }
 
@@ -122,19 +122,19 @@
     <div class="form-group col-md-10">
 
         @Html.DropDownList("District_ID",
-                           new SelectList(db.DISTRICT, "ID", "DistrictName"),
+                           new SelectList(db.DISTRICTs, "ID", "DistrictName"),
                                    "--Chọn Quận--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Ward_ID,
-                               new SelectList(db.WARD.Take(0), "ID", "WardName"),
+                               new SelectList(db.WARDs.Take(0), "ID", "WardName"),
                                        "--Chọn Phường--", new { @class = "form-control control-label col-md-2" })
     </div>
     <div class="form-group col-md-10">
 
         @Html.DropDownListFor(m => m.Street_ID,
-                               new SelectList(db.STREET.Take(0), "ID", "StreetName"),
+                               new SelectList(db.STREETs.Take(0), "ID", "StreetName"),
                                        "--Chọn Đường--", new { @class = "form-control control-label col-md-2" })
     </div>
 

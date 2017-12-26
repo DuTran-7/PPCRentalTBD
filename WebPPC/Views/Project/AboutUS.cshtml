@@ -1,7 +1,5 @@
-﻿
-
-@using WebPPC.Models
-@model List<ABOUTUS>
+﻿@using WebPPC.Models
+@model List<ABOUTU>
 @{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -27,7 +25,7 @@
                 <p></p>
                 <p></p>
                 <h2>Giới thiệu</h2>
-                <div >
+                <div>
                     Công ty bất động sản PPC Rental (PPC = Perfect Property Company) là
                     danh nghiệp hoạt động chuyên nghiệp trong lĩnh vực môi giới bất động sản trong
                     và ngoài nước. PPC Rental được phát triển dựa trên nền tảng là sự hiểu biết
@@ -48,10 +46,10 @@
                             <div class="max-lines">@item.aboutname</div>
                             <img src="/img/@item.aboutavt" class="img-responsive" />
                             <div class="max-line">@item.aboutcontent</div>
-                            
+
                         </div>
 
                     }
-                    
+
 </body>
 </html>
